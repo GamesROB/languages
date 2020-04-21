@@ -126,11 +126,11 @@ Support us here: %s
     
 [languageProperties]
 flag = "🇰🇷" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
-language = "Korean" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+language = "한국어" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 translators = "oaeoie#6792" # Found in: LanguageCommands.java#20:132
-languageName = "Korean" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
+languageName = "한국어" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
 version = "1.0" 
-country = "KOR" 
+country = "대한민국" 
 code = "ko_KR" # Found in: LanguageCommands.java#20:76
 
 [events]

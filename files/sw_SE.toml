@@ -1092,12 +1092,12 @@ permissionLock = "⛔ You can't use this command!"
     description = "View information about our partner, alertbot." 
     
 [languageProperties]
-language = "Engelska" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+language = "Svenska" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 translators = "Lucke#5520" # Found in: LanguageCommands.java#20:132
 flag = "🇸🇪" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
 country = "Sverige" 
 code = "sw_SE" # Found in: LanguageCommands.java#20:76
-languageName = "Swedish" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
+languageName = "Svenska" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
 version = "1.8.6" 
 
 [gameFramework]

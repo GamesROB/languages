@@ -1185,13 +1185,13 @@ uncompletedChallenges = "%s have uncompleted challenges! `g*achievements`"
     memoryGame = "Memory Game Lowest Time" 
     
 [languageProperties]
-language = "Английский" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+language = "Русский" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 code = "ru_RU" # Found in: LanguageCommands.java#20:76
-country = "" 
+country = "Россия" 
 translators = "ipu#4800, TheJulfor#3687, mcain_haracter663#1814, Advisor#9856" # Found in: LanguageCommands.java#20:132
 version = "1.6.3" 
 flag = "🇷🇺" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
-languageName = "Russian" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
+languageName = "Русский" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
 
 [badges]
 highestBaltop1st = "Первый в рейтинге" 

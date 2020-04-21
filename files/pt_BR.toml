@@ -1,41 +1,51 @@
 
 [game]
     [game.2048]
-    name = "" 
-    points = "" 
-    shortDescription = "" 
-    longDescription = "" 
-    loss = "The board was filled!" 
+    name = "2048"
+    shortDescription = "O clássico 2048!" 
+    longDescription = """
+    Clique na reação que quer para mover os números.
+    Números do mesmo valor irão juntar-se.
+    Tente chegar no 2048!
+    """
+    loss = "O placar está cheio!" 
+    points = " pontos"
     
     [game.hangman]
-    name = "" 
-    sendWordDM = "" 
-    shortDescription = "" 
-    wordSet = """
-    **You chose the sentence!**
-    You can go back to %s.
+    name = "Forca" 
+    sendWordDM = "Qual sentença escolhe?" 
+    shortDescription = "Tente adivinhar a palavra que o criador escolher!" 
+    longDescription = """
+    O criador manda uma sentença sigilosa para o bot no PV.
+    Depois disso, os outros jogadores tentam adivinhar-lá, letra a letra ou de uma vez!
     """
-    validGuess = "%s got the letter %s on point!" 
+    wordSet = """
+    **Você escolheu a sentença!**
+    Volte agora para %s.
+    """
+    validGuess = "%s adivinhou a letra %s!" 
     wordPicked = "" 
-    outOfLimbs = "%s is out of limbs! Nice try!" 
-    invalidGuess = "%s guessed %s, and got it wrong!" 
-    sendWord = "Before anything, %s: Send the sentence you want in DMs!" 
-    longDescription = "" 
-    wordTooBig = "That word is too big! The maximum size is %s." 
+    outOfLimbs = "%s não tem mais partes! Boa tentativa!" 
+    invalidGuess = "%s adivinhou %s, e errou!" 
+    sendWord = "Antes de qualquer outra coisa, %s: Mande a sentença desejada no PV!" 
+    wordTooBig = "Esta sentença é muito grande, escolha uma até %s." 
     
     [game.memorygame]
-    longDescription = "" 
-    shortDescription = "" 
-    name = "" 
+    shortDescription = "Teste sua memória tentando encontrar 2 do mesmo emoji!" 
+    longDescription = """
+    Mande a combinação do que quiser revelar (ex. a3).
+    Se falhar na junção de 2, lembre das posições para depois.
+    """
+    name = "Jogo da Memória" 
     
     [game.achievement]
-    onARoll = "" 
-    gambleTokens = "Gamble %s %s" 
-    upperClass = "" 
+    onARoll = "Arrebentando!" 
+    gambleTokens = "Aposte %s %s" 
+    upperClass = "Classe A" 
     billGates = "Bill Gates" 
-    reachTokens = "Get %s %s" 
-    winGames = "Win %s games" 
-    unfair = "" 
+    reachTokens = "Consiga %s %s" 
+    winGames = "Vença %s jogos" 
+    unfair = "Injusto!" 
     votingWeek = "Semana de Votação!" 
     stubborn = "Teimoso" 
     tooManyGames = "Jogos Demais" 
@@ -69,7 +79,7 @@
     loseTokensGambling = "Perca %s tokens apostando" 
     
     [game.uno]
-    invalidColor = "Essa Cor É Inválida" 
+    invalidColor = "Essa Cor é Inválida" 
     noColor = "Você precisa escolher uma cor em inglês para usar a carta curinga (ex. `B blue`)." 
     drawCard = "Você comprou uma carta já que não tinha nenhuma jogável." 
     game = """
@@ -388,8 +398,8 @@ Razão: %s
 tooFast = "Você está mandando mensagens muito rápido! Espere o último comando terminar de carregar." 
 # Found in: CommandsManager.java#805:101
 noGamesInChannel = """
-There are no games currently in this channel.
-You can type `%shelp` to pick and start a game!
+Não há jogos atualmente no canal.
+Você pode digitar `%shelp` para escolher e iniciar um jogo!
 """
 invalidLanguage = "" # Found in: LanguageCommands.java#29:92 LanguageCommands.java#44:92
 mentionedMessage = "Meu prefixo nesse servidor é `%s`. Envie `%shelp` para começar!" # Found in: CommandsManager.java#741:126
@@ -411,37 +421,35 @@ O bot precissa dessas permissões para usar o comando:
 """
 partnerCheckItOut = "Dê uma olhadinha" # Found in: CommandsManager.java#814:115
 cmdPermDenied = "Você não tem permissão pra executar esse comando." # Found in: CommandsManager.java#503:77 CommandsManager.java#505:73
-nth2 = "" 
-nth1 = "" 
-nth4 = "" 
-nth3 = "" 
-botDM = "I'm just a bot, there's only so much I can talk about!" 
-cmdPermDeniedAdmin = "This command is limited to server administrators by default." # Found in: CommandsManager.java#505:78
-pagedCommandFooter = "Page %s/%s (`%s%s <page>` to view another page)." # Found in: PagedCommand.java#43:100
-invalidPage = "That's not a valid page. Please pick one between 1 and %s." # Found in: PagedCommand.java#36:93
+nth2 = "º" 
+nth1 = "º" 
+nth4 = "º" 
+nth3 = "º"
+cmdPermDeniedAdmin = "Esse comando é limitado para administradores por padrão." # Found in: CommandsManager.java#505:78
+pagedCommandFooter = "Página %s/%s (`%s%s <página>` para ver outra página)." # Found in: PagedCommand.java#43:100
+invalidPage = "Essa página é inválida, escolha uma entre 1 e %s." # Found in: PagedCommand.java#36:93
 # Found in: GenericCommands.java#210:73
 globalStatistics = """
-📶 **%s** servers
-👥 **%s** users
-🗨 **%s** text channels
-🎮 **%s** games (**%s** active)
-❗  **%s** commands
-📈 **%s** votes (**%s** this month)
-🕙 **%s** played
+📶 **%s** servidores
+👥 **%s** usuários
+🗨 **%s** canais de texto
+🎮 **%s** jogos (**%s** ativos)
+❗  **%s** comandos
+📈 **%s** votos (**%s** nesse mês)
+🕙 **%s** jogados
 """
-premiumBotLeave = "I've left the server **%s** as it seems you don't have Premium anymore." 
 cooldown = "⏰ Wait %s to use this command again." # Found in: CommandsManager.java#524:83 CommandsManager.java#525:89 CommandsManager.java#531:100 CommandsManager.java#534:100 CommandsManager.java#539:72
 # Found in: CommandsManager.java#478:79
 blacklisted2 = """
-🔨 **Suspended from GamesROB for %s**
+🔨 **Suspenso do GamesROB por %s**
 `%s`
 %s
-You may appeal to %s
+Você pode recorrer para %s
 """
 # Found in: TokensCommand.java#32:73 ProfileCommands.java#311:73
 patreonLevel = """
-You need to be at least %s on our Patreon to use this command.
-Support us here: %s
+Você precisa ser ao mínimo %s no Patreon para usar esse comando.
+Nos suporte: %s
 """
 
     [genericMessages.upvote]
@@ -482,7 +490,7 @@ Support us here: %s
     """
     
     [genericMessages.notEnoughTokens]
-    beggining = "You don't have enough %s to do that (Need %s more)." # Found in: Utility.java#417:82
+    beggining = "Você não tem %s suficientes para fazer isso (Precisa de mais %s)." # Found in: Utility.java#417:82
     tokensCommand = "\nSaiba de maneiras para ganhar tokens com `%stokens`." # Found in: Utility.java#420:89
     
     [genericMessages.cooldown2]
@@ -490,11 +498,11 @@ Support us here: %s
     title = "Você deve esperar para utilizar esse comando novamente!" # Found in: CommandsManager.java#524:90
     timeLeft = "⏰ Tempo restante: %s" # Found in: CommandsManager.java#525:99
     supporterTime = "Tempo para um [Suportador](%s): %s" # Found in: CommandsManager.java#531:115
-    msg = "You are under cooldown for this command!" # Found in: CommandsManager.java#539:77
+    msg = "Você está sendo limitado desse comando!" # Found in: CommandsManager.java#539:77
     
     [genericMessages.threeplayerPatreon]
-    content = "You need to be VIP or be using the Premium Bot to play with 4+ players" 
-    embed = "Check it out" 
+    content = "Você precisa ser VIP ou estar usando o bot Premium para jogar com mais 4 ou mais jogadores" 
+    embed = "Vê lá" 
     
 [command]
 permissionLock = "⛔ Você não tem permissão para usar esse comando!" 
@@ -520,12 +528,12 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
             title = "🔗 Links úteis" # Found in: GenericCommands.java#91:87
             # Found in: GenericCommands.java#92:92
             description2 = """
-            🌐 [Our Website](%s)
-            ➕ [Add bot to server](%s)
+            🌐 [Nosso Site](%s)
+            ➕ [Adicione o Bot num Servidor](%s)
             <:patreon:666319895306174504> [Patreon](%s)
-            ℹ️ [Join our support server](%s)
-            ❤ [Credits](%s)
-            ⬆ [Upvote the bot in DBL](%s)
+            ℹ️ [Entre no nosso servidor de suporte](%s)
+            ❤ [Créditos](%s)
+            ⬆ [Vote para o bot no Top.gg](%s)
             """
             
             [command.info.embed2.system]
@@ -533,9 +541,9 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
             # Found in: GenericCommands.java#105:93
             description2 = """
             RAM: **%s**
-            OS: **%s**
+            Sistema: **%s**
             Shard: **%s/%s** (**%s**)
-            %s RPC/JSON Connection
+            %s Conexão RPC/JSON
             """
             
             [command.info.embed2.statistics3]
@@ -543,11 +551,11 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
             description = """
             
             ♨ **%s** threads
-            View more with `%sstatistics`
+            Veja mais com `%sstatistics`
             """
             
             [command.info.embed2.statistics2]
-            title = "📟 Global Statistics" # Found in: GenericCommands.java#87:93
+            title = "📟 Estatísticas Globais" # Found in: GenericCommands.java#87:93
             
     [command.baltop]
     footer = """
@@ -609,23 +617,23 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     websiteTitle = "Veja nosso site!" # Found in: CommandsManager.java#869:160
     # Found in: CommandsManager.java#871:108
     recentUpdate = """
-    <:update:264184209617321984> The bot has recently received an update! `v%s`
-    Check out the changes with `%schangelog`.
+    <:update:264184209617321984> O bot recebeu uma atualização recentemente! `v%s`
+    Veja as mudanças com `%schangelog`.
     """
     # Found in: CommandsManager.java#327:75
     gameInfo2 = """
     `%s%s`: %s
     
-    **Long Description**
+    **Descrição Longa**
     %s
     
-    **Settings:**
+    **Configurações:**
     %s
     
-    %sAliases: %s
-    More information: %s
+    %sAlternativos: %s
+    Mais Informações: %s
     """
-    setting = "`%s` (Values %s - %s / Default %s)" # Found in: CommandsManager.java#331:95
+    setting = "`%s` (Valores %s - %s / Padrão %s)" # Found in: CommandsManager.java#331:95
     
         [command.help.categories]
         tokencommands = "Fichas" 
@@ -635,7 +643,7 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
         profilecommands = "Perfil" 
         infocommands = "Informações" 
         matchcommands = "Partida" 
-        eventcommands = "Halloween Event" 
+        eventcommands = "Dia das Bruxas" 
         
     [command.backgroundupload]
     setimg = "Escolhido fundo do perfil!" # Found in: ProfileCommands.java#81:76 ProfileCommands.java#93:72
@@ -809,26 +817,26 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     title = "Your Statistics" # Found in: GenericCommands.java#140:80
     # Found in: GenericCommands.java#173:83
     overtimeStatistics = """
-    📶 Servers: %s
-    👥 Users: %s
-    🗨 Text Channels: %s
-    🎮 Games: %s (Active: %s)
-    ❗ Commands: %s
-    📈 Upvotes: %s
-    🕙 Played: **%s**
+    📶 Servidores: %s
+    👥 Usuários: %s
+    🗨 Canais de Texto: %s
+    🎮 Jogos: %s (Ativos: %s)
+    ❗ Comandos: %s
+    📈 Votos: %s
+    🕙 Jogados: **%s**
     🏓 Ping: %s
-    📟 Avg Command Time: %s
-    💻 RAM Usage: %s
+    📟 Média de Comando: %s
+    💻 Uso de RAM: %s
     """
-    footer = "Comparison Time" # Found in: GenericCommands.java#148:82
+    footer = "Comparando com" # Found in: GenericCommands.java#148:82
     
         [command.statistics.commandStatistics]
         mostUsed = "**Comandos mais utilizados:**" # Found in: GenericCommands.java#151:91
-        title = "Command Statistics" # Found in: GenericCommands.java#150:98
+        title = "Estatísticas de Comandos" # Found in: GenericCommands.java#150:98
         
         [command.statistics.gameStatistics]
-        mostPlayed = "**Most played games:**\n" # Found in: GenericCommands.java#158:90
-        title = "Game Statistics" # Found in: GenericCommands.java#157:95
+        mostPlayed = "**Jogos mais jogados:**\n" # Found in: GenericCommands.java#158:90
+        title = "Estatísticas de Jogos" # Found in: GenericCommands.java#157:95
         
     [command.invite]
     description = "Adicione o bot no seu servidor!" 
@@ -856,14 +864,14 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     message = "%s saiu da partida.\n" 
     
     [command.highscores]
-    entry = "%s held by %s" # Found in: TokensCommand.java#135:82
-    global = "World Record game score holders:" # Found in: TokensCommand.java#124:69 TokensCommand.java#150:87
-    server = "Top game score records on **%s**:" # Found in: TokensCommand.java#125:69
+    entry = "%s de %s" # Found in: TokensCommand.java#135:82
+    global = "Récordes mundiais:" # Found in: TokensCommand.java#124:69 TokensCommand.java#150:87
+    server = "Récordes em **%s**:" # Found in: TokensCommand.java#125:69
     
         [command.highscores.category]
-        entry = "\n%s lugar mantido por %s (%s)" # Found in: TokensCommand.java#167:75
-        server = "%s top records on ***%s**:" 
-        global = "%s top records globally:" 
+        entry = "\n%s de %s (%s)" # Found in: TokensCommand.java#167:75
+        server = "Recórdes de %s em ***%s**:" 
+        global = "Recórdes de %s mundiais:" 
         
     [command.idlerpg]
     description = "Saiba mais sobre nosso parceiro IdleRPG!" 
@@ -876,7 +884,7 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     unknownUser = "*jogador desconhecido*" # Found in: LeaderboardCommands.java#93:117 LeaderboardCommands.java#110:81
     # Found in: CommandsManager.java#208:107
     disabledWebsite = """
-    This command has been disabled temporarly, the leaderboard is still acessbile at:
+    Esse comando foi desativo, o placar é disponível em:
     %s
     """
     
@@ -887,7 +895,7 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     [command.setprefix]
     description = "Altere o prefix do bot para seu servidor!" 
     message = "Alterado prefix do bot para esse servidor!" # Found in: GenericCommands.java#274:66
-    tooLong = "That prefix is too long!" # Found in: GenericCommands.java#267:120
+    tooLong = "O prefixo é longo demais!" # Found in: GenericCommands.java#267:120
     
     [command.discordserversme]
     description = "Descubra mais sobre nosso parceiro, DiscordServers.me!" 
@@ -978,7 +986,7 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     matchHeader = "Apostando 🔸 %s tokens..." # Found in: SlotsCommand.java#46:88 SlotsCommand.java#90:104
     
     [command.weekly]
-    timeout = "You can get your weekly %s again in %s." # Found in: TokensCommand.java#34:67
+    timeout = "Você pode conseguir sua recompensa de %s mensal novamente em %s." # Found in: TokensCommand.java#34:67
     description = "Receba seus tokens semanais por ser um doador gentil!" 
     message = "Você recebeu 🔸 %s tokens!" # Found in: TokensCommand.java#41:63
     
@@ -1004,88 +1012,88 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     Temos um site com mais informações sobre o bot!
     https://gamesrob.com
     """
-    description = "Gives you a link to the website" 
+    description = "Te dá um link do site" 
     
     [command.trickortreating]
     # Found in: HalloweenEvent.java#97:108
     rateTime2 = """
-    Tricks or treats?
-    Click on the reactions below to choose:
-    🍬 +%s candy for them
-    ⛔ %s of their candy
+    Doçuras ou travessuras?
+    Clique nas reações para escolher:
+    🍬 +%s doces para eles
+    ⛔ %s dos doces deles
     """
-    alreadyLooking = "You're already looking for a channel." # Found in: HalloweenEvent.java#152:138
-    candyCommand = "\nCheck your candy with `%scandy`!" # Found in: HalloweenEvent.java#301:57
-    findingChannel2 = "🔎 Searching for servers (Estimated wait of %s)..." # Found in: HalloweenEvent.java#207:90
-    quit = "Quit connection finding." # Found in: HalloweenEvent.java#141:73
+    alreadyLooking = "Você já está procurando por um canal" # Found in: HalloweenEvent.java#152:138
+    candyCommand = "\nVeja seus doces com `%scandy`!" # Found in: HalloweenEvent.java#301:57
+    findingChannel2 = "🔎 Procurando servidores (Estimativa de %s)..." # Found in: HalloweenEvent.java#207:90
+    quit = "Você saiu da procura de servidores." # Found in: HalloweenEvent.java#141:73
     # Found in: HalloweenEvent.java#294:92 HalloweenEvent.java#298:62
     rateTreat = """
-    🍬 Treats!
-    + %s candy were given to %s.
+    🍬 Doces!
+    + %s doces dados para %s.
     """
     alreadyConnected = "This server already has a connection happening." # Found in: HalloweenEvent.java#143:131
     # Found in: HalloweenEvent.java#294:130 HalloweenEvent.java#298:100
     rateTrick = """
-    ⛔ Trick!
-    - %s candy were removed from %s.
+    ⛔ Travessuras!
+    - %s doces removidos de %s.
     """
     # Found in: HalloweenEvent.java#174:104
     connectedProxy2 = """
-    You have %s to convince them to give you candy!
-    🚩 Flag this connection (Don't falsely flag)
+    Você tem %s para convencê-los a te dar doces!
+    🚩 Reporte a conexão (Não o faça incorretamente)
     """
-    description = "Trick or treating, but it's on Discord!" 
-    cantQuitStarted = "The connection has already started." # Found in: HalloweenEvent.java#139:60
-    connected = "You've connected up to another server!\n" # Found in: HalloweenEvent.java#166:95 HalloweenEvent.java#167:97 HalloweenEvent.java#173:101 HalloweenEvent.java#174:98
+    description = "Doces ou travessuras, só que no Discord!" 
+    cantQuitStarted = "A conexão já foi estabelecida." # Found in: HalloweenEvent.java#139:60
+    connected = "Já está conectado a outro servidor!\n" # Found in: HalloweenEvent.java#166:95 HalloweenEvent.java#167:97 HalloweenEvent.java#173:101 HalloweenEvent.java#174:98
     # Found in: HalloweenEvent.java#167:102
     connectedHost2 = """
-    In %s, you can choose to give them treats or trick them.
-    🚩 Flag this connection (Don't falsely flag)
+    Em %s, você pode escolher dar ou remover doces.
+    🚩 Reporte a conexão (Não o faça incorretamente)
     """
-    timeUp = "Looks like the time ran out! No tricks or treats after all..." # Found in: HalloweenEvent.java#104:107 HalloweenEvent.java#105:105
-    matchfindLimit = "The connection finder time has ended." # Found in: HalloweenEvent.java#85:113
-    rateWait = "You still have to wait %s to rate!" # Found in: HalloweenEvent.java#302:86
-    forceend = "The connection was forcibly ended." # Found in: HalloweenEvent.java#260:57 HalloweenEvent.java#339:127 HalloweenEvent.java#340:125
+    timeUp = "O tempo acabou! Parece que não haverão doces nem travessuras..." # Found in: HalloweenEvent.java#104:107 HalloweenEvent.java#105:105
+    matchfindLimit = "O tempo de procura de partidas acabou." # Found in: HalloweenEvent.java#85:113
+    rateWait = "Você ainda precisa esperar %s para avaliar!" # Found in: HalloweenEvent.java#302:86
+    forceend = "A conexão foi encerrada." # Found in: HalloweenEvent.java#260:57 HalloweenEvent.java#339:127 HalloweenEvent.java#340:125
     flagged = "This connection was flagged and has ended." # Found in: HalloweenEvent.java#261:86
     # Found in: HalloweenEvent.java#169:105 HalloweenEvent.java#176:106
     connectionServers = """
     
     
-    **Home:** %s
-    **Visitor:** %s
+    **Você:** %s
+    **Visitante:** %s
     """
-    flagNoContent = "There is no content to flag. Please do not abuse the flag feature as it will lead to a blacklist." # Found in: HalloweenEvent.java#253:123
+    flagNoContent = "Não há conteúdo para reportar. Por favor não abuse esse botão pois isso levará a uma suspensão." # Found in: HalloweenEvent.java#253:123
     
     [command.gdpr]
-    description = "Get all of the data we have stored with your User ID attached." 
-    dm = "Here's all the data we have on your account:" 
-    message2 = "A private message will be sent to you shortly." 
+    description = "Receba todos dados que temos guardado com seu ID de usuário." 
+    dm = "Aqui está todos os dados que temos:" 
+    message2 = "Uma mensagem será enviada em privada brevemente." 
     
         [command.gdpr.deletion]
-        info = "You can request data deletion with `g*gdpr remove`" # Found in: GenericCommands.java#337:79
+        info = "Você pode pedir a deleção desses dados com `g*gdpr remove`" # Found in: GenericCommands.java#337:79
         # Found in: GenericCommands.java#360:74
         message = """
-        :exclamation: **All** of your data will be **permanently** deleted! :exclamation:
-        If you change your mind, you will have the option to cancel this request for __30 days__ following the request using `%sgdpr remove`.
+        :exclamation: **Todos** seus dados serão removidos **permanentemente**! :exclamation:
+        Se trocar de idéia, você pode cancelar o pedido durante __30 dias__ com `%sgdpr remove`.
         """
         # Found in: CommandsManager.java#458:75
         reminder = """
-        :exclamation: Your data is currently scheduled to be deleted on **%s** :exclamation: 
-        If this was done by accident or you change your mind, you can cancel this operation using `%sgdpr remove`.
+        :exclamation: Seus dados serão deletados em **%s** :exclamation: 
+        Se fez isso acidentemente ou trocou de ideia, pode cancelar a operão com `%sgdpr remove`.
         """
-        cancelled = "Data deletion was cancelled." # Found in: GenericCommands.java#356:76
+        cancelled = "Deleção de dados cancelada." # Found in: GenericCommands.java#356:76
         
     [command.candy]
     # Found in: HalloweenEvent.java#130:61
     own = """
-    🍬 You have %s candy!
-    Get more candy by trick or treating!
+    🍬 Você tem %s doces!
+    Consiga mais com doces ou travessuras!
     """
-    other = "🍬 %s has %s candy!" # Found in: HalloweenEvent.java#131:63
-    description = "Checks how much candy you or someone else has" 
+    other = "🍬 %s tem %s doces!" # Found in: HalloweenEvent.java#131:63
+    description = "Verifica a quantidade você ou alguém tem de doces." 
     
     [command.alertbot]
-    description = "View information about our partner, alertbot." 
+    description = "Veja informações sobre nosso parceiro AlertBot." 
     
 [gameFramework]
 betting = "💰 Apostando %s 🔸 Fichas!" 
@@ -1167,25 +1175,25 @@ victorymessage = "Won!"
     guildbest = """
     %s
     **Recorde Mundial**: %s
-    **Essa Tentativa**: %s **Recorde do Servidor** (%s%s worldwide)
+    **Essa Tentativa**: %s **Recorde do Servidor** (%s%s mundialmente)
     """
     notbest = """
     %s
-    **Personal Best**: %s
-    **This Run**: %s (%s%s in the server/%s%s worldwide)
+    **Mlehor Pessoal:**: %s
+    **Essa Tentativa**: %s (%s%s no servidor/%s%s mundialmente)
     """
-    uno = "Uno Lowest Time" 
-    minesweeper = "Minesweeper Lowest Time" 
+    uno = "Menor tempo no Uno" 
+    minesweeper = "Menor tempo no Campo Minado" 
     wr = """
     %s
-    **This Run**: %s **World Record!**
+    **Essa Tentativa**: %s **Récorde Mundial!**
     """
-    minesweeperKnightPaths = "Minesweeper Knight Paths Lowest Time" 
-    quiz = "Quiz Most Points" 
-    memoryGame = "Memory Game Lowest Time" 
+    minesweeperKnightPaths = "Menor tempo no Campo Minado, Caminhos de Cavaleiro" 
+    quiz = "Mais pontos no Quiz" 
+    memoryGame = "Menor tempo no Jogo da Memória" 
     
 [languageProperties]
-language = "" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+language = "Português" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 code = "pt_BR" # Found in: LanguageCommands.java#20:76
 country = "guide" 
 languageName = "Português Brasileiro" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
@@ -1204,10 +1212,10 @@ flag = "🇧🇷" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#
         emoji = "Usar emojis externos" 
         
         [permissions.message.attach]
-        files = "Send files" 
+        files = "Enviar arquivos" 
         
         [permissions.message.add]
-        reaction = "Add Reactions" 
+        reaction = "Adicionar Reações"
         
 [transactions]
 betting = "" 
@@ -1278,27 +1286,27 @@ Quer ajudar a traduzir para a sua língua?
 [events]
 # Found in: EventTimer.java#19:104 EventTimings.java#49:104
 hasntBegun = """
-This command can only be executed during %s!
-That event is happening in %s.
+Esse comando só pode ser executado durante o %s!
+Isso acontece em %s.
 """
-halloween = "Halloween" # Found in: EventTimings.java#29:29
+halloween = "Dia das Bruxas (Halloween)" # Found in: EventTimings.java#29:29
 
 [errors]
     [errors.dmdisabled]
-    other = "%s has private messaging with the bot disabled. This is required for this game." 
-    self = "You have private messaging with the bot disabled. This is required for this command." # Found in: GenericCommands.java#345:88
+    other = "%s tem mensagens em PV com o bot desativado. Isso é requirido para esse jogo." 
+    self = "Você tem mensagens em PV com o bot desativado. Isso é requirido para esse jogo." # Found in: GenericCommands.java#345:88
     
 [genericMesages]
 # Found in: CommandsManager.java#473:98
 blacklistEnded = """
-🔨 **%s Suspension Ended**
+🔨 **%s Suspensão Terminada**
 `%s`
 %s
-Refrain from breaking the rules again
+Evite quebrar as regras novamente
 """
 
 [premimum]
-holderTooManyKeys = "The user holding the key to the premium bot has too many servers registered." 
+holderTooManyKeys = "O usuário com chaves para o Premium está usando-as em servidores demais." 
 
 [website]
     [website.languageProperties]

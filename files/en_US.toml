@@ -1,9 +1,5 @@
 
 [genericMessages]
-botDM = """
-Thanks for telling me! I will forward this message to the GamesROB team.
-*Abusing this feature will lead to a blacklist.*
-"""
 ownersOnly = "This command is only accessible to owners." # Found in: TokensCommand.java#47:75 OwnerCommand.java#94:43 OwnerCommand.java#109:47 OwnerCommand.java#126:43 OwnerCommand.java#140:71 OwnerCommand.java#215:43 OwnerCommand.java#232:43 OwnerCommand.java#240:43 OwnerCommand.java#266:43 OwnerCommand.java#278:43 OwnerCommand.java#329:43 OwnerCommand.java#412:43 OwnerCommand.java#470:43 OwnerCommand.java#509:43 OwnerCommand.java#594:43 OwnerCommand.java#675:71 OwnerCommand.java#687:43 CommandsManager.java#410:75
 upvoteMessage = """
 Thank you for upvoting GamesROB!
@@ -54,7 +50,6 @@ globalStatistics = """
 📈 **%s** votes (**%s** this month)
 🕙 **%s** played
 """
-premiumBotLeave = "I've left the server **%s** as it seems you don't have Premium anymore." 
 cooldown = "⏰ Wait %s to use this command again." # Found in: CommandsManager.java#524:83 CommandsManager.java#525:89 CommandsManager.java#531:100 CommandsManager.java#534:100 CommandsManager.java#539:72
 partnerCheckItOut = "Check it out" # Found in: CommandsManager.java#814:115
 cmdPermDenied = "You are not allowed to run this command here." # Found in: CommandsManager.java#503:77 CommandsManager.java#505:73
@@ -134,7 +129,7 @@ Support us here: %s
     
 [game]
     [game.2048]
-    shortDescription = "" 
+    shortDescription = "The classic 2048 game!" 
     longDescription = """
     Click the reaction for the direction you want to shift the board.
     Tiles with the same value will join together.

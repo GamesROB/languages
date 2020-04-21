@@ -210,7 +210,7 @@ uncompletedChallenges = "%s have uncompleted challenges! `g*achievements`"
     memoryGame = "Memory Game Lowest Time" 
     
 [languageProperties]
-language = "Italian" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+language = "Italiano" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 code = "it_IT" # Found in: LanguageCommands.java#20:76
 country = "Italia" 
 translators = "*Not Found*, Fin#3799" # Found in: LanguageCommands.java#20:132

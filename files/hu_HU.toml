@@ -1196,13 +1196,13 @@ permissionLock = "⛔ A parancs használatához nincs jogod!"
     description = "View information about our partner, alertbot." 
     
 [languageProperties]
-language = "Hungarian" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+language = "Magyar" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 translators = "Mary Johanna (left Discord)#5737, *Not Found*, PandaDriver#1584" # Found in: LanguageCommands.java#20:132
 code = "hu_HU" # Found in: LanguageCommands.java#20:76
 version = "1.6.3" 
 flag = "🇭🇺" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
-country = "Hungary" 
-languageName = "Hungarian" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
+country = "Magyarország" 
+languageName = "Magyar" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
 
 [permissions]
     [permissions.message]

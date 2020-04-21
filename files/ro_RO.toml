@@ -1197,12 +1197,12 @@ permissionLock = "⛔ Nu poți folosi această comandă!"
     description = "View information about our partner, alertbot." 
     
 [languageProperties]
-language = "Limba Engleza" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+language = "Românesc" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 translators = "*Not Found*, *Not Found*" # Found in: LanguageCommands.java#20:132
 code = "ro_RO" # Found in: LanguageCommands.java#20:76
 version = "1.6.2" 
 flag = "🇷🇴" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
-country = "Romania" 
+country = "Românesc" 
 languageName = "Românesc" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
 
 [permissions]
