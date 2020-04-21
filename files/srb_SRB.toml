@@ -1,0 +1,1507 @@
+
+[game]
+    [game.2048]
+    shortDescription = "Spoji plocice dok ne dobijes broj 2048!" 
+    longDescription = """
+    Klikni na reakciju za direkciju koji ti zelis da bi premestio board.
+    Plocice sa istom valutom ce se spojiti zajedno.
+    Probaj da stignes do broja2048!
+    """
+    name = "2048" 
+    points = " pojeni" 
+    loss = "Tabla je popunjena!" 
+    
+    [game.hangman]
+    name = "Hangman" 
+    sendWordDM = "Koju recenicu ti biras?" 
+    shortDescription = "Probaj da pogodis rec koja je postavljena od strane kreatora meca!" 
+    wordSet = """
+    **Ti biras recenicu!**
+    Mozes da se vratis %s.
+    """
+    validGuess = "%s dobio je slovo %s tacno!" 
+    wordPicked = "Rec je odabrana!" 
+    outOfLimbs = "%s Van je ekstremiteta! Dobar pokusaj!" 
+    wordTooBig = "Ta rec je prevelika! Maksimalna velicina je %s." 
+    invalidGuess = "%s [pogodio] %s, i nije tacno pogodio!" 
+    sendWord = "Pre bilo sta, %s: Posalji recenicu koju zelis privatno u DMs!" 
+    longDescription = """
+    Kreator meca je poslao tajnu recenicu botu privatno DMs.
+    Posle toga, ostali igraci su probali da pogode, slovo po slovo, ili celu recenicu!
+    """
+    
+    [game.memorygame]
+    longDescription = """
+    Posalji kombinaciju gde zelis da otkrijes (e.g. a3).
+    Ako se ne uspes 2, setite se njihovih pozicija za kasnije.
+    """
+    shortDescription = "Testiraj svoju memoriju tako sto ces povezivati 2 emojija!" 
+    name = "Igra Memorije" 
+    
+    [game.achievement]
+    onARoll = "Na repetivnosti" 
+    gambleTokens = "Gamble %s %s" 
+    upperClass = "Kornja Klasa" 
+    billGates = "Bukvalno Bill Gejts" 
+    reachTokens = "Get %s %s" 
+    winGames = "Pobedi %s igrice" 
+    unfair = "Ovo nije fer!" 
+    votingWeek = "Nedelja Glasanja!" 
+    stubborn = "Tvrdoglav" 
+    tooManyGames = "Previse Igrica" 
+    richBoi = "Bogati decko" 
+    tryhard = "Probajteze" 
+    highRoller = "Visoki Valjak" 
+    master = "Glavni" 
+    addicted = "Navucen" 
+    votingMonth = "Mesec za Glasanje..?" 
+    tooGood = "Previse dobar" 
+    proPlayer = "Profesionalni Igrac" 
+    intensePlayer = "Silan Igrac" 
+    playGames = "Igraj %s igrice" 
+    lucky = "Srecnik" 
+    # Found in: AchievementType.java#77:79
+    got = """
+    Dosignuca Dobi: **%s**!
+    *%s*
+    +🔸 %s tokene
+    """
+    upvote = "Pozitivno glasaj za GamesROB na DBL %s vremenski" 
+    mediumClass = "Srednja Klasa" 
+    overconfident = "Samouveren" 
+    crowned = "#Crowned" 
+    realPlayer = "Pravi Igrac" 
+    supporter = "Podrska" 
+    rigged = "Namesteno!!" 
+    winTokensGambling = "Pobedi %s za kockanje tokenima" 
+    gambler = "Kockar" 
+    runAchievements = "Koristi `%sachievements` da vidis svoja dostignuca!" # Found in: AchievementType.java#80:104
+    loseTokensGambling = "Izgubi %s tokene kocanje" 
+    
+    [game.uno]
+    invalidColor = "To nije validna boja." 
+    requestPlayer = """
+    Izaberi igraca da promenis decks sa:
+    %s
+    """
+    noColor = "Moras da odaberes boju da bi koristio wildcard (e.g. `B blue`)." 
+    drawCard = "Izvukao si kartu zato sto si zavrsio potez." 
+    game = """
+    Najbolja Karta
+    %s
+    
+    
+    """
+    requestColor = "Molim te izaberi sledecu boju:" 
+    draw2 = " i %s vukao %s karte" 
+    block = ", Blokiran %s" 
+    draw4 = " i odaberi %s, %s vuci %s karte" 
+    playerDrawCard2 = "%s vukao kartu iz spila." 
+    name = "Uno" 
+    longDescription = """
+    Svako dobija 7 karata, koje su ti poslate privatno. Svaku rundu, mozes da koristis kartu.
+    Ako imas kartu sa istom bojom ili brojem kao poslednja boja koriscenja, mozes da je iskoristis.
+    Ako nemas, moras da vuces karte iz spila.
+    """
+    chooseCard = """
+    %s: Posalji broj karte u svoj spilu koju hoces da odigras ovde!
+    Tvoj spil je u privatnim porukama.
+    
+    """
+    played = "%s je odigrao %s%s." 
+    won = "Pobedio si igricu!" 
+    deckDm3 = """
+    Mozes da igras na %s.
+    Na tvom redu, klikni na reakciju za kartu koju hoces da odigras.
+    Klikni na :heavy_plus_sign: reakciju da bi vukao kartu iz spila.
+    Ako zelis, mozes da posaljes slovo iznad na karti ili \"+\" u kanalu za igrice.
+    Tvoj spil:
+    """
+    wildcard = " biraj boju %s" 
+    shortDescription = "Probaj da dobijes istu boju ili broj na svojoj karti, dok nisu gotovi!" 
+    invert = ", Izokrenuti red igrice" 
+    
+    [game.minesweeper]
+    longDescription = """
+    Posalji mesto gde hoces da kopas (e.g. c4), Broj bombi koje su blizu bice pokazan.
+    Nemoj da kopas unutar bombe! Mozes da je oznacis metodom suffixing F (e.g. e1F)
+    """
+    left = "igrac je izasao iz igre" 
+    name = "Minesweeper" 
+    bomb = "Izvukao si bombu!" 
+    shortDescription = "OG minesweeper! Nemoj da eksplodiras!" 
+    
+    [game.mode]
+        [game.mode.house]
+        name = "Kuca" 
+        description = "Broj pokazan u plocicama, tvoje kopanje nece se plusirati u levo, dole i desne plocice." 
+        
+        [game.mode.knightpaths]
+        name = "Vitezov Put" 
+        description = "Broj u plocici koju si iskopao zapravo pokazuje koja je vitezova putanja (Sah)!" 
+        
+        [game.mode.overseer]
+        name = "Glavni" 
+        description = "Znam svaciji spil svaki put!" 
+        
+        [game.mode.reversettt]
+        name = "Izokrenuti" 
+        description = "Preokrenuti dan je! Kako god bi spajao, vidi ovo ako ti pomaze." 
+        
+        [game.mode.crazy]
+        name = "Ludo" 
+        description = "Igraj kartu sa brojem 7 da promenis spil sa drugim igracem!" 
+        
+        [game.mode.reversec4]
+        description = "Preokrenut je dan danas! Nemoj da spojis cetiri!" 
+        name = "Izokrenuti" 
+        
+        [game.mode.rush]
+        name = "Rush" 
+        description = "Mora brzo! isece se na pocetku." 
+        
+    [game.detective]
+    dmAssassin2 = """
+    🗡 Ti si ubica!
+    Ko ce biti prvi nesretnik?
+    %s
+    """
+    dmCitizen = "🏙 Ti si gradjanin." 
+    name = "Detektiv" 
+    wakeFourthPlus = "🌆 Grad se budi, sa jednim gradjaninom manje, i to bi bilo %s. Kada ce prestati?" 
+    murderReveal = "%s bio je ubica!" 
+    assassinKicked = "Ubica je bio izbacen! Konaco, grad moze da spava u miru." 
+    sleep = "🌇 Grad ide da spava." 
+    chooseKick = """
+    
+    Kolektivno, grad mora da odabere ko ce da pobegne sa ovim odvratnim delom, pa mozemo da ih izbacimo za dobrobit.
+    Posalji slovo za koga mislis ko treba da bude izbacen:
+    
+    """
+    invalidUser = "Taj clan ne igra trenutno ili je umro/izbacen iz igre." 
+    shortDescription = "Jedan od vas je ubica. Izbaci ga pre nego sto je prekasno." 
+    wakeThird = "🌆 Grad se budi. Sigurno smo u \"pattern\" teritoriji okruzeni %s's ubistvima." 
+    dmAssassinRecursive2 = """
+    Ko ce biti nocas?
+    %s
+    """
+    sleepIndecisive = "🌇 Grad je otisao da spava, city goes to sleep, neodlucno nije nikoga izbacio. Kako ce se to zavrsiti?" 
+    sleepKicked = """
+    🌇 Grad je otisao da spava, samouvereno izbacuje %s napolje iz grada za pokusaj ubistva.
+    Malo znaju, to nije osoba koju su hteli za izbace...
+    """
+    longDescription = """
+    Ubica ce ubiti nekoga svake noci.
+    Gradjani ce izbaciti nekoga svaki dan.
+    Probaj da izbacis ubicu pre nego sto je prekasno.
+    """
+    wakeSecond = "🌆 Grad se budi, ali ovog puta vremenu fali %s, ko je bio izboden, opet, u njihovoj kuci. Oni kazu dva put da je to samo slucajnost ali, da li je to tacno?" 
+    wakeFirst = "🌆 Grad se probudio, bio je u soku kada su videli da %s je bio izboden u svojoj kuci. Zasto bi neko to uradio?" 
+    
+        [game.detective.response]
+        wait = "⏰ Cekas da noc dodje, da odradis to." 
+        assassinexec = "🗡 Ti si ubio **%s** tokom noci." 
+        assassinguard = """
+        🗡 Prati bilo koga ko je izasao iz njihove kuce.
+        %s
+        """
+        medic = "🏥 Izlecio si **%s** tokom noci." 
+        revived = "🏥 Bio si izlecen od strane **%s**. Oni ti kazu da im ne otkrijes identitet." 
+        detective = "🏥 Proverio si **%s**, i oni su %s%% sigurno su %s." 
+        
+        [game.detective.night]
+        playerquery = """
+        
+        Sta ces uraditi?
+        %s
+        %s Ostati kuci
+        """
+        villager = """
+        🏙 Ti si seljak.
+        Tokom dana, dodji da upoznas svoje komsije seljake da pronadjete ko je zapravo ubica!
+        """
+        assassin = """
+        🗡 Ti si ubica!
+        Ubi nekog ili ostani kuci da gledas ko je uvece budan.
+        """
+        medic = """
+        🏥 Ti si lekar!
+        Leci nekog ko je ranjen ili ostani kuci.
+        """
+        detective = """
+        🔍 Ti si detektiv!
+        Proveri nekog da probas da nadjes ubicu ili ostani kuci.
+        """
+        
+        [game.detective.action]
+        villager = "%s Glasaj koga treba ubiti %s" 
+        assassin = "%s Ubi %s" 
+        medic = "%s Izleci %s" 
+        detective = "%s Provera %s" 
+        
+        [game.detective.notification]
+        healed0 = "🏥 Nepoznato lekar, jedan od seljaka nalazi nacin da izleci i vrati ga **%s** u zivot. ostali su srecni da ga vide zivog, osim ubice, koji je nasao sledecu zrtvu." 
+        healed1 = "🏥 Nepoznati lekar uspeva da spase **%s** takodje. Ko su oni? Da li ce ih ubica naci?" 
+        
+            [game.detective.notification.night]
+            first = "🌃 Noc pocinje u mirnom selu." 
+            execution = """
+            %s Selo se slozio da ubiju %s, i otkrili su da je to %s.
+            🌃 Seljaci, zale za izgubljenog, idu da odmaraju tokom noci.
+            """
+            noaction = """
+            Selo je poteljeno koga treba ubiti, pa su se slozili sa komsijama.
+            🌃 Jos potreseni zbog ubistva, odlucili su da sacekaju.
+            """
+            
+            [game.detective.notification.day]
+            title = "🌇 **Dan %s**" 
+            executetitle = "Seljaci su se dogovorili da je najbolje da se glasa koga treba ubiti.." 
+            killed0 = "🗡 Seljaci se bude da nadju **%s** je nestao. Trazeci ga, nasli su njegovo/njeno telo. Zrtva je ubijena bez milosti." 
+            killed1 = "🗡 Seljaci se bude, i opet saznaju da se jos jedno ubistvo desilo od **%s**." 
+            killed2 = "🗡 Ubica nece prestati, **%s** je sledeca zrtva, seljaci saznaju kada su se probudili." 
+            killedspecial = "🗡 Seljaci se bude da nadju **%s**'s telo. Isto su saznali da postoji nepoznati lekar%s. Buducnost nije svetla za njih." 
+            skipped = "Seljaci se buda. Posle paranoje, srecni su zato sto niko nije bio ubijen. Ubica je jos uvek na slobodi." 
+            
+        [game.detective.errormessage]
+        day0guard = "Ne mozes da cuvas tokom prve noci." 
+        targeted = """
+        Cuo si od drugog ubice, da oni su odabrali tu osobu nocas.
+        Biraj neku drugu opciju.
+        """
+        
+        [game.detective.over]
+        assassin = "🗡 Ubica je pobedio!" 
+        villagers2 = "Villagers win! %s was the assassin." 
+        
+    [game.quiz]
+    cantPlay = "%s: Nagadjao si previse puta! Sacekaj da igras u sledecoj rundi." 
+    noOneAnswered = "Niko to nije mogao da pogodi! Odgovor je bio \"**%s**\"." 
+    answer = "%s (+%s pojeni) Odgovorio je tacno!" 
+    name = "Kviz" 
+    shortDescription = "Da li znas sve odgovore?" 
+    longDescription = """
+    Ko moze prvi da odgovori na pitanje?
+    Posalji slovo koje mislis da je tacan odgovor u poruci.
+    Kako god ko ima vise pojena pobednik je!
+    """
+    revealAnswer = """
+    %s
+    Odgovor je bio: %s
+    
+    """
+    
+    [game.towncountryriver]
+    rate = """
+    
+    
+    %s to pocinje sa %s:
+    %s
+    reci `da` or `ne` zavisi ako mislis da je validno!
+    
+    """
+    longDescription = """
+    Misli brzo! Imas 15 sekundi da zamislis rec koja pocinje sa slovom koja ti je data sa povezanom temom.
+    Ostali igraci mogu da glasasju da li je tvoja tema kompatabilna sa temom `da` ili `ne`!
+    """
+    reactionRate2 = """
+    
+    
+    Glasaj %s's poruku koja zavisi ako mislis da je validna!
+    Theme: **%s**
+    
+    """
+    name = "Grad, Drzava, Reka" 
+    shortDescription = "Da li znas reci? Imas 15 sekundi da smislis reci koje su povezane sa temom." 
+    themeMessage2 = """
+    
+    
+    Brzo, daj mi %s koje pocinje sa %s!
+    ⏰ imas vremena %s
+    
+    """
+    
+        [game.towncountryriver.themes]
+        tv = "Filmovi/TV Program" 
+        boardGame = "Igra Na Tabli" 
+        bodyPart = "Deo Tela" 
+        discordBots = "Discord Bot" 
+        videoGame = "Video Igrice" 
+        movie = "Film" 
+        object = "Objekat" 
+        game = "Igra" 
+        trademark = "Trademark" 
+        anime = "Anime" 
+        celebrity = "Poznata licnost" 
+        animal = "Zivotinja" 
+        fortniteSkin = "Fortnite Skin" 
+        adjective = "Pridev" 
+        name = "Ime" 
+        gender = "Pol" 
+        apps = "Apps/Programs" 
+        company = "Kompanija" 
+        cep = "Zemlja/Drzava/Grad" 
+        youtuber = "Jutjuber" 
+        profession = "Profesija" 
+        meme = "Meme" 
+        
+    [game.tictactoe]
+    longDescription = """
+    Znas kako TicTacToe radi!
+    Samo posalji u slovu kojem zelis da stavis kao naslov (e.g. a).
+    """
+    shortDescription = "Namesti 3 plocica na liniji koje su na tabli!" 
+    name = "TicTacToe" 
+    tie = "Nereseno!" 
+    
+    [game.connectFour]
+    longDescription = """
+    Moras da spojis 4 plocice sa svojom bojom vertikalno, horizontalno ili dijagonalno!
+    Posalji u chat broj za red koji hoces da padne u (e.g.: 3)
+    """
+    name = "SpojiCetiri" 
+    shortDescription = "Baci plocice po redu da bi spojio 4 iste boje!" 
+    
+    [game.roulette]
+    longDescription = """
+    Jedan metak, 8 burskih rupa.
+    Prevrni bure sa bilo kojom jacinom koju zelis, i zeli najbolje kada pucas!
+    """
+    shortDescription = "Prevrni bure, i nemoj da primis udarac!" 
+    chooseStrength = """
+    🔫 Koliko jako mozes da okrenes bure?
+    Posalji broj od %s do %s.
+    """
+    survive = "%s povlaci okidac, i oslobadja se sa zvukom." 
+    shot = "%s povlaci okidac i biva upucan! Kako How lose od njih." 
+    name = "Ruski Rulet" 
+    
+    [game.unonew]
+    longDescription = "Ovo unapredjene izgleda da je zamrznuo igricu. Molim vas prijavite sve u vezi Please report all instances to discord.gg/YsZ9ZDQ" 
+    name = "Uno Remake [BETA]" 
+    shortDescription = "Eksperimentu vezi novog Uno prepravke." 
+    
+[genericMessages]
+ownersOnly = "Ova komanda je dostupna samo vlasnicima." # Found in: TokensCommand.java#47:75 OwnerCommand.java#94:43 OwnerCommand.java#109:47 OwnerCommand.java#126:43 OwnerCommand.java#140:71 OwnerCommand.java#215:43 OwnerCommand.java#232:43 OwnerCommand.java#240:43 OwnerCommand.java#266:43 OwnerCommand.java#278:43 OwnerCommand.java#329:43 OwnerCommand.java#412:43 OwnerCommand.java#470:43 OwnerCommand.java#509:43 OwnerCommand.java#594:43 OwnerCommand.java#675:71 OwnerCommand.java#687:43 CommandsManager.java#410:75
+upvoteMessage = """
+Hvala ti sto si pozitivno glasao za GamesROB!
+Zaradio si:
+**%s**
+Pozitivno glasanje: **%s dana**
+Nastavi da pozitivno glasas za svako-dnevne nagrade!
+"""
+# Found in: CommandsManager.java#478:78
+blacklisted = """
+⛔ Ti si na crnoj listi da ne mozes da koristis GamesROB by %s (%s).
+Razlog: %s
+"""
+tooFast = "⏰ Ti saljes komande pre brzo! Sacekaj pre nego sto se poslednja komanda zavrsila sa ucitavanjem." 
+# Found in: CommandsManager.java#805:101
+noGamesInChannel = """
+Trenutno nema igara u ovom kanalu.
+Mozes da napises `%spomoc` da bi pokrenuo igru!
+"""
+invalidLanguage = "Nije validan jezik." # Found in: LanguageCommands.java#29:92 LanguageCommands.java#44:92
+mentionedMessage = "Moj prefix na ovom serveru je `%s`. Posalji`%shelp` da pocnes!" # Found in: CommandsManager.java#741:126
+cmdPermDeniedAdmin = "Ova komanda je limitirana od strane administratora ovog servera automacki." # Found in: CommandsManager.java#505:78
+# Found in: Match.kt#79:91
+alreadyPlaying = """
+Vec trenutno igras drugu igru na %s!
+Ukucaj `%sstop` da bi zaustavio mec.
+"""
+pagedCommandFooter = "Strana %s/%s (`%s%s <page>` da vidis sledecu stranu)." # Found in: PagedCommand.java#43:100
+# Found in: CommandsManager.java#747:76
+error = """
+❌ Greska se odigrala kada je ubacena ta komanda error!
+Molim te prijavi je sa ID `%s` na nasem serveru (%s).
+Izvinjavamo se.
+"""
+# Found in: CommandsManager.java#494:83
+requirespermissions = """
+Bot treba da ima permisije na serveru da bi ova komanda radila:
+`%s`
+"""
+invalidPage = "To nije validna stranica. Molim te biraj izmedju 1 i %s." # Found in: PagedCommand.java#36:93
+# Found in: GenericCommands.java#210:73
+globalStatistics = """
+📶 **%s** serveri
+👥 **%s** clanovi
+🗨 **%s** tekstualni kanali
+🎮 **%s** igrice (**%s** aktivan)
+❗  **%s** komande
+📈 **%s** glasanje (**%s** ovog meseca)
+🕙 **%s** odigrano
+"""
+premiumBotLeave = "Izasao sam sa servera **%s** isgleda da nemas Premium vise." 
+cooldown = "⏰ Cekaj %s da koristis ovu komandu ponovo." # Found in: CommandsManager.java#524:83 CommandsManager.java#525:89 CommandsManager.java#531:100 CommandsManager.java#534:100 CommandsManager.java#539:72
+partnerCheckItOut = "Vidi ovo!" # Found in: CommandsManager.java#814:115
+cmdPermDenied = "Nemas dopustenja da koristis tu komandu ovde." # Found in: CommandsManager.java#503:77 CommandsManager.java#505:73
+nth2 = "nd" 
+nth1 = "st" 
+nth4 = "th" 
+nth3 = "rd" 
+# Found in: CommandsManager.java#478:79
+blacklisted2 = """
+🔨 **Suspenzija Od GamesROB zbog %s**
+`%s`
+%s
+Mozete da apelujete na %s
+"""
+# Found in: TokensCommand.java#32:73 ProfileCommands.java#311:73
+patreonLevel = """
+Moras barem da budes %s na nasem Patreon da bi koristio ovu komandu.
+Podrzi nas ovde: %s
+"""
+botDM = "I'm just a bot, there's only so much I can talk about!" 
+
+    [genericMessages.upvote]
+    # Found in: RPCManager.java#319:79
+    header = """
+    **Hvala ti sto si glasao za GamesROB!**
+    Nagrada:
+    + 🔸 %s tokeni!
+    """
+    weekend = " x2 (Vikend Vise igraca)" # Found in: RPCManager.java#320:93
+    vip = " x4 (VIP)" # Found in: RPCManager.java#322:80
+    # Found in: RPCManager.java#327:79
+    footer = """
+    
+    
+    ⏰ Mozes da pozitivno glasas posle 12 sati.
+    📆 Sto vise glasas, vise tokena dobijes.
+    ✴ Na vikendima, duplo vise dobijas tokene.
+    """
+    streak = " (%s puta u danu)" # Found in: RPCManager.java#326:93
+    supporter = " x2 (Podrzavaju)" # Found in: RPCManager.java#324:86
+    
+    [genericMessages.languagecommand]
+    entry = "%s (Prevedeno od strane %s)" # Found in: LanguageCommands.java#18:62
+    # Found in: LanguageCommands.java#14:79
+    header = """
+    %s Jezik je trenutno stavljen na %s.
+    Izaberi kod (`ima tamniju pozadinu`) od jezika koji zelis ispod i iznad `%s <code>`:
+    
+    
+    """
+    # Found in: LanguageCommands.java#21:125
+    bottom = """
+    
+    
+    Hoces da pomognes da prevedes na svoj jezik?
+    %s
+    """
+    
+    [genericMessages.notEnoughTokens]
+    beggining = "You don't have enough %s to do that (Need %s more)." # Found in: Utility.java#417:82
+    tokensCommand = "\nNauci kako da dobijes jos tokena sa `%stokens`." # Found in: Utility.java#420:89
+    
+    [genericMessages.cooldown2]
+    vipTime = "[VIP](%s) Vremene: %s" # Found in: CommandsManager.java#534:109
+    title = "Oladi" # Found in: CommandsManager.java#524:90
+    timeLeft = "⏰ Vreme: %s" # Found in: CommandsManager.java#525:99
+    msg = "Na hladjenju si zbog ovde komande!" # Found in: CommandsManager.java#539:77
+    supporterTime = "[Podrska](%s) Vreme: %s" # Found in: CommandsManager.java#531:115
+    
+    [genericMessages.threeplayerPatreon]
+    content = "Moras da budes VIP ili da koristis Premium Bota da igras sa 4+ igraca" 
+    embed = "Pogledaj" 
+    
+[command]
+permissionLock = "⛔ Ne mozes da koristis tu komandu!" 
+
+    [command.info]
+    description = "Vidi statistiku i informacije" 
+    
+        [command.info.embed2]
+        description = "**Bot za zabavne igrice na tvom Discord serveru!**" # Found in: GenericCommands.java#86:93
+        
+            [command.info.embed2.versions]
+            title = "📁 Verzije" # Found in: GenericCommands.java#97:90
+            # Found in: GenericCommands.java#98:94
+            description = """
+            GamesROB Verzija: **%s**
+            Java Verzija: **%s**
+            [JDA](%s) Verzija: **%s**
+            [JDA Framework](%s) Verzija: **%s**
+            Cluster Uptime: **%s**
+            """
+            
+            [command.info.embed2.statistics3]
+            # Found in: GenericCommands.java#89:105
+            description = """
+            
+            ♨ **%s** threads
+            Vidi jos sa `%sstatistics`
+            """
+            
+            [command.info.embed2.links]
+            title = "🔗 Korisni Linkovi" # Found in: GenericCommands.java#91:87
+            # Found in: GenericCommands.java#92:92
+            description2 = """
+            🌐 [Nas Sajt](%s)
+            ➕ [Dodaj bota na server](%s)
+            <:patreon:666319895306174504> [Patreon](%s)
+            ℹ️ [Udji na nas server](%s)
+            ❤ [Credits](%s)
+            ⬆ [Poztivno glasaj za bota na DBL](%s)
+            """
+            
+            [command.info.embed2.statistics2]
+            title = "📟 Globalne Statistike" # Found in: GenericCommands.java#87:93
+            
+            [command.info.embed2.system]
+            # Found in: GenericCommands.java#105:93
+            description2 = """
+            RAM: **%s**
+            OS: **%s**
+            Shard: **%s/%s** (**%s**)
+            %s RPC/JSON Konekcija
+            """
+            title = "💻 Sistem" # Found in: GenericCommands.java#104:88
+            
+    [command.baltop]
+    footer = """
+    
+    Pokazivanje %s unosa po stranici | Stranica %s/%s
+    Pogledaj drugu stranicu sa `%sbaltop %s<page>`.
+    """
+    server = "Clanovi se najvise tokena u **%s**:\n" 
+    global = "The users with most %s on GamesROB globally:\n" # Found in: TokensCommand.java#186:70
+    globalView = "\nDa vidis globalnu rank listu, ukucaj `%sbaltop global`." 
+    invalidPage = "Molim te odaberi stranu od %s do %s." 
+    description = "Pokazi nam rank listu za tokene." 
+    
+    [command.statistics]
+    # Found in: GenericCommands.java#166:101
+    aditionalGlobalStats2 = """
+    
+    🖼 **%s** Slike generisane (avg. **%s** gen/**%s** post)
+    🔼 **%s** slike su otpremne
+    🤖 **%s** avg. AI vreme procesa
+    """
+    # Found in: GenericCommands.java#142:95
+    userStatistics = """
+    :jacina_signala: **%s** cesti serveri
+    :chart_with_upwards_trend: **%s** glasovi (zadnji glas %s)
+    :video_igrice: **%s** igrice odigrane
+    :sat10: **%s** nastavio da igra
+    *Note: Ova informacija mozda nije do kraja tacna.*
+    """
+    description = "Vidi jos statisika u vezi bota i tvoja korist u vezi bota" 
+    globalStatistics = "Globalna Statistika" # Found in: GenericCommands.java#172:115 GenericCommands.java#188:97
+    title = "Tvoje Statisike" # Found in: GenericCommands.java#140:80
+    # Found in: GenericCommands.java#173:83
+    overtimeStatistics = """
+    📶 Servers: %s
+    👥 Clanovi: %s
+    🗨 Tekstualni Kanali: %s
+    🎮 Igrice: %s (Aktivnost: %s)
+    ❗ Komande: %s
+    📈 Pozitivni Glasovi: %s
+    🕙 Igranje: **%s**
+    🏓 Ping: %s
+    📟 Avg Vreme Komande: %s
+    💻 RAM Koriscenje: %s
+    """
+    footer = "Vreme Poredjenja" # Found in: GenericCommands.java#148:82
+    
+        [command.statistics.commandStatistics]
+        mostUsed = "**Najvise koriscenje komande:**\n" # Found in: GenericCommands.java#151:91
+        title = "Komande Statisike" # Found in: GenericCommands.java#150:98
+        
+        [command.statistics.gameStatistics]
+        mostPlayed = "**Najvise odigrane igrice:**\n" # Found in: GenericCommands.java#158:90
+        title = "Statisika Igrice" # Found in: GenericCommands.java#157:95
+        
+    [command.customeco]
+    purgecancelled = "Otkazan purge taska." # Found in: PatreonCommands.java#192:93
+    # Found in: PatreonCommands.java#202:71
+    purgewarning = """
+    ⚠ **Sve** pobede u turnirima i ekonomija bice od strane clanova i tebe  **zauvek izbrisana** in %s.
+    Run `%scustomeco purge` da bi zaustavio ovu akciju.
+    """
+    purgebegin = "🗑 Brisem Deleting napravljenu ekonomsku data..." # Found in: PatreonCommands.java#171:83
+    # Found in: PatreonCommands.java#140:73 PatreonCommands.java#155:73
+    enableddesc = """
+    
+    Upravljaj tako sto ces koristiti `%stokens <add/remove/set> <user> <amount>`.
+    Da ugasis napravljenu ekonomiju, koristi `%scustomeco toggle`. Sva memeorija ce biti sacuvana ako je upalis ponovo.
+    Da izbrises memoriju kucaj `%scustomeco purge`.
+    """
+    purgefinish = "Sva napravljena ekonomska memorije je izbrisana. Kucaj  `%scustomeco toggle` da pustis ekonomiju opet." # Found in: PatreonCommands.java#180:84
+    enabled = "Tvoj server koristi svoju napravljenu ekonomiju." # Found in: PatreonCommands.java#139:84 PatreonCommands.java#140:69 PatreonCommands.java#155:69
+    togglemessage = "ekonomija je postavljena `%s` na **%s**." # Found in: PatreonCommands.java#152:72
+    disableddesc = "\nUkucaj `%scustomeco toggle` da bi dopustio." # Found in: PatreonCommands.java#142:74 PatreonCommands.java#154:74
+    disabled = "Ekonomija je ugasena na tvom serveru." # Found in: PatreonCommands.java#141:72 PatreonCommands.java#142:70 PatreonCommands.java#154:70
+    description = "Menjaj ekonomiju od tvog premium servera" 
+    setname = "The economy name for this server has been changed." # Found in: PatreonCommands.java#227:66
+    
+    [command.help]
+    # Found in: CommandsManager.java#345:77
+    commandInfo = """
+    `%s%s`: %s
+    Zvani: %s
+    Kategorija: %s
+    """
+    other = "%s ostali" # Found in: CommandsManager.java#857:77
+    # Found in: CommandsManager.java#336:107
+    modes = """
+    **Modovi:**
+    %s
+    
+    
+    """
+    # Found in: CommandsManager.java#864:72
+    subCategory2 = """
+    
+    Koristi `%%PREFIX%%pomoc komandu` da bi dobio informaciju u vezi komande (e.g. `%%PREFIX%%help slotovi`).
+    Reaguj sa kategorijskim emotom da bi video sve komande.
+    Argumenti `<in these>` su obavezene, Dok argumenti `[u ovim]` su neobavezni. Ne moras da ih koristis u komandi (e.g. `%%PREFIX%%slots 10`)
+    """
+    beginning2 = "%s **GamesROB v%s** *by deprilula28*\n" # Found in: CommandsManager.java#837:97
+    description = "Dajem ti pomoc!" 
+    # Found in: CommandsManager.java#871:108
+    recentUpdate = """
+    <:update:264184209617321984> Bot je unapredjen! `v%s`
+    Vidi promene sa `%schangelog`.
+    """
+    # Found in: CommandsManager.java#327:75
+    gameInfo2 = """
+    `%s%s`: %s
+    
+    **Dugacka Deskripcija**
+    %s
+    
+    **Podesavanja:**
+    %s
+    
+    %sZvani: %s
+    Jos Informacija: %s
+    """
+    websiteTitle = "Pogledaj nas websajt!" # Found in: CommandsManager.java#869:160
+    setting = "`%s` (Valute %s - %s / Default %s)" # Found in: CommandsManager.java#331:95
+    
+        [command.help.categories]
+        tokencommands = "Tokeni" 
+        servercommands = "Server" 
+        partnercommands = "Partneri" 
+        eventcommands = "Noc Vestica" 
+        games = "Igrice" 
+        profilecommands = "Profil" 
+        infocommands = "Informacija" 
+        matchcommands = "Mec" 
+        
+    [command.backgroundupload]
+    setimg = "Pozadinska slika postavljena!" # Found in: ProfileCommands.java#81:76 ProfileCommands.java#93:72
+    # Found in: ProfileCommands.java#77:84
+    nonpatreon = """
+    Moras da budes VIP na nasem Patreon da bi mogao da menjas svoju pozadinsku sliku!
+    Podrzavaj nas na Patreon da bi dobio kul perks:
+    %s
+    """
+    description = "Postavi pozadinsku sliku za svoj profil" 
+    # Found in: ProfileCommands.java#67:102
+    invalidlink = """
+    Invalidna pozadinska selekcija.
+    Molim te biraj od ponudjenih opcija ili stavi sliku koju zelis da korisis.
+    """
+    imagenotowned = "🔒 Ne mozes da koristis tu sliku. Vidi sve slike koje mozes ta koristis sa `%sprofilebackground`!" # Found in: ProfileCommands.java#87:88
+    
+    [command.profile]
+    title = "Profil (Bodovi sa ovog servera)" # Found in: ProfileCommands.java#297:97
+    unranked = "Nije na rank listi" # Found in: ImageCommands.java#158:77
+    position = "Pozicija" # Found in: LeaderboardCommands.java#81:76 ProfileCommands.java#275:76
+    losses = "Gubitnik" # Found in: LeaderboardCommands.java#83:74 ProfileCommands.java#277:74
+    description = "Vidi svoj profil, ili od nekog drugog!" 
+    game = "Igrica" # Found in: LeaderboardCommands.java#84:72 ProfileCommands.java#272:128 ProfileCommands.java#278:72
+    gambling2 = "%%PREFIX%%slots" # Found in: ProfileCommands.java#193:73
+    upvote2 = "Pozitivno Glasanje" # Found in: ProfileCommands.java#171:68 ProfileCommands.java#174:71
+    tokenGuide = "Vidi svoj ceo profil na sajtu" # Found in: ProfileCommands.java#216:82
+    winMatches2 = "Pobedi Spajanje" # Found in: ProfileCommands.java#182:68
+    overall = "Sve Ukupno" # Found in: LeaderboardCommands.java#48:126 ProfileCommands.java#284:83
+    completeAchievements2 = "%%PREFIX%%uspesi" # Found in: ProfileCommands.java#188:85
+    upvoteEmbed = "ili [klikni ovde](%s) da pozitivno glasas za bota!" # Found in: ProfileCommands.java#234:93
+    gamesPlayed = "Igrice" # Found in: LeaderboardCommands.java#84:79 ProfileCommands.java#278:79
+    victories = "Pobede" # Found in: LeaderboardCommands.java#79:71 LeaderboardCommands.java#82:77 ProfileCommands.java#276:77
+    winPercent = "Pobeda %%" # Found in: LeaderboardCommands.java#85:78 ProfileCommands.java#279:78
+    background = "Postavi svoju profilnu pozadinu sa `g*profilebackgrounds`\n" # Found in: ProfileCommands.java#218:88
+    
+    [command.emote]
+    reset = "Tvoj emoji se resetovao!" # Found in: ProfileCommands.java#331:64
+    # Found in: ProfileCommands.java#323:82
+    animatedPatreon = """
+    Moras da budes patron da bi koristio animirane emojis!
+    %s
+    """
+    cannotUse = "Ja ne mogu da koristim taj emote! Mora da bude na serveru na kojem sam ja." # Found in: ProfileCommands.java#321:117
+    description = "Promeni emoji plocicu pa ces bidi u mecu!" 
+    set = "tvoj emoji je bio postavljen: %s" # Found in: ProfileCommands.java#319:66 ProfileCommands.java#327:66
+    invalid = "to nije emoji ili Discord emote." # Found in: ProfileCommands.java#328:73
+    
+    [command.upvote]
+    setdays = "%s's Pozitivno glasanje dan status je postavljen na%s." # Found in: OwnerCommand.java#116:67 CommandsManager.java#229:118
+    description = "Dajem ti informaciju u vezi tvog zadnjeg pozitivnog glasa" 
+    clickToVote = "Klikni da bi presao na stranicu za glasanje" # Found in: GenericCommands.java#293:108
+    adddays = "%s's status pozitivnog glasanje je dodato by %s." # Found in: CommandsManager.java#231:102
+    messageCanVote = "Mozes da pozitivno glasas za bota za 🔸 %s tokene!" # Found in: GenericCommands.java#290:81
+    # Found in: GenericCommands.java#283:71
+    info = """
+    Zadnji pozitivno glasao: %s
+    Trenutna crta: %s dana (Izgubio %s)
+    Pozitivno glasao %s puta od %s (Vidi svoju istoriju sa `%supvote history`)
+    
+    """
+    removedays = "%s's pozitivno glasanje status dana je izbrisan by %s." # Found in: CommandsManager.java#233:105
+    
+        [command.upvote.history]
+        title = "**Tvoj zadnji pozitivan glas:**\n" # Found in: GenericCommands.java#303:77
+        footer = """
+        
+        Pokazujem %s entries per page | Page %s/%s
+        Vidi sledecu stranu sa `%supvote history <page>`.
+        """
+        
+    [command.perm]
+    reset = "🔨 %s Permisija je resetovvana!" 
+    permReg = "%s **%s** permisije `%s` on %s" # Found in: Permissions.java#128:66
+    invalidPerm = "Netacna permisija!" # Found in: PermissionCommands.java#98:77
+    # Found in: PermissionCommands.java#113:61
+    set = """
+    🔨 Napravljena pravila sto se tice permisija:
+    %s
+    """
+    description = "Promeni permisiju" 
+    allPerms = "SVE" # Found in: Permissions.java#130:78
+    specifySpec = "Molim te objasni `%s`." # Found in: PermissionCommands.java#104:53
+    noRole = "nisam mogao da nadjem ulogu sa tim imenom!" 
+    # Found in: PermissionCommands.java#98:81
+    invalidPermList = """
+    Ta permisija nije validna. Evo ti neke permisije koje mozes da koristis:
+    %s
+    """
+    
+        [command.perm.check]
+        ownHeader = "Tvoje premisije:\n" # Found in: PermissionCommands.java#44:72
+        otherHeader = "%s's Permisije:\n" # Found in: PermissionCommands.java#45:74
+        
+    [command.tokens]
+    remove = "Skinuti %s tokeni iz %s's balansa (Trenutni balans: %s)." # Found in: CommandsManager.java#145:105
+    gamblingNoTokens = "~~Kockanje~~ (Negativno ili nulti balans)" 
+    giveInvalidUser = "You can't give this user %s." # Found in: CommandsManager.java#153:91
+    viewTransactions = "\nDa vidis svoje transakcij, probaj `%stokens transactions`." 
+    baltop = "\nNa Rank Listi **%s** na ovom serveru i **%s** globalno! `%sbaltop`" 
+    achievements2 = "**Zavrsavanje uspeha**: Vidi ih sa `%sachievements`!" 
+    add = "Dodati %s tokeni u %s's balans (Trenutni balans: %s)." # Found in: CommandsManager.java#143:93
+    set = "Set %2$s's balans to %1$s (Trenutni balans: %s)." # Found in: CommandsManager.java#146:111
+    winningMatches = "**Pobednicki mecevei**" 
+    giveInvalidAmount = "You can only give %s to %s %s." # Found in: CommandsManager.java#156:93
+    give = "%s dao %s + 🔶 %s tokena!" # Found in: CommandsManager.java#153:80 CommandsManager.java#156:80 CommandsManager.java#162:76
+    embedUpvote = "[Pozitivno glasaj za bota na DBl da dobijes tokene](%s)" 
+    upvoteLater = "~~Pozitivno glasanje za bota~~ (Mozes opet to da uradis kad %s)" 
+    gamblingTokens = "**Kockanje sa** `g*slots`" 
+    
+        [command.tokens.transactions]
+        footer3 = "Balans = 🔶 %s tokeni." # Found in: TokensCommand.java#117:84
+        title = "**Tvoja transakcija:**\n" # Found in: TokensCommand.java#107:82
+        
+    [command.shardinfo]
+    # Found in: GenericCommands.java#253:74
+    title = """
+    **Shard Informacije:**
+    ```prolog
+    %s
+    ```
+    """
+    users = "Clanovi" 
+    description = "🗄 *Debug* Vidi shard informaciju dump" 
+    channels = "Kanali" 
+    games = "Igrice" 
+    guilds = "Serveri" 
+    ping = "Ping" 
+    shard = "Shard" 
+    singleShard = "%s **Shard %s**: %s serveri (%s%% load), %s kanali, %s clanovi, %s ping i %s igrice." 
+    ram = "RAM Koriscenje" 
+    status = "Status" 
+    newTitle = "**Bot statisika i informacije:**\n" 
+    
+    [command.patreon]
+    insiders = "Insajderi" 
+    supporter = "Podrzavaju" 
+    # Found in: PatreonCommands.java#208:61
+    text = """
+    ako vam se dopada bot, molim vas doniraj na nas Patreon:
+    %s
+    Trebaju nam pare da placamo host i da pravimo bota sto boljim.
+    Bilo koja suma novca puno pomaze, i ti ces dobiti nagrade!
+    
+    Patreon Status: %s
+    """
+    premium = "Premium" 
+    vip = "VIP" 
+    none = "Nije Donirao" 
+    description = "Vidi jos informacija u vezi nase Pateron kampanje!" 
+    
+    [command.invite]
+    description = "Pozovi bota!" 
+    
+        [command.invite.embed]
+        description = "You'll need the Manage Server permission in the server you want to add it on." # Found in: GenericCommands.java#74:85
+        title = "Klikni da bi pozvao GamesROB!" # Found in: GenericCommands.java#73:78
+        
+    [command.achievements]
+    description = "Vidi svoj progres u svojim dostignucima" 
+    beginning = "Evo su svi uspesi koje mozes da kompletiras:\n\n" # Found in: TokensCommand.java#75:83
+    noAchievements = "Ni jedan uspeh nije spreman za tebe trenutno! :wink:" # Found in: TokensCommand.java#73:102
+    upvote = "Pozitivno glasaj za bota na DBL" # Found in: TokensCommand.java#97:110
+    
+    [command.stop]
+    response = "Ovaj mec se zaustavio." # Found in: Match.kt#107:58
+    description = "Forsiraj da se trenutni mec zaustavi" 
+    matchStopped = "⏹ Mec je stopiran by %s" 
+    
+    [command.leave]
+    description = "Izasao je tvoj trenutni mec" 
+    creator = "Ti si kreator meca, koristi `%sstop` da bi stopirao mec." 
+    notInMatch = "Nisi u ovom mecu!" 
+    cantLeave = "Ne mozes da izadjes iz ovog meca." 
+    message = "%s je izasao iz meca.\n" 
+    
+    [command.highscores]
+    entry = "%s held by %s" # Found in: TokensCommand.java#135:82
+    global = "Svetski Rekord Rezultat:" # Found in: TokensCommand.java#124:69 TokensCommand.java#150:87
+    server = "Top rekord u igrici na **%s**:" # Found in: TokensCommand.java#125:69
+    
+        [command.highscores.category]
+        entry = "%s mesto je drzano od strane %s (%s)" # Found in: TokensCommand.java#167:75
+        server = "%s top rekorderi na ***%s**:" 
+        global = "%s top rekord globalno :" 
+        
+    [command.idlerpg]
+    description = "Nauci josd u vezi naseg partnerskog bota, IdleRPG!" 
+    message = "IdleRPG je bot sa prodavnicom, karakterima, klasama, tamnicama, stvarima, PvP, ekonomijom, kockanjem, svadbom, muzikom i jos mnogo toga!" 
+    
+    [command.leaderboard]
+    # Found in: CommandsManager.java#208:107
+    disabledWebsite = """
+    Ova komanda je privremeno ugasena, rank lista je jos uvek otvorena:
+    %s
+    """
+    websiteLink = "Vidi sve na nasem sajtu" # Found in: LeaderboardCommands.java#140:83
+    noWinner = "~nema pobednika trenutno~" # Found in: LeaderboardCommands.java#133:80
+    description = "Vidi rank listu!" 
+    unknownUser = "*nepoznati clan*" # Found in: LeaderboardCommands.java#93:117 LeaderboardCommands.java#110:81
+    
+    [command.cafe]
+    description = "Nauci jos u vezi naseg partnerskog bota, Cafe!" 
+    message = "Cafe je dodatni stil ekonomije. Bot koji sluzi da bi podigao tvoj server! Ima preko 30 retkih stvari, dosta poboljsanja, rank listu i jos!" 
+    
+    [command.setprefix]
+    description = "Postavi komadnu prefix za svoj server!" 
+    tooLong = "Taj prefix je previse dugacak!" # Found in: GenericCommands.java#267:120
+    message = "Promeni botov prefix za ovog igraca!" # Found in: GenericCommands.java#274:66
+    
+    [command.discordserversme]
+    description = "Nauci jos u vezi naseg partnera, DiscordServers.me!" 
+    message = """
+    Da li hoces da trazis i da delis Discord servere?
+    Pogledaj nase partnera, DiscordServers.me!
+    """
+    
+    [command.ping]
+    description = "🗄 *Debug* Vidi aktivnost bot" 
+    message = """
+    🏓 Pong!
+    Bot -> Discord: %s
+    You -> Bot: %s
+    Websocket: %s
+    Avarage Command Processing Time: %s
+    """
+    
+    [command.trickortreating]
+    # Found in: HalloweenEvent.java#97:108
+    rateTime2 = """
+    Smicalica ili poslastica?
+    Klikni na reakciju ispod da bi odabrao:
+    🍬 +%s bombone za njih
+    ⛔ %s od njihovih bombona
+    """
+    alreadyLooking = "Vec gledas za kanal." # Found in: HalloweenEvent.java#152:138
+    candyCommand = "\nPogledaj svoje bombone tako sto ces ukucati `%scandy`!" # Found in: HalloweenEvent.java#301:57
+    findingChannel2 = "🔎 Trazenje za server (Vremenski cekanje od %s)..." # Found in: HalloweenEvent.java#207:90
+    quit = "Prestani da trazis konekciju." # Found in: HalloweenEvent.java#141:73
+    # Found in: HalloweenEvent.java#294:92 HalloweenEvent.java#298:62
+    rateTreat = """
+    🍬 Slatkisi!
+    + %s bomboni su dodeljeni %s.
+    """
+    alreadyConnected = "Ovaj server vec ima konekciju koja se desava." # Found in: HalloweenEvent.java#143:131
+    # Found in: HalloweenEvent.java#294:130 HalloweenEvent.java#298:100
+    rateTrick = """
+    ⛔ Trik!
+    - %s Bombone su izbacene iz %s.
+    """
+    # Found in: HalloweenEvent.java#174:104
+    connectedProxy2 = """
+    Moras da %s nateras njih da ti daju bombone!
+    🚩 Prijavi ovu konekciju (Nemoj namerno da prijavljujes)
+    """
+    description = "Smicalica ili poslastica, ali je na Discordu!" 
+    cantQuitStarted = "Konekcija je vec pocela." # Found in: HalloweenEvent.java#139:60
+    connected = "Konektovao si se na drugi server!\n" # Found in: HalloweenEvent.java#166:95 HalloweenEvent.java#167:97 HalloweenEvent.java#173:101 HalloweenEvent.java#174:98
+    # Found in: HalloweenEvent.java#167:102
+    connectedHost2 = """
+    U %s, mozes da biras da ih tretiras ili da ih zeznes.
+    🚩 Priavji ovu konekciju (Nemoj da prijavljujes bez razloga)
+    """
+    timeUp = "Vreme je isteklo! Nema vise smicalica ili poslastica  posle svega..." # Found in: HalloweenEvent.java#104:107 HalloweenEvent.java#105:105
+    matchfindLimit = "konekcija za trazenje se zavrsilo." # Found in: HalloweenEvent.java#85:113
+    rateWait = "moras da sacekas %s da bi ocenjivao!" # Found in: HalloweenEvent.java#302:86
+    forceend = "Konekcija je na silu zavrsena." # Found in: HalloweenEvent.java#260:57 HalloweenEvent.java#339:127 HalloweenEvent.java#340:125
+    flagged = "Konekcija je prijavljena i zavrsila se." # Found in: HalloweenEvent.java#261:86
+    # Found in: HalloweenEvent.java#169:105 HalloweenEvent.java#176:106
+    connectionServers = """
+    
+    
+    **Kuca:** %s
+    **Gost:** %s
+    """
+    flagNoContent = "Nema nicega da se prijavi. Molim vas nemojte da zloupotrebljavate ovu mogucnost bicete na crnoj listi." # Found in: HalloweenEvent.java#253:123
+    
+    [command.tournment]
+    notstarted = "GamesROB turnir nije napravljen! Koristi `%stournment napravi <end time>` da bi poceo turnir." # Found in: PatreonCommands.java#34:94 PatreonCommands.java#83:94 PatreonCommands.java#107:107
+    # Found in: PatreonCommands.java#93:44
+    enddm = """
+    Turnir se zavrsio!
+    Mozes da nagradis najbolje clanove tako sto ces im poslati tokene (`%stokens add <member> <amount>`).
+    """
+    timelimit = "Ne mozes da krenes turnir koji uzima jos %s." # Found in: PatreonCommands.java#65:103
+    description = "napravi GamesROB turnri" 
+    askend = "Ovaj turnir je vec zavrsen. Pitaj moderatora da zavrsi turnir `%stournment end`." # Found in: PatreonCommands.java#36:113
+    purge = "Turnir je izbrisan." # Found in: PatreonCommands.java#116:64
+    # Found in: PatreonCommands.java#69:109
+    alreadystart = """
+    Turnir je vec poceo! Zavrsava se  %s.
+    Moderator na serveru moze da ga zavrsi sa komandom `%stournment purge`.
+    """
+    timeset = "Turnir je napravljen! Namesten je da se zavrsi u %s.\n" # Found in: PatreonCommands.java#76:66
+    notended = "Turnir se jos nije zavrsio. Ako zelis na silu da se zaustavi, koristi `%stournment purge`." # Found in: PatreonCommands.java#85:116
+    
+        [command.tournment.leaderboard]
+        # Found in: PatreonCommands.java#44:116
+        header = """
+        Turnir se zavrsava %s.
+        Top %s igraci:
+        
+        """
+        # Found in: PatreonCommands.java#89:119
+        endheader = """
+        **Zavrseni turnir!**
+        Rank Lista:
+        
+        """
+        entry = "%s sa **%s** pobedjuje\n" # Found in: PatreonCommands.java#50:60 PatreonCommands.java#127:88
+        
+    [command.userlang]
+    set = "Tvoj jezik je stavljen na %s" # Found in: LanguageCommands.java#50:65
+    description = "Promeni svoj jezik." 
+    
+    [command.join]
+    gameStarted = "Ova igra je vec pocela!" # Found in: Match.kt#81:115
+    alreadyOnMatch = "Ti si vec u mecu!" 
+    collectiveMatch = "Ovo je kolektivan mec, mozes samo da krenes da igras!" 
+    description = "Usao u mec u trenutnom kanalu" 
+    full = "Mech je trenutno pun!" 
+    
+    [command.gdpr]
+    description = "Dobi svu memoriju koju smo sacuvali sa tvojim Clan ID profilom." 
+    dm = "Evo su sve informacije koje mi imamo na tvom profilu:" 
+    message2 = "A private message will be sent to you shortly." 
+    
+        [command.gdpr.deletion]
+        info = "You can request data deletion with `g*gdpr remove`" # Found in: GenericCommands.java#337:79
+        # Found in: GenericCommands.java#360:74
+        message = """
+        :exclamation: **All** of your data will be **permanently** deleted! :exclamation:
+        If you change your mind, you will have the option to cancel this request for __30 days__ following the request using `%sgdpr remove`.
+        """
+        # Found in: CommandsManager.java#458:75
+        reminder = """
+        :exclamation: Your data is currently scheduled to be deleted on **%s** :exclamation: 
+        If this was done by accident or you change your mind, you can cancel this operation using `%sgdpr remove`.
+        """
+        cancelled = "Data deletion was cancelled." # Found in: GenericCommands.java#356:76
+        
+    [command.guildlang]
+    description = "Promeni automacki jezik ovog servera." 
+    set = "Jezik za ovaj server je stavljen na %s" # Found in: LanguageCommands.java#35:66
+    
+    [command.changelog]
+    description = "Pokazi sve promene na najnovijem unapredjenju" 
+    # Found in: GenericCommands.java#224:63
+    text = """
+    **GamesROB v%s**
+    From %s
+    ```diff
+    %s
+    ```
+    *Promene su najcesce svkakog petka, pravi se sledece promene %s.*
+    *Mozes da predlozis ideje i resenja za bagove na nasem serveru: %s*
+    """
+    
+    [command.slots]
+    description = "Kockaj svoje toene u slot igricama! Sigurno nije rigged veruj mi" 
+    invalidTokens = "You can only gamble %s to %s %s." # Found in: SlotsCommand.java#30:94
+    lost = "Izgubio" 
+    earnt = "Zarada" 
+    all = "sve" # Found in: SlotsCommand.java#31:68
+    matchEnd = "Result: %s" # Found in: SlotsCommand.java#79:92
+    matchHeader = "Vrtimo za 🔸 %s tokene..." # Found in: SlotsCommand.java#46:88 SlotsCommand.java#90:104
+    
+    [command.weekly]
+    timeout = "You can get your weekly %s again in %s." # Found in: TokensCommand.java#34:67
+    description = "Dobi svoje nedeljne token zato si bio dobar donator!" 
+    message = "Zaradio si 🔸 %s tokene!" # Found in: TokensCommand.java#41:63
+    
+    [command.support]
+    message = """
+    Ako imas probleme sa botom, hoces da predlozis nove promene, da budes obavesten kada se bot menja ili samo da pricas sa ljudima koji ga koriste, vidi nas Discord server:
+    https://discord.gg/rUpAqVa
+    """
+    description = "Dam ti link za pomocni server u vezi bota" 
+    
+    [command.candy]
+    # Found in: HalloweenEvent.java#130:61
+    own = """
+    🍬 Imas %s bombone!
+    Mozes da dobijes jos bombona tako sto ces ici na smicalicu ili poslasticu!
+    """
+    other = "🍬 %s ima %s bombone!" # Found in: HalloweenEvent.java#131:63
+    description = "Vidi koliko bombona imas ili neko drugi" 
+    
+    [command.listplayers]
+    description = "Lista igraca u trenutnom mecu u kanalu" 
+    # Found in: Match.kt#112:63
+    header = """
+    **%s Mec**
+    %s
+    
+    
+    """
+    
+    [command.website]
+    description = "Evo ti link za websajt" 
+    message = """
+    Imamo websajt gde mozete da znate jos u vezi bota!
+    https://gamesrob.com
+    """
+    
+    [command.alertbot]
+    description = "Vidi jos inofrmacija u vezi naseg partnera, alertbot." 
+    
+[gameFramework]
+betting = "💰 Kladjenje %s 🔸 tokeni!" 
+defaultMode = "Normalni %s" 
+waiting = "⏰ Cekanje\n" 
+timeout = "Mec se zaustavio posle **%s**." 
+viewPlayers = "Vidi igrace sa `%slistplayers`." 
+findMatches = "Mozes da igras sa ljudima na zvanicnom GamesROB serveru!" 
+playersOutOfRange = "Mozes samo da imas izmedju %s i %s igraca u ovoj igri!" 
+emote = "Mozes da promenis emote koji pokazujes kao u igri sa %semote!" 
+viewPlayersStop = "Vidi igrace sa `%slistplayer` i stopiraj sa `%sstop`." 
+next = " - **Sledeci**" 
+requireBetting = """
+U ovoj igri mora da se kladi!
+Dodaj `bet=amount` na kraju komande odaberi koliko tokena treba da bude iskorisceno za opkladu.
+"""
+collectiveMatch2 = """
+**%s Game**
+%s
+
+
+"""
+everyoneQuit = "Mec je zaustavljen zato sto su svi izasli." 
+# Found in: Match.kt#67:88
+multiplayerMatch = """
+**Vise-igraca %s Mec**
+%s
+
+
+"""
+begin = """
+**Spremno je!**
+**%s**
+%s
+
+
+"""
+typeToJoin = "Mozes da napises `%sjoin` da bi usao." 
+joinToPlayNoReaction2 = "🚪 Type `%sjoin` to join!" 
+gameOver = """
+**Kraj Igrice!**
+%s
+
+
+"""
+mode = "\n**%s Mod:** %s" 
+modePlayButtonHeader = "\n**Odaberi %s mod:**" 
+modePlayButton = "\n%s da igras %s" 
+addBot = "Klikni 🤖 da dodas AI igraca!" 
+singleplayerMatch = """
+**Single-player %s Match**
+%s
+
+
+"""
+join = "%s je usao u mec! %s/%s" 
+settingOutOfRange = "Podesavanja `%s` moraju da budu izmedju %s i %s!" 
+winner = "%s pobedio je!" 
+patreon = "Pomozi nam da odrzavamo bota tako sto ces nas podrzavati na Pateronu za manje nego za kafu!" 
+creatorQuit = "Mec %s biva prekinut zato sto je kreator izasao." 
+draw = "Nereseno je!" 
+rematch = "Klikni na :arrows_counterclockwise: za jos jednu rundu!" 
+activeGame = "Ima neka druga igrica koja se igra u ovom kanalu." 
+left = "%s izasao iz meca!" 
+turn = "%s's red" 
+now = " - **Sad**" 
+joinToPlay2 = "🚪 Napisi `%sjoin` ili klikni vrata da bi usao!" 
+playButton = "Klikni :arrow_forward: da pocne %s!" 
+gameOverSmall = "**Kraj Igrice!**\n\n" 
+victorymessage = "Pobedio!" 
+uncompletedChallenges = "%s imas ne zavrsen izazov! `g*achievements`" 
+
+    [gameFramework.highscore]
+    playerbest = """
+    %s
+    **Svetsi Rekord**: %s
+    **Rekord Na Serveru**: %s
+    **Ovo Se Otvara**: %s **Personalni Najbolji** (%s%s u serveru/%s%s svetski)
+    """
+    connect4 = "Spoji Sto Vise Mozes Tiles" 
+    guildbest = """
+    %s
+    **Svetski Rekord**: %s
+    **This Run**: %s **Rekord Na Serveru** (%s%s svetski)
+    """
+    notbest = """
+    %s
+    **Personalni Najbolji**: %s
+    **Ova Runda*: %s (%s%s in the server/%s%s worldwide)
+    """
+    uno = "Uno Najsporije Vremene" 
+    minesweeper = "Minesweeper Najsporije Vreme" 
+    wr = """
+    %s
+    **U Ovoj Igri**: %s **Svetski Rekord!**
+    """
+    minesweeperKnightPaths = "Minesweeper Vitezova Putanja Najmanje Vreme" 
+    quiz = "Najvise pojena u Kvizu" 
+    memoryGame = "Igra Memorije Najsporije Vreme" 
+    
+[languageProperties]
+language = "Serbian" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+code = "sr_SR" # Found in: LanguageCommands.java#20:76
+country = "Sjedinjene Americke Drzave" 
+languageName = "Serbian" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
+translators = "Fin#3799" # Found in: LanguageCommands.java#20:132
+version = "1.8.6" 
+flag = "🇷🇸" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
+
+[permissions]
+    [permissions.message]
+    history = "Vidi Istoriju Poruka" 
+    
+        [permissions.message.embed]
+        links = "Salji linkove" 
+        
+        [permissions.message.ext]
+        emoji = "Koristi spoljne emotes" 
+        
+        [permissions.message.attach]
+        files = "Posalji fajlove" 
+        
+        [permissions.message.add]
+        reaction = "Dodaj Rekaciju" 
+        
+[transactions]
+betting = "Koristi se za kockanje u rundama" 
+slots = "Korisceno za kockanje u slotovskoj masini" # Found in: SlotsCommand.java#34:81 SlotsCommand.java#72:98
+winGamePrize = "Nagrada za pobednika ovog meca" 
+changingEmote = "Promeni naslov svog emoji" 
+upvote = "Glasanje za bota na DBL" # Found in: RPCManager.java#333:72
+weekly = "Nedeljna Patreon Komanda" # Found in: TokensCommand.java#37:128
+cheater = "Varalica" 
+completeAchievement = "Zavrsavas postignuce" # Found in: AchievementType.java#75:112
+give = "Dao si tokene" # Found in: CommandsManager.java#159:124
+got = "Dobio si tokene" # Found in: CommandsManager.java#161:103
+
+[events]
+# Found in: EventTimer.java#19:104 EventTimings.java#49:104
+hasntBegun = """
+Ova komanda moze da bude odradjena samo dok %s!
+To desavanje se desava u %s.
+"""
+halloween = "Noc Vestica" # Found in: EventTimings.java#29:29
+
+[errors]
+    [errors.dmdisabled]
+    other = "%s ima privatne poruke sa botom ugasene. Ovo je potrebno za ovu igricu." 
+    self = "Imas privatne poruke sa botom ugasene. Ovo je potrebno za ovu komandu." # Found in: GenericCommands.java#345:88
+    
+[badges]
+staff = "Staff" 
+translator = "Prevodilac" 
+achiever = "Pobednik" 
+highestBaltop1st = "1st u baltop" 
+patron = "Patron" 
+highestBaltop3rd = "3 mesto u baltop" 
+globalBaltopTop10 = "Top 10 globalno u baltop" 
+developer = "Developer" 
+highestBaltop2nd = "2 u baltop" 
+# Found in: AchievementType.java#101:71
+earned = """
+
+Zaradio si **%s** bedz!
+ sad ce da se pokaze na `%sprofile`.
+"""
+
+[languagecommand]
+bottom = "Hoces da pomognes da prevedis bota na svoj jezik? %s" # Found in: LanguageCommands.java#21:125
+
+[genericMesages]
+# Found in: CommandsManager.java#473:98
+blacklistEnded = """
+🔨 **%s Suspenzija Zavrsena**
+`%s`
+%s
+Nemoj te da krsite pravila ponovo
+"""
+
+[backgroundimages]
+    [backgroundimages.bubbles]
+    name = "Mehurici" 
+    description = "Obojeni mehurici!" 
+    
+    [backgroundimages.shapes]
+    name = "Oblici" 
+    description = "Nosi malo istorije." 
+    
+    [backgroundimages.halloween]
+    name = "Noc Vestica" 
+    description = "Naj-jezivije od svih vremena." 
+    
+    [backgroundimages.xmas]
+    name = "Nova Godina" 
+    description = "Samo za vesela vremena." 
+    
+    [backgroundimages.custom]
+    name = "Custom" 
+    description = "Patreon ekskluzivna pozadina!" 
+    
+    [backgroundimages.bday]
+    name = "Rodjendan" 
+    description = "Konfete!" 
+    
+[challenges]
+    [challenges.complete]
+    any = "\n\nIzazov zavrsen: %s +🔶 %s tokeni" # Found in: Challenges.java#57:70
+    user = "\n%s zavrsio je izazov: %s +🔶 %s tokeni" # Found in: Challenges.java#56:88
+    
+[premimum]
+holderTooManyKeys = "The user holding the key to the premium bot has too many servers registered." 
+
+[website]
+    [website.languageProperties]
+    code = "en_US" 
+    language = "English" 
+    country = "USA" 
+    languageName = "🇺🇸 American English" 
+    translators = "deprilula28#3609" 
+    
+    [website.game]
+        [website.game.2048]
+        name = "2048" 
+        description = "Join numbers together, and try to reach 2048!" 
+        bulletpoint = "Powers of two" 
+        
+        [website.game.connectfour]
+        name = "ConnectFour" 
+        description = "Drop tiles in order to connect 4 of your color!" 
+        bulletpoint = "Inversed mode" 
+        
+        [website.game.hangman]
+        name = "Hangman" 
+        description = "Try to guess the word submitted by the match's creator!" 
+        bulletpoint = "Your own words against you" 
+        
+        [website.game.minesweeper]
+        name = "Minesweeper" 
+        description = "The OG minesweeper! Don't get blown up!" 
+        bulletpoint = "Knight paths & house modes" 
+        
+        [website.game.tictactoe]
+        name = "TicTacToe" 
+        description = "Arrange 3 of your tile in a line within the board!" 
+        bulletpoint = "Inversed mode" 
+        
+        [website.game.detective]
+        name = "Detective" 
+        description = "Find and kick the murderer before it's too late!" 
+        bulletpoint = "Who did it?" 
+        
+        [website.game.roulette]
+        name = "Russian Roulette" 
+        description = "Who will be the lucky one to leave with the money?" 
+        bulletpoint = "Requires betting" 
+        
+        [website.game.quiz]
+        name = "Quiz" 
+        description = "Do you know all the answers?" 
+        bulletpoint = "3 thousand questions" 
+        
+        [website.game.uno]
+        name = "Uno" 
+        description = "Try to get the same color or number on one of your cards, until they're over!" 
+        bulletpoint = "Uno!" 
+        
+        [website.game.towncountryriver]
+        name = "Town, Country, River" 
+        description = "Do you know words? You have 15 seconds to come up with words within a theme." 
+        bulletpoint = "Very brazilian origins" 
+        
+        [website.game.game2048]
+        name = "2048" 
+        description = "Join numbers together, and try to reach 2048!" 
+        bulletpoint = "Powers of two" 
+        
+        [website.game.memory]
+        name = "Memory Game" 
+        description = "Can you remember where the emojis were?" 
+        bulletpoint = "Was it there?" 
+        
+        [website.game.memorygame]
+        name = "Memory Game" 
+        description = "Can you remember where the emojis were?" 
+        bulletpoint = "Was it there?" 
+        
+    [website.commonWrapper]
+    githubSource = "Github Source" 
+    trelloPage = "Trello Page" 
+    dblListing = "DBL Listing" 
+    supportServer = "Support Server" 
+    myServers = "My Servers" 
+    mutualServersDropdown = "Servers" 
+    help = "Commands" 
+    translators = "Translations" 
+    joinServer = "Join Our Server" 
+    addBot = "Add The Bot" 
+    logIn = "Log In" 
+    signOut = "Sign Out" 
+    language = "Language" 
+    
+    [website.home]
+    botDescription = "The Discord bot for playing chat games right on your server!" 
+    invite = "Add it to your server" 
+    upvote = "Upvote it on DBL" 
+    becomePatreon = "Support us on Patreon" 
+    addtodiscord = "Add to your Discord" 
+    readMore = "Read more" 
+    botinfo = "Command List and Info" 
+    discordserversmeDescription1 = "Do you want to find or share Discord servers?" 
+    discordserversmeDescription2 = "Check out our partner, DiscordServers.me!" 
+    servers = "servers" 
+    commands = "commands" 
+    
+        [website.home.changelog]
+        title = "What's new with GamesROB v%s" 
+        subtitle = "From %s" 
+        
+        [website.home.patreon]
+        title = "Become a patron!" 
+        description = "Help us GamesROB running for a price less than a coffee every month and get rewards in return!" 
+        button = "View the page" 
+        
+        [website.home.gameFeaturesList]
+        players = " players" 
+        ai = "Play with other users or AI" 
+        fromDiscord = "Right from Discord!" 
+        
+        [website.home.haveFunTogether]
+        title = "Have fun together!" 
+        description = "These are classic party games, and you can play them with basically as many people as you'd like!" 
+        
+        [website.home.playCompetitively]
+        title = "Be competitive!" 
+        description = "You can see view leaderboards on your Discord server and on it's page in the website! Who's the best?" 
+        
+        [website.home.goGetTheMoney]
+        title = "Go get the money!" 
+        description = "The bot includes a virtual currency for bets in games and minigames like slots!" 
+        
+    [website.server]
+    rankingName = "Category" 
+    overall = "Overall" 
+    position = "Position" 
+    user = "User" 
+    wins = "Victories" 
+    lost = "Losses" 
+    gamesPlayed = "Matches" 
+    settings = "Settings" 
+    nth1 = "st" 
+    nth2 = "nd" 
+    nth3 = "rd" 
+    nth4 = "th" 
+    leaderboard = "Leaderboard" 
+    viewallmembers = "View all members" 
+    viewall = "View all scores" 
+    
+    [website.serverEdit]
+    language = "Language" 
+    permStartGame = "Starting Games Permission" 
+    permStopGame = "Stopping Games Permission" 
+    default = "Default" 
+    submit = "Save Changes" 
+    mode = "Mode" 
+    target = "Target" 
+    location = "Location" 
+    permission = "Permission" 
+    gamestart = "Start match of " 
+    gamejoin = "Join match of " 
+    gameleave = "Leave match of " 
+    gamestop = "Stop match of " 
+    owngamestop = "Stop own match of " 
+    command = "Run command " 
+    viewotheruserprofiles = "View other user profiles" 
+    viewglobalbaltop = "View global baltop" 
+    deny = "Deny" 
+    allow = "Allow" 
+    
+    [website.help]
+    intro = "Intro" 
+    commands = "Commands" 
+    credits = "Credits" 
+    currency = "Guide to Tokens" 
+    tictactoe = "TicTacToe" 
+    connectfour = "ConnectFour" 
+    minesweeper = "Minesweeper" 
+    hangman = "Hangman" 
+    roulette = "Russian Roulette" 
+    detective = "Detective" 
+    quiz = "Quiz" 
+    uno = "Uno" 
+    games = "Games" 
+    infocommands = "Information" 
+    cooldownMessage = "This command can only be executed every " 
+    cooldownMessageSupporter = "For Patreon Supporters, this is reduced to " 
+    cooldownMessageVIP = "For Patreon Premium members, this is reduced to  " 
+    permissionsMessage = "In order for this command to work, the bot requires the Discord permissions: " 
+    adminOnlyMessage = "By default, this command is limited to server administrators only." 
+    usageMessage = "Usage: " 
+    features = "Features" 
+    
+    [website.premiumPage]
+    registerServer = "Confirm using one of your keys in this server:" 
+    keysRemaining = " keys remaining" 
+    registeredServers = "The servers you have registered with your premium keys are:" 
+    revokeButton = "Revoke" 
+    addButton = "Add to a server" 
+    

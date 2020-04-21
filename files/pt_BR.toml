@@ -1,0 +1,1498 @@
+
+[game]
+    [game.2048]
+    name = "" 
+    points = "" 
+    shortDescription = "" 
+    longDescription = "" 
+    loss = "The board was filled!" 
+    
+    [game.hangman]
+    name = "" 
+    sendWordDM = "" 
+    shortDescription = "" 
+    wordSet = """
+    **You chose the sentence!**
+    You can go back to %s.
+    """
+    validGuess = "%s got the letter %s on point!" 
+    wordPicked = "" 
+    outOfLimbs = "%s is out of limbs! Nice try!" 
+    invalidGuess = "%s guessed %s, and got it wrong!" 
+    sendWord = "Before anything, %s: Send the sentence you want in DMs!" 
+    longDescription = "" 
+    wordTooBig = "That word is too big! The maximum size is %s." 
+    
+    [game.memorygame]
+    longDescription = "" 
+    shortDescription = "" 
+    name = "" 
+    
+    [game.achievement]
+    onARoll = "" 
+    gambleTokens = "Gamble %s %s" 
+    upperClass = "" 
+    billGates = "Bill Gates" 
+    reachTokens = "Get %s %s" 
+    winGames = "Win %s games" 
+    unfair = "" 
+    votingWeek = "Semana de Votação!" 
+    stubborn = "Teimoso" 
+    tooManyGames = "Jogos Demais" 
+    richBoi = "Riquinho" 
+    tryhard = "Tryhard" 
+    highRoller = "Rolador" 
+    master = "Mestre" 
+    addicted = "Viciado" 
+    votingMonth = "Mês de Votação..?" 
+    tooGood = "Bom Demais" 
+    proPlayer = "Pro Player" 
+    intensePlayer = "Jogador Intenso" 
+    playGames = "Jogue %s partidas" 
+    lucky = "Sortudo" 
+    # Found in: AchievementType.java#77:79
+    got = """
+    Conquista Desbloqueada: **%s**!
+    *%s*
+    +🔸 %s tokens
+    """
+    upvote = "Vote para GamesROB no DBL %s vezes" 
+    mediumClass = "Classe Média" 
+    overconfident = "Confidente demais" 
+    crowned = "#Coroa" 
+    realPlayer = "Jogador de Verdade" 
+    supporter = "Suportador" 
+    rigged = "Roubado!!" 
+    winTokensGambling = "Ganhe %s tokens apostando" 
+    gambler = "Apostador" 
+    runAchievements = "Use `%sachievements` para ver seu progresso com conquistas!" # Found in: AchievementType.java#80:104
+    loseTokensGambling = "Perca %s tokens apostando" 
+    
+    [game.uno]
+    invalidColor = "Essa Cor É Inválida" 
+    noColor = "Você precisa escolher uma cor em inglês para usar a carta curinga (ex. `B blue`)." 
+    drawCard = "Você comprou uma carta já que não tinha nenhuma jogável." 
+    game = """
+    Última Carta
+    %s
+    
+    
+    """
+    name = "Uno" 
+    longDescription = """
+    Todos ganham 7 cartas, enviadas no privado. Em cada partida, você pode usar uma carta.
+    Se você tiver uma carta da mesma cor ou número da última usada, você pode colocá-la.
+    Caso o contrário, você deverá comprar 2 cartas.
+    """
+    chooseCard = """
+    %s: Envie o número da carta na sua mão que você quer usar aqui!
+    Sua mão está em nossa conversa privada.
+    
+    """
+    shortDescription = "Tente achar a mesma cor ou número da sua carta, até elas acabarem!" 
+    invert = ", invertendo a ordem do jogo" 
+    requestPlayer = """
+    Choose a player to switch decks with:
+    %s
+    """
+    requestColor = "Please choose the next color:" 
+    draw2 = " and %s drew %s cards" 
+    block = ", blocking %s" 
+    draw4 = " and chose the color %s, %s drew %s cards" 
+    playerDrawCard2 = "%s drew a card from the pile." 
+    played = "%s has played %s%s." 
+    won = "You won the game!" 
+    deckDm3 = """
+    You can play on %s.
+    On your turn, click the reaction for the card you want to play.
+    Click the :heavy_plus_sign: reaction to draw a card from the pile.
+    If you prefer, you can send the letter on top of the card or \"+\" in the game channel.
+    Your deck:
+    """
+    wildcard = " and chose the color %s" 
+    
+    [game.minesweeper]
+    longDescription = """
+    Envie onde quer cavar (ex. c4), e o número de bombas por perto irá mostrar.
+    Não cave uma bomba! Boa sorte!
+    """
+    left = "O jogador saiu" 
+    name = "Campo Minado" 
+    bomb = "Você cavou uma bomba!" 
+    shortDescription = "O famoso campo minado! Não seja explodido!" 
+    
+    [game.mode]
+        [game.mode.house]
+        name = "Casa" 
+        description = "O número mostrado no item que você cavar não contará as bombas à esquerda, direita ou baixo." 
+        
+        [game.mode.knightpaths]
+        name = "Contagem de Cavalo" 
+        description = "O número mostrado no item que você cavar será as bombas em caminhos de cavalo (Xadrez) dela!" 
+        
+        [game.mode.reversettt]
+        name = "Invertido" 
+        description = "É o dia invertido! Nós dois sabemos que provavelmente daria velha, e isso não vai ajudar." 
+        
+        [game.mode.reversec4]
+        description = "É o dia invertido! Não ligue 4!" 
+        name = "Invertido" 
+        
+        [game.mode.overseer]
+        name = "Overseer" 
+        description = "Know everyone's deck at all times!" 
+        
+        [game.mode.crazy]
+        name = "Crazy" 
+        description = "Play a card with number 7 to swap decks with an opponent!" 
+        
+        [game.mode.rush]
+        name = "Rush" 
+        description = "Gotta go fast! Cuts out the early game." 
+        
+    [game.detective]
+    dmAssassin2 = """
+    🗡 Você é o assassino!
+    Quem será o primeiro mal sortudo?
+    %s
+    """
+    dmCitizen = "🏙 Você é um cidadão." 
+    name = "Detetive" 
+    wakeFourthPlus = "🌆 A cidade acordou, com menos um cidadão conosco, e esse seria %s. Quando isso irá acabar?" 
+    murderReveal = "%s era o assassino!" 
+    assassinKicked = "O assassino foi expulso! Finalmente, a cidade poderá durmir em paz." 
+    sleep = "🌇 A cidade dorme." 
+    chooseKick = """
+    
+    Coletivamente, a cidade deve decidir quem está causando esses horríveis momentos, para podermos expulsá-los para sempre.
+    Envie a letra para quem deveria ser expulso da cidade:
+    
+    """
+    invalidUser = "Esse usuário não está no jogo ou já morreu/foi expulso." 
+    shortDescription = "Um de vocês é um assassino. Sua missão é expulsá-lo antes que seja tarde demais." 
+    wakeThird = "🌆 A cidade acorda. Isso não pode ser mais uma concicidência: %s foi esfaqueado na sua casa. Pela terceira vez." 
+    sleepIndecisive = "🌇 A cidade dorme, indecisivos, expulsando ninguém. Como que isso irá afetá-los?" 
+    sleepKicked = """
+    🌇 A cidade dorme, confidentemente expulsando %s da cidade por tentativa de assassinato.
+    Só não sabiam que esse não era quem queriam expulsar...
+    """
+    longDescription = """
+    O assassino esfaqueará uma pessoa toda noite.
+    Cidadãos irão expulsar alguém todo dia.
+    Tente expulsar o assassino antes que seja tarde demais.
+    """
+    wakeSecond = "🌆 A cidade acorda, dessa vez sem %s, também esfaqueado, também na sua casa. Dizem que duas vezes é concidência, né?" 
+    wakeFirst = "🌆 A cidade acorda, surpresa quando encontram %s esfaqueado na sua própria casa. Por que alguém faria isso?" 
+    dmAssassinRecursive2 = """
+    Who will it be tonight?
+    %s
+    """
+    
+        [game.detective.response]
+        wait = "⏰ Você irá esperar até a noite chegar e fazer isso." 
+        assassinexec = "🗡 Você assassina **%s** durante a noite." 
+        assassinguard = """
+        🗡 Você fica de olho aberto pra quem sai da casa.
+        %s
+        """
+        medic = "🏥 Você revive **%s** ao longo da noite." 
+        revived = "🏥 Você foi revivido por **%s**. Ele(a) pede para você não revelar a sua identidade." 
+        detective = "🏥 Você investiga **%s**, e tem %s%% de certeza que é um(a) %s." 
+        
+        [game.detective.night]
+        playerquery = """
+        
+        O que fará?
+        %s
+        %s Ficar em casa
+        """
+        villager = """
+        🏙 Você é um aldeão.
+        Durante o dia, visite os outros para descobrir quem é o assassino!
+        """
+        assassin = """
+        🗡 Você é um assassino!
+        Mate alguém ou fique em casa para ver quem sair hoje à noite.
+        """
+        medic = """
+        🏥 Você é um médico!
+        Revive alguém que foi atacado ou permaneça em casa.
+        """
+        detective = """
+        🔍 Você é um detetive!
+        Investigue alguém para tentar encontrar o assassino, ou fique em casa.
+        """
+        
+        [game.detective.action]
+        villager = "%s Vote para executar %s" 
+        assassin = "%s Mate %s" 
+        medic = "%s Reviva %s" 
+        detective = "%s Investigue %s" 
+        
+        [game.detective.notification]
+        healed0 = "🏥 Anônimamente, um dos aldeões descobre uma maneira de reviver **%s**. O resto fica bem feliz de vê-lo(a) novamente, exceto o assassino, que agora tem um novo alvo." 
+        healed1 = "🏥 O(A) médico(a) anônimo(a) consegue salvar **%s** dessa vez. Mas quem é? Será que o assassino irá descobrir?" 
+        
+            [game.detective.notification.night]
+            first = "🌃 A noite come na vila pacífica." 
+            execution = """
+            %s A vila concorda em executar %s, e é revelado que ele(a) é um %s.
+            🌃 Os aldeãos, de luto dos perdidos, dormem ao pôr do sol.
+            """
+            noaction = """
+            A vila está dividida sobre quem executar, então decidem confiar uns nos outros.
+            🌃 Ainda perturbados com o ataque da noite passada, os aldeões decidem descançar.
+            """
+            
+            [game.detective.notification.day]
+            title = "🌇 **Dia %s**" 
+            executetitle = "A vila decide que é melhor fazer um voto para executar o assassino, baseado num voto." 
+            killed0 = "🗡 Os aldeões acordam e descobrem que **%s** está perdido(a). Preocupados, vão à sua casa e encontram seu corpo. Ele(a) foi matado(a) sem piedade." 
+            killed1 = "🗡 Os aldeões acordam e, novamente, são acordados pelo assissinato trágico de **%s**." 
+            killed2 = "🗡 Já é óbvio que o assassino não irá parar enquanto estiver livre. **%s** é a próxima vítima que os aldeões descobrem ao acordar." 
+            killedspecial = "🗡 Os aldeões acordam e descobrem o corpo de **%s**. Também descobrem que era um(a) anônimo %s. Seu futuro parece cada vez pior." 
+            skipped = "Os aldeões acordam. Depois de paranóia, estão felizes de descobrir que ninguém morreu no dia anterior. O assassino ainda está, porém, por aí." 
+            
+        [game.detective.errormessage]
+        day0guard = "Não pode ficar em casa na primeira noite." 
+        targeted = """
+        Ouviu de outro assassino que essa pessoa já é um alvo.
+        Escolha outra opção.
+        """
+        
+        [game.detective.over]
+        assassin = "🗡 Assassinos vencem!" 
+        villagers2 = "Villagers win! %s was the assassin." 
+        
+    [game.quiz]
+    cantPlay = "%s: You've guessed too many times! Wait to play in the next round." 
+    noOneAnswered = "No one could answer that! The answer was \"**%s**\"." 
+    answer = "%s (+%s points) has answered it correctly!" 
+    name = "" 
+    shortDescription = "Você sabe as respostas?" 
+    longDescription = """
+    Quem consegue responder as respostas primeiro?
+    Mande a letra que você acha que é a resposta correta em mensagem.
+    Quem tiver mais pontos no final vencerá!
+    """
+    revealAnswer = """
+    %s
+    A resposta era: %s
+    
+    """
+    
+    [game.towncountryriver]
+    rate = """
+    
+    
+    %s que começa com %s:
+    %s
+    Diga `sim` ou `não` de acordo com sua opinião!
+    
+    """
+    longDescription = """
+    Pense rápido! Você tem 15 segundos de pensar sobre uma palvra que começa com ume letra em um tema.
+    Os outros jogadores podem votar se a palavra está correat ou não com `sim` ou `não`!
+    """
+    reactionRate2 = """
+    
+    
+    Vote na mensagem de %s dependendo da sua opinião da validade dentro do tema!
+    Tema: **%s**
+    
+    """
+    name = "Stop/Adedonha" 
+    shortDescription = "Conhece várias palavras? Você tem 15 segundos para pensar em palavras dentro de um tema." 
+    themeMessage2 = """
+    
+    
+    Rápido, me diz um(a) %s que começa com %s!
+    ⏰ Você tem %s
+    
+    """
+    
+        [game.towncountryriver.themes]
+        tv = "Filme/Série de TV" 
+        boardGame = "Jogo de Tabuleiro" 
+        bodyPart = "PCH" 
+        discordBots = "Bot do Discord" 
+        videoGame = "Video Game" 
+        movie = "Filme" 
+        object = "Objeto" 
+        game = "Jogo" 
+        trademark = "Mark" 
+        anime = "Anime" 
+        celebrity = "Celebridade" 
+        animal = "Animal" 
+        fortniteSkin = "Skin do Fortnite" 
+        adjective = "Adjetivo" 
+        name = "Nome" 
+        gender = "Gênero" 
+        apps = "Aplicativo (App) ou Programa" 
+        company = "Empresa" 
+        cep = "CEP" 
+        youtuber = "YouTuber" 
+        profession = "Profissão" 
+        meme = "Meme" 
+        
+    [game.tictactoe]
+    longDescription = """
+    Você sabe como funciona!
+    Envie a letra de onde quer colocar seu símbolo (ex. a).
+    """
+    shortDescription = "Faça uma linha de 3!" 
+    name = "Jogo da Velha" 
+    tie = "Deu velha!" 
+    
+    [game.connectFour]
+    longDescription = """
+    Você deve ligar 4 botões da sua cor verticalmente, horizontalmente ou em diagonal!
+    Envie no chat o número para a linha que você quer derrubar (ex.: 3)
+    """
+    name = "Lig4" 
+    shortDescription = "Derrube botões e ligar 4!" 
+    
+    [game.roulette]
+    longDescription = """
+    Uma bala, 8 buracos no barril.
+    Vire o barril com qualquer força, e acredite no melhor quando puxar o gatilho!
+    """
+    shortDescription = "Vire o barril, não seja acertado!" 
+    name = "Roleta Russa" 
+    chooseStrength = """
+    🔫 How strongly will you flip the barrel?
+    Send a number from %s to %s.
+    """
+    survive = "%s pulls the trigger, and is relieved by the lack of sound." 
+    shot = "%s pulls the trigger and gets hit! How unlucky of them." 
+    
+    [game.unonew]
+    longDescription = "This update seems to freeze the game randomly. Please report all instances to discord.gg/YsZ9ZDQ" 
+    name = "Uno Remake [BETA]" 
+    shortDescription = "An experiement of the new Uno remake." 
+    
+[genericMessages]
+ownersOnly = "Esse comando é somente acessivel para os donos." # Found in: TokensCommand.java#47:75 OwnerCommand.java#94:43 OwnerCommand.java#109:47 OwnerCommand.java#126:43 OwnerCommand.java#140:71 OwnerCommand.java#215:43 OwnerCommand.java#232:43 OwnerCommand.java#240:43 OwnerCommand.java#266:43 OwnerCommand.java#278:43 OwnerCommand.java#329:43 OwnerCommand.java#412:43 OwnerCommand.java#470:43 OwnerCommand.java#509:43 OwnerCommand.java#594:43 OwnerCommand.java#675:71 OwnerCommand.java#687:43 CommandsManager.java#410:75
+upvoteMessage = """
+Obrigado por Votar No GamesROB
+Você Recebeu:
+**%s**
+Votos Seguidos: **%s dias**
+Continue Votando Para receber Recompensas!
+"""
+# Found in: CommandsManager.java#478:78
+blacklisted = """
+⛔ Você foi bloqueado de usar GamesROB por %s (%s).
+Razão: %s
+"""
+tooFast = "Você está mandando mensagens muito rápido! Espere o último comando terminar de carregar." 
+# Found in: CommandsManager.java#805:101
+noGamesInChannel = """
+There are no games currently in this channel.
+You can type `%shelp` to pick and start a game!
+"""
+invalidLanguage = "" # Found in: LanguageCommands.java#29:92 LanguageCommands.java#44:92
+mentionedMessage = "Meu prefixo nesse servidor é `%s`. Envie `%shelp` para começar!" # Found in: CommandsManager.java#741:126
+# Found in: Match.kt#79:91
+alreadyPlaying = """
+You are already playing another game on %s!
+Type `%sstop` to stop that match.
+"""
+# Found in: CommandsManager.java#747:76
+error = """
+❌ Ocorreu um erro executando esse comando!
+Por-favor, reporte-o junto com o ID `%s` no nosso servidor (%s).
+Desculpe-nos pela inconveniência.
+"""
+# Found in: CommandsManager.java#494:83
+requirespermissions = """
+O bot precissa dessas permissões para usar o comando:
+`%s`
+"""
+partnerCheckItOut = "Dê uma olhadinha" # Found in: CommandsManager.java#814:115
+cmdPermDenied = "Você não tem permissão pra executar esse comando." # Found in: CommandsManager.java#503:77 CommandsManager.java#505:73
+nth2 = "" 
+nth1 = "" 
+nth4 = "" 
+nth3 = "" 
+botDM = "I'm just a bot, there's only so much I can talk about!" 
+cmdPermDeniedAdmin = "This command is limited to server administrators by default." # Found in: CommandsManager.java#505:78
+pagedCommandFooter = "Page %s/%s (`%s%s <page>` to view another page)." # Found in: PagedCommand.java#43:100
+invalidPage = "That's not a valid page. Please pick one between 1 and %s." # Found in: PagedCommand.java#36:93
+# Found in: GenericCommands.java#210:73
+globalStatistics = """
+📶 **%s** servers
+👥 **%s** users
+🗨 **%s** text channels
+🎮 **%s** games (**%s** active)
+❗  **%s** commands
+📈 **%s** votes (**%s** this month)
+🕙 **%s** played
+"""
+premiumBotLeave = "I've left the server **%s** as it seems you don't have Premium anymore." 
+cooldown = "⏰ Wait %s to use this command again." # Found in: CommandsManager.java#524:83 CommandsManager.java#525:89 CommandsManager.java#531:100 CommandsManager.java#534:100 CommandsManager.java#539:72
+# Found in: CommandsManager.java#478:79
+blacklisted2 = """
+🔨 **Suspended from GamesROB for %s**
+`%s`
+%s
+You may appeal to %s
+"""
+# Found in: TokensCommand.java#32:73 ProfileCommands.java#311:73
+patreonLevel = """
+You need to be at least %s on our Patreon to use this command.
+Support us here: %s
+"""
+
+    [genericMessages.upvote]
+    # Found in: RPCManager.java#319:79
+    header = """
+    **Obrigado Por Votar No GamesROB!**
+    Recompensa:
+    + 🔸 %s Fichas!
+    """
+    weekend = " x2 (Final de semana)" # Found in: RPCManager.java#320:93
+    vip = " x4 (VIP)" # Found in: RPCManager.java#322:80
+    # Found in: RPCManager.java#327:79
+    footer = """
+    
+    
+    ⏰ Você pode votar de novo em 12 horas.
+    📆 Votar mais dias seguidos aumenta a quantidade de tokens ganhos.
+    ✴ Em fins de semana, você ganha o dobro dos tokens.
+    """
+    streak = " (%s dias seguidos)" # Found in: RPCManager.java#326:93
+    supporter = " x2 (Suportador)" # Found in: RPCManager.java#324:86
+    
+    [genericMessages.languagecommand]
+    entry = "%s (Traduzido por %s)" # Found in: LanguageCommands.java#18:62
+    # Found in: LanguageCommands.java#14:79
+    header = """
+    %s A língua está configarada para %s.
+    Escolha o código (`com fundo escuro`) da linguagem escolhida abaixo e envie `%s <código>`:
+    
+    
+    """
+    # Found in: LanguageCommands.java#21:125
+    bottom = """
+    
+    
+    Quer ajudar traduzindo para a sua língua nativa?
+    %s
+    """
+    
+    [genericMessages.notEnoughTokens]
+    beggining = "You don't have enough %s to do that (Need %s more)." # Found in: Utility.java#417:82
+    tokensCommand = "\nSaiba de maneiras para ganhar tokens com `%stokens`." # Found in: Utility.java#420:89
+    
+    [genericMessages.cooldown2]
+    vipTime = "Tempo para um [VIP](%s): %s" # Found in: CommandsManager.java#534:109
+    title = "Você deve esperar para utilizar esse comando novamente!" # Found in: CommandsManager.java#524:90
+    timeLeft = "⏰ Tempo restante: %s" # Found in: CommandsManager.java#525:99
+    supporterTime = "Tempo para um [Suportador](%s): %s" # Found in: CommandsManager.java#531:115
+    msg = "You are under cooldown for this command!" # Found in: CommandsManager.java#539:77
+    
+    [genericMessages.threeplayerPatreon]
+    content = "You need to be VIP or be using the Premium Bot to play with 4+ players" 
+    embed = "Check it out" 
+    
+[command]
+permissionLock = "⛔ Você não tem permissão para usar esse comando!" 
+
+    [command.info]
+    description = "Ver estatísticas e informações" 
+    
+        [command.info.embed2]
+        description = "**O bot para jogar jogos de chat divertidos no seu Discord!**" # Found in: GenericCommands.java#86:93
+        
+            [command.info.embed2.versions]
+            title = "Versões" # Found in: GenericCommands.java#97:90
+            # Found in: GenericCommands.java#98:94
+            description = """
+            Versão do GamesROB: **%s**
+            Versão do Java: **%s**
+            Versão do [JDA](%s): **%s**
+            Versão do [JDA Framework](%s): **%s**
+            Tempo de Atividade: **%s**
+            """
+            
+            [command.info.embed2.links]
+            title = "🔗 Links úteis" # Found in: GenericCommands.java#91:87
+            # Found in: GenericCommands.java#92:92
+            description2 = """
+            🌐 [Our Website](%s)
+            ➕ [Add bot to server](%s)
+            <:patreon:666319895306174504> [Patreon](%s)
+            ℹ️ [Join our support server](%s)
+            ❤ [Credits](%s)
+            ⬆ [Upvote the bot in DBL](%s)
+            """
+            
+            [command.info.embed2.system]
+            title = "💻 Sistema" # Found in: GenericCommands.java#104:88
+            # Found in: GenericCommands.java#105:93
+            description2 = """
+            RAM: **%s**
+            OS: **%s**
+            Shard: **%s/%s** (**%s**)
+            %s RPC/JSON Connection
+            """
+            
+            [command.info.embed2.statistics3]
+            # Found in: GenericCommands.java#89:105
+            description = """
+            
+            ♨ **%s** threads
+            View more with `%sstatistics`
+            """
+            
+            [command.info.embed2.statistics2]
+            title = "📟 Global Statistics" # Found in: GenericCommands.java#87:93
+            
+    [command.baltop]
+    footer = """
+    
+    Mostrando %s usuários por página | Página %s de %s
+    Veja outra página com `%sbaltop %s<página>`.
+    """
+    server = "Os usuários com mais tokens em **%s**:\n" 
+    global = "The users with most %s on GamesROB globally:\n" # Found in: TokensCommand.java#186:70
+    globalView = "\nPara ver o placar global, tente `%sbaltop global`." 
+    invalidPage = "Por favor, escolha uma página entre %s e %s." 
+    description = "Mostra o placar de tokens." 
+    
+    [command.customeco]
+    purgecancelled = "Cancelada a deletação de dados." # Found in: PatreonCommands.java#192:93
+    # Found in: PatreonCommands.java#202:71
+    purgewarning = """
+    ⚠ **Todas** as vitórias de torneio e quantidade de economia customizadas que usuários conseguiram ou receberam de você serão **permanentemente deletadas** em %s.
+    Utilize `%scustomeco purge` novamente para cancelar.
+    """
+    purgebegin = "🗑 Deletando dados da economia..." # Found in: PatreonCommands.java#171:83
+    # Found in: PatreonCommands.java#140:73 PatreonCommands.java#155:73
+    enableddesc = """
+    
+    Gerencie-a utilizando `%stokens <add (adicionar)/remove (remover)/set (configurar)> <usuário> <quantidade>`.
+    Desative a economia utilizando `%scustomeco toggle`. Todas as informações serão guardadas caso queira re-ativar a economia.
+    Para limpar todos os dados, utilize `%scustomeco purge`.
+    """
+    purgefinish = "Todos os dados da economia customizada foram deletadas. Utilize `%scustomeco toggle` para ativar a economia customizada novamente." # Found in: PatreonCommands.java#180:84
+    enabled = "Esse servidor utiliza uma economia customizada." # Found in: PatreonCommands.java#139:84 PatreonCommands.java#140:69 PatreonCommands.java#155:69
+    togglemessage = "Alterado economia customizada para `%s` em **%s**." # Found in: PatreonCommands.java#152:72
+    disableddesc = "\nEnvie `%scustomeco toggle` para ativar." # Found in: PatreonCommands.java#142:74 PatreonCommands.java#154:74
+    disabled = "Economia customizada desativada nesse servidor.." # Found in: PatreonCommands.java#141:72 PatreonCommands.java#142:70 PatreonCommands.java#154:70
+    description = "Customize a economia do seu servidor premium" 
+    setname = "The economy name for this server has been changed." # Found in: PatreonCommands.java#227:66
+    
+    [command.help]
+    # Found in: CommandsManager.java#345:77
+    commandInfo = """
+    `%s%s`: %s
+    Aliases: %s
+    Categoria: %s
+    """
+    other = "%s outros" # Found in: CommandsManager.java#857:77
+    # Found in: CommandsManager.java#336:107
+    modes = """
+    **Modos:**
+    %s
+    """
+    # Found in: CommandsManager.java#864:72
+    subCategory2 = """
+    
+    Use `%%PREFIX%%help command` para receber mais informações sobre um comando (e.g. `%%PREFIX%%help slots`).
+    Clique nas reações abaixo de uma categoria para ver os comandos da categoria.
+    Argumentos `<assim>` são requiridos, enquanto arugmentos `[assim]` são opcionais. Você não precisa incluir os `[` e `<` no comando (ex. `%%PREFIX%%slots 10`)
+    """
+    beginning2 = "%s **GamesROB v%s** *por deprilula28*" # Found in: CommandsManager.java#837:97
+    description = "Te dá ajuda!" 
+    websiteTitle = "Veja nosso site!" # Found in: CommandsManager.java#869:160
+    # Found in: CommandsManager.java#871:108
+    recentUpdate = """
+    <:update:264184209617321984> The bot has recently received an update! `v%s`
+    Check out the changes with `%schangelog`.
+    """
+    # Found in: CommandsManager.java#327:75
+    gameInfo2 = """
+    `%s%s`: %s
+    
+    **Long Description**
+    %s
+    
+    **Settings:**
+    %s
+    
+    %sAliases: %s
+    More information: %s
+    """
+    setting = "`%s` (Values %s - %s / Default %s)" # Found in: CommandsManager.java#331:95
+    
+        [command.help.categories]
+        tokencommands = "Fichas" 
+        servercommands = "Servidor" 
+        partnercommands = "Parceiros" 
+        games = "Jogos" 
+        profilecommands = "Perfil" 
+        infocommands = "Informações" 
+        matchcommands = "Partida" 
+        eventcommands = "Halloween Event" 
+        
+    [command.backgroundupload]
+    setimg = "Escolhido fundo do perfil!" # Found in: ProfileCommands.java#81:76 ProfileCommands.java#93:72
+    # Found in: ProfileCommands.java#77:84
+    nonpatreon = """
+    Você precisa ser VIP no nosso Patreon para customizar o fundo do seu perfil!
+    Nos suporte no Patreon e receba recompensas:
+    %s
+    """
+    description = "Escolha a imagem no fundo do seu perfil" 
+    # Found in: ProfileCommands.java#67:102
+    invalidlink = """
+    O URL precisa ser uma imagem no Imgur.
+    Clique com o botão direito na imagem no Imgur e escolha \"Copiar endereço da imagem\".
+    """
+    imagenotowned = "🔒 Você não pode usar essa imagem. Veja as que você pode com `%sprofilebackground`!" # Found in: ProfileCommands.java#87:88
+    
+    [command.profile]
+    title = "Perfil (Valores desse servidor)" # Found in: ProfileCommands.java#297:97
+    unranked = "Não Ranqueado" # Found in: ImageCommands.java#158:77
+    position = "Posição" # Found in: LeaderboardCommands.java#81:76 ProfileCommands.java#275:76
+    losses = "Percas" # Found in: LeaderboardCommands.java#83:74 ProfileCommands.java#277:74
+    description = "Veja seu perfil, ou de outros!" 
+    game = "Jogo" # Found in: LeaderboardCommands.java#84:72 ProfileCommands.java#272:128 ProfileCommands.java#278:72
+    tokenGuide = "Leia nosso guia de tokens clicando aqui!" # Found in: ProfileCommands.java#216:82
+    overall = "Em Geral" # Found in: LeaderboardCommands.java#48:126 ProfileCommands.java#284:83
+    upvoteEmbed = "Ou [clique aqui](%s) para votar para o bot!" # Found in: ProfileCommands.java#234:93
+    gamesPlayed = "Jogos" # Found in: LeaderboardCommands.java#84:79 ProfileCommands.java#278:79
+    victories = "Vitórias" # Found in: LeaderboardCommands.java#79:71 LeaderboardCommands.java#82:77 ProfileCommands.java#276:77
+    winPercent = "%% Ganha" # Found in: LeaderboardCommands.java#85:78 ProfileCommands.java#279:78
+    background = "Escolha seu fundo com `g*profilebackgrounds`\n" # Found in: ProfileCommands.java#218:88
+    gambling2 = "%%PREFIX%%slots" # Found in: ProfileCommands.java#193:73
+    upvote2 = "Upvote" # Found in: ProfileCommands.java#171:68 ProfileCommands.java#174:71
+    winMatches2 = "Win Matches" # Found in: ProfileCommands.java#182:68
+    completeAchievements2 = "%%PREFIX%%achievements" # Found in: ProfileCommands.java#188:85
+    
+    [command.emote]
+    reset = "Seu emoji foi resetado!" # Found in: ProfileCommands.java#331:64
+    cannotUse = "Não posso usar esse emoji! Tente colocá-lo nesse servidor." # Found in: ProfileCommands.java#321:117
+    description = "Altere o símbolo emoji que você será em partidas!" 
+    set = "Seu emoji foi escolhido! %s" # Found in: ProfileCommands.java#319:66 ProfileCommands.java#327:66
+    invalid = "Desculpe-me, mas esse não é um emoji válido..." # Found in: ProfileCommands.java#328:73
+    # Found in: ProfileCommands.java#323:82
+    animatedPatreon = """
+    You need to be a patron to use animated emojis!
+    %s
+    """
+    
+    [command.upvote]
+    setdays = "Os dias votados de %s foram alterados para %s." # Found in: OwnerCommand.java#116:67 CommandsManager.java#229:118
+    description = "Te dá informações sobre seus últimos votos." 
+    clickToVote = "Clique para ir para a página de voto" # Found in: GenericCommands.java#293:108
+    messageCanVote = "Você pode votar para o bot para 🔸 %s tokens!" # Found in: GenericCommands.java#290:81
+    # Found in: GenericCommands.java#283:71
+    info = """
+    Votado pela Ùltima Vez: %s
+    Votos em Seguida: %s dias (Perderá %s)
+    Votou %s vezes desde %s (Veja seu histórico com `%supvote history`)
+    
+    """
+    adddays = "%s's upvoted days status was added by %s." # Found in: CommandsManager.java#231:102
+    removedays = "%s's upvoted days status was removed by %s." # Found in: CommandsManager.java#233:105
+    
+        [command.upvote.history]
+        title = "**Seus últimos votos:**\n" # Found in: GenericCommands.java#303:77
+        footer = """
+        
+        Mostrando %s itens por página | Página %s de %s
+        Veja outra página com `%supvote history <page>`.
+        """
+        
+    [command.perm]
+    reset = "🔨 Permissão para %s foi resetada!" 
+    invalidPerm = "Permissão inválida!" # Found in: PermissionCommands.java#98:77
+    # Found in: PermissionCommands.java#113:61
+    set = """
+    🔨 Created permission rule:
+    %s
+    """
+    description = "Alterar uma permissão" 
+    noRole = "Não pude achar uma permissão com esse nome!" 
+    # Found in: PermissionCommands.java#98:81
+    invalidPermList = """
+    Permissão inválida! Aqui estão as que você pode usar:
+    %s
+    """
+    permReg = "%s **%s** permission `%s` on %s" # Found in: Permissions.java#128:66
+    allPerms = "ALL" # Found in: Permissions.java#130:78
+    specifySpec = "Please specify a `%s`." # Found in: PermissionCommands.java#104:53
+    
+        [command.perm.check]
+        ownHeader = "Suas permissões:" # Found in: PermissionCommands.java#44:72
+        otherHeader = "%s's Permissions:\n" # Found in: PermissionCommands.java#45:74
+        
+    [command.tokens]
+    remove = "%s tokens foram removidos de %s (Balanço atual: %s)." # Found in: CommandsManager.java#145:105
+    gamblingNoTokens = "~~Apostando~~ (Balança menor ou igual a zero)" 
+    giveInvalidUser = "You can't give this user %s." # Found in: CommandsManager.java#153:91
+    viewTransactions = "\nPara ver suas transações recentes, tente `%stokens transactions`." 
+    baltop = "\nRanqueado **%s** nesse servidor e **%s** globalmente! `%sbaltop`" 
+    achievements2 = "**Completando conquistas**: Veja seu progresso com `%sachievements`!" 
+    winningMatches = "**Vencendo Partidas**" 
+    giveInvalidAmount = "You can only give %s to %s %s." # Found in: CommandsManager.java#156:93
+    give = "%s gave %s %s!" # Found in: CommandsManager.java#153:80 CommandsManager.java#156:80 CommandsManager.java#162:76
+    embedUpvote = "Ou [Clique aqui](%s) para votar para o bot" 
+    upvoteLater = "~~Votando para o bot~~ (Você poderá fazê-lo novamente em %s)" 
+    gamblingTokens = "**Apostando com** `g*slots`" 
+    add = "%s on %s's balance (Current balance: %s)." # Found in: CommandsManager.java#143:93
+    set = "Set %2$s's balance to %1$s (Current balance: %s)." # Found in: CommandsManager.java#146:111
+    
+        [command.tokens.transactions]
+        title = "**Suas transações recentes:**\n" # Found in: TokensCommand.java#107:82
+        footer3 = "Balance = %s" # Found in: TokensCommand.java#117:84
+        
+    [command.shardinfo]
+    # Found in: GenericCommands.java#253:74
+    title = """
+    **Informação das Shards:**
+    ```prolog
+    %s
+    ```
+    """
+    users = "Usuários" 
+    description = "🗄 *Debug* Ver informações do uso de RAM" 
+    channels = "Canais" 
+    games = "Jogos" 
+    guilds = "Servidores" 
+    ping = "Ping" 
+    shard = "Shard" 
+    ram = "Uso de RAM" 
+    status = "Estado" 
+    singleShard = "%s **Shard %s**: %s servers (%s%% load), %s channels, %s users, %s ping and %s games." 
+    newTitle = "**Bot Statistics and Information:**\n" 
+    
+    [command.patreon]
+    insiders = "Insiders" 
+    supporter = "Suportador" 
+    # Found in: PatreonCommands.java#208:61
+    text = """
+    Se gosta do bot, considere doando para nosso Patreon e receba recompensas:
+    %s
+    Precisamos de dinheiro para pagar a hospedagem e investir melhorando o bot.
+    Qualquer quantia ajuda!
+    
+    Seu estado atual: %s
+    """
+    premium = "Premium" 
+    vip = "VIP" 
+    none = "Não é Doador" 
+    description = "Saiba mais sobre nossa campanha no Patreon!" 
+    
+    [command.statistics]
+    # Found in: GenericCommands.java#142:95
+    userStatistics = """
+    
+    :signal_strength: **%s** servidores em comum
+    :chart_with_upwards_trend: **%s** votos (última vez %s)
+    :video_game: **%s** partidas
+    :clock10: **%s** tempo jogado
+    *Note: Esses dados podem não estar completamente atualizados.*
+    """
+    description = "Veja estatísticas do bot e seu uso dele" 
+    # Found in: GenericCommands.java#166:101
+    aditionalGlobalStats2 = """
+    
+    🖼 **%s** images generated (avg. **%s** gen/**%s** post)
+    🔼 **%s** of images uploaded
+    🤖 **%s** avg. AI process time
+    """
+    globalStatistics = "Global Statistics" # Found in: GenericCommands.java#172:115 GenericCommands.java#188:97
+    title = "Your Statistics" # Found in: GenericCommands.java#140:80
+    # Found in: GenericCommands.java#173:83
+    overtimeStatistics = """
+    📶 Servers: %s
+    👥 Users: %s
+    🗨 Text Channels: %s
+    🎮 Games: %s (Active: %s)
+    ❗ Commands: %s
+    📈 Upvotes: %s
+    🕙 Played: **%s**
+    🏓 Ping: %s
+    📟 Avg Command Time: %s
+    💻 RAM Usage: %s
+    """
+    footer = "Comparison Time" # Found in: GenericCommands.java#148:82
+    
+        [command.statistics.commandStatistics]
+        mostUsed = "**Comandos mais utilizados:**" # Found in: GenericCommands.java#151:91
+        title = "Command Statistics" # Found in: GenericCommands.java#150:98
+        
+        [command.statistics.gameStatistics]
+        mostPlayed = "**Most played games:**\n" # Found in: GenericCommands.java#158:90
+        title = "Game Statistics" # Found in: GenericCommands.java#157:95
+        
+    [command.invite]
+    description = "Adicione o bot no seu servidor!" 
+    
+        [command.invite.embed]
+        description = "⚠ Você precisará da permissão \"Gerenciador Servidor\" no servidor que quer convidar." # Found in: GenericCommands.java#74:85
+        title = "🎮 Clique para convidar GamesROB!" # Found in: GenericCommands.java#73:78
+        
+    [command.achievements]
+    description = "Veja seu progresso em conquistas" 
+    beginning = "Aqui estão conquistas que você pode desbloquear:\n\n" # Found in: TokensCommand.java#75:83
+    noAchievements = "Não há conquistas disponíveis para você agora! :wink:" # Found in: TokensCommand.java#73:102
+    upvote = "Dê um voto para o bot no DBL" # Found in: TokensCommand.java#97:110
+    
+    [command.stop]
+    response = "A partida foi parada." # Found in: Match.kt#107:58
+    description = "Força uma parada na partida" 
+    matchStopped = "⏹ Partida parada por %s" 
+    
+    [command.leave]
+    description = "Leaves your current match" 
+    creator = "Você criou essa partida, use `%sstop` para pará-la." 
+    notInMatch = "Você não está nessa partida!" 
+    cantLeave = "Você não pode sair dessa partida." 
+    message = "%s saiu da partida.\n" 
+    
+    [command.highscores]
+    entry = "%s held by %s" # Found in: TokensCommand.java#135:82
+    global = "World Record game score holders:" # Found in: TokensCommand.java#124:69 TokensCommand.java#150:87
+    server = "Top game score records on **%s**:" # Found in: TokensCommand.java#125:69
+    
+        [command.highscores.category]
+        entry = "\n%s lugar mantido por %s (%s)" # Found in: TokensCommand.java#167:75
+        server = "%s top records on ***%s**:" 
+        global = "%s top records globally:" 
+        
+    [command.idlerpg]
+    description = "Saiba mais sobre nosso parceiro IdleRPG!" 
+    message = "IdleRPG is a bot with shop system, characters, classes, dungeons, items, PvP, economy, gambling, marriage, music, guilds and much more!" 
+    
+    [command.leaderboard]
+    websiteLink = "Veja tudo no nosso site" # Found in: LeaderboardCommands.java#140:83
+    noWinner = "~nenhum vencedor ainda~" # Found in: LeaderboardCommands.java#133:80
+    description = "Veja a lista de vencedores!" 
+    unknownUser = "*jogador desconhecido*" # Found in: LeaderboardCommands.java#93:117 LeaderboardCommands.java#110:81
+    # Found in: CommandsManager.java#208:107
+    disabledWebsite = """
+    This command has been disabled temporarly, the leaderboard is still acessbile at:
+    %s
+    """
+    
+    [command.cafe]
+    description = "Saiba mais sobre nosso parceiro Cafe!" 
+    message = "Cafe is a incremental/clicker style economy bot meant to liven up your server! It has over 30 unique items, tons of upgrades, leaderboards and more!" 
+    
+    [command.setprefix]
+    description = "Altere o prefix do bot para seu servidor!" 
+    message = "Alterado prefix do bot para esse servidor!" # Found in: GenericCommands.java#274:66
+    tooLong = "That prefix is too long!" # Found in: GenericCommands.java#267:120
+    
+    [command.discordserversme]
+    description = "Descubra mais sobre nosso parceiro, DiscordServers.me!" 
+    message = """
+    Do you want to find or share Discord servers?
+    Check out our partner, DiscordServers.me!
+    """
+    
+    [command.ping]
+    description = "🗄 *Debug* Ver a latência do bot" 
+    message = """
+    🏓 Pong!
+    Bot -> Discord: %s
+    Você -> Bot: %s
+    Websocket: %s
+    Média de latência de processamento: %s
+    """
+    
+    [command.tournment]
+    notstarted = "Não há um torneio do GamesROB acontecendo! Use `%stournment create <tempo para acabar>` para começar um." # Found in: PatreonCommands.java#34:94 PatreonCommands.java#83:94 PatreonCommands.java#107:107
+    # Found in: PatreonCommands.java#93:44
+    enddm = """
+    O torneio for terminado!
+    Você pode dar como recompensa para os vençedores tokens usando (`%stokens add <member> <amount>`).
+    """
+    timelimit = "Você não pode começar um torneio que dure mais que %s." # Found in: PatreonCommands.java#65:103
+    description = "Crie um torneio do GamesROB" 
+    askend = "Esse torneio já acabou. Peça para um moderador do servidor utilizar `%stournment end` para terminar." # Found in: PatreonCommands.java#36:113
+    purge = "O torneio foi deletado." # Found in: PatreonCommands.java#116:64
+    # Found in: PatreonCommands.java#69:109
+    alreadystart = """
+    Já está ocorrendo um torneio! Ele acaba %s.
+    Um moderador do servidor pode terminá-lo usando `%stournment purge`.
+    """
+    timeset = "Torneio começado. Ele acabará em %s.\n" # Found in: PatreonCommands.java#76:66
+    notended = "O torneio ainda não acabou. Se quer forçá-lo a acabar, use `%stournment purge`." # Found in: PatreonCommands.java#85:116
+    
+        [command.tournment.leaderboard]
+        # Found in: PatreonCommands.java#44:116
+        header = """
+        O torneio acaba %s.
+        Melhores %s jogadores:
+        
+        """
+        # Found in: PatreonCommands.java#89:119
+        endheader = """
+        **O torneio acabou!**
+        Placar de Liderança:
+        
+        """
+        entry = "%s com **%s** vitórias\n" # Found in: PatreonCommands.java#50:60 PatreonCommands.java#127:88
+        
+    [command.userlang]
+    set = "Sua línguagem pessoal foi alterada para %s" # Found in: LanguageCommands.java#50:65
+    description = "Altere sua própria linguagem." 
+    
+    [command.join]
+    alreadyOnMatch = "Você já está nesse jogo!" 
+    description = "Entra na partida do canal atual" 
+    full = "O jogo já começou!" 
+    gameStarted = "This game has already started!" # Found in: Match.kt#81:115
+    collectiveMatch = "This is a collective match, you can just go ahead and play!" 
+    
+    [command.guildlang]
+    description = "Altere a linguagem padrão para o servidor." 
+    set = "A linguagem padrão para esse servidor foi alterado para %s" # Found in: LanguageCommands.java#35:66
+    
+    [command.changelog]
+    description = "Mostra todas as novidades da última atualização." 
+    # Found in: GenericCommands.java#224:63
+    text = """
+    **GamesROB v%s**
+    De %s
+    
+    %s
+    
+    *Normalmente atualizamos toda sexta-feita, fazendo a próxima %s.*
+    *Você pode sugerir funcionalidades e reportar bugs no nosso servidor: %s*
+    """
+    
+    [command.slots]
+    description = "Aposte seus tokens em um jogo de cassino! Totalmente não roubado, confie em mim" 
+    invalidTokens = "You can only gamble %s to %s %s." # Found in: SlotsCommand.java#30:94
+    lost = "perdeu" 
+    earnt = "ganhou" 
+    all = "todos os seus" # Found in: SlotsCommand.java#31:68
+    matchEnd = "Result: %s" # Found in: SlotsCommand.java#79:92
+    matchHeader = "Apostando 🔸 %s tokens..." # Found in: SlotsCommand.java#46:88 SlotsCommand.java#90:104
+    
+    [command.weekly]
+    timeout = "You can get your weekly %s again in %s." # Found in: TokensCommand.java#34:67
+    description = "Receba seus tokens semanais por ser um doador gentil!" 
+    message = "Você recebeu 🔸 %s tokens!" # Found in: TokensCommand.java#41:63
+    
+    [command.support]
+    message = """
+    Se estiver tendo problemas com o bot, quer sugerir funcionalidades, ser notificado quando atualizamos o bot ou quer conversar com outras pessoas que o usam, entre no nosso servidor de suporte:
+    https://discord.gg/rUpAqVa
+    """
+    description = "Te dá um link para o servidor de suporte do bot" 
+    
+    [command.listplayers]
+    description = "Lista os jogadores da partida atual" 
+    # Found in: Match.kt#112:63
+    header = """
+    **Partida de %s**
+    %s
+    
+    
+    """
+    
+    [command.website]
+    message = """
+    Temos um site com mais informações sobre o bot!
+    https://gamesrob.com
+    """
+    description = "Gives you a link to the website" 
+    
+    [command.trickortreating]
+    # Found in: HalloweenEvent.java#97:108
+    rateTime2 = """
+    Tricks or treats?
+    Click on the reactions below to choose:
+    🍬 +%s candy for them
+    ⛔ %s of their candy
+    """
+    alreadyLooking = "You're already looking for a channel." # Found in: HalloweenEvent.java#152:138
+    candyCommand = "\nCheck your candy with `%scandy`!" # Found in: HalloweenEvent.java#301:57
+    findingChannel2 = "🔎 Searching for servers (Estimated wait of %s)..." # Found in: HalloweenEvent.java#207:90
+    quit = "Quit connection finding." # Found in: HalloweenEvent.java#141:73
+    # Found in: HalloweenEvent.java#294:92 HalloweenEvent.java#298:62
+    rateTreat = """
+    🍬 Treats!
+    + %s candy were given to %s.
+    """
+    alreadyConnected = "This server already has a connection happening." # Found in: HalloweenEvent.java#143:131
+    # Found in: HalloweenEvent.java#294:130 HalloweenEvent.java#298:100
+    rateTrick = """
+    ⛔ Trick!
+    - %s candy were removed from %s.
+    """
+    # Found in: HalloweenEvent.java#174:104
+    connectedProxy2 = """
+    You have %s to convince them to give you candy!
+    🚩 Flag this connection (Don't falsely flag)
+    """
+    description = "Trick or treating, but it's on Discord!" 
+    cantQuitStarted = "The connection has already started." # Found in: HalloweenEvent.java#139:60
+    connected = "You've connected up to another server!\n" # Found in: HalloweenEvent.java#166:95 HalloweenEvent.java#167:97 HalloweenEvent.java#173:101 HalloweenEvent.java#174:98
+    # Found in: HalloweenEvent.java#167:102
+    connectedHost2 = """
+    In %s, you can choose to give them treats or trick them.
+    🚩 Flag this connection (Don't falsely flag)
+    """
+    timeUp = "Looks like the time ran out! No tricks or treats after all..." # Found in: HalloweenEvent.java#104:107 HalloweenEvent.java#105:105
+    matchfindLimit = "The connection finder time has ended." # Found in: HalloweenEvent.java#85:113
+    rateWait = "You still have to wait %s to rate!" # Found in: HalloweenEvent.java#302:86
+    forceend = "The connection was forcibly ended." # Found in: HalloweenEvent.java#260:57 HalloweenEvent.java#339:127 HalloweenEvent.java#340:125
+    flagged = "This connection was flagged and has ended." # Found in: HalloweenEvent.java#261:86
+    # Found in: HalloweenEvent.java#169:105 HalloweenEvent.java#176:106
+    connectionServers = """
+    
+    
+    **Home:** %s
+    **Visitor:** %s
+    """
+    flagNoContent = "There is no content to flag. Please do not abuse the flag feature as it will lead to a blacklist." # Found in: HalloweenEvent.java#253:123
+    
+    [command.gdpr]
+    description = "Get all of the data we have stored with your User ID attached." 
+    dm = "Here's all the data we have on your account:" 
+    message2 = "A private message will be sent to you shortly." 
+    
+        [command.gdpr.deletion]
+        info = "You can request data deletion with `g*gdpr remove`" # Found in: GenericCommands.java#337:79
+        # Found in: GenericCommands.java#360:74
+        message = """
+        :exclamation: **All** of your data will be **permanently** deleted! :exclamation:
+        If you change your mind, you will have the option to cancel this request for __30 days__ following the request using `%sgdpr remove`.
+        """
+        # Found in: CommandsManager.java#458:75
+        reminder = """
+        :exclamation: Your data is currently scheduled to be deleted on **%s** :exclamation: 
+        If this was done by accident or you change your mind, you can cancel this operation using `%sgdpr remove`.
+        """
+        cancelled = "Data deletion was cancelled." # Found in: GenericCommands.java#356:76
+        
+    [command.candy]
+    # Found in: HalloweenEvent.java#130:61
+    own = """
+    🍬 You have %s candy!
+    Get more candy by trick or treating!
+    """
+    other = "🍬 %s has %s candy!" # Found in: HalloweenEvent.java#131:63
+    description = "Checks how much candy you or someone else has" 
+    
+    [command.alertbot]
+    description = "View information about our partner, alertbot." 
+    
+[gameFramework]
+betting = "💰 Apostando %s 🔸 Fichas!" 
+defaultMode = "%s Normal" 
+waiting = "⏰ Esperando" 
+timeout = "A partida expirou após de **%s**." 
+viewPlayers = "Veja os jogadores com `%slistplayers`." 
+findMatches = "Você pode jogar com pessoas no servidor official do GamesROB!" 
+playersOutOfRange = "Só pode haver entre %s e %s jogadores nesse jogo!" 
+emote = "Você pode alterar o emoji que você é em jogos com %semote!" 
+viewPlayersStop = "Veja os jogadores com `%slistplayers` e saia com `%sleave`." 
+next = " - **Próximo**" 
+requireBetting = """
+Esse jogo precisa de uma aposta!
+Adicione `bet=quantidade` no fim do comando para escolher quantos tokens deverão ser apostados.
+"""
+everyoneQuit = "A partida foi cancelada porque todos sairam." 
+collectiveMatch2 = """
+**Jogo de %s**
+%s
+"""
+# Found in: Match.kt#67:88
+multiplayerMatch = """
+**Partida Multi-jogador de %s!**
+%s
+
+
+"""
+begin = """
+**Começou!**
+**%s**
+%s
+
+
+"""
+typeToJoin = "Digite `%sjoin` para participar." 
+joinToPlayNoReaction2 = "🚪 Digite `%sjoin` para entrar!" 
+gameOver = """
+**Fim de Jogo!**
+%s
+
+
+"""
+mode = "\n**Modo %s:** %s" 
+modePlayButtonHeader = "\n**Escolha o modo de %s:**" 
+modePlayButton = "\n%s para %s" 
+addBot = "Clique em 🤖 para adicionar um jogador de IA!" 
+singleplayerMatch = """
+**Partida Solo de %s!**
+%s
+
+
+"""
+join = "%s entrou na partida! %s/%s" 
+settingOutOfRange = "A configuração `%s` deve ter um valor entre %s e %s!" 
+winner = "%s venceu!" 
+patreon = "Se está gostando do bot, considere tornar-se um Patrão para suportar a existência!" 
+creatorQuit = "A partida de %s foi cancelada porque o(a) criador(a) saiu." 
+draw = "Empate!" 
+rematch = "Clique no :arrows_counterclockwise: para jogar novamente!" 
+activeGame = "Há outro jogo nesse canal." 
+left = "%s saiu da partida!" 
+turn = "Vez de %s" 
+now = " - **Agora**" 
+joinToPlay2 = "🚪 Digite `%sjoin` ou clique na porta abaixo para entrar!" 
+playButton = "Clique em :arrow_forward: para começar %s!" 
+uncompletedChallenges = "%s tem desafios incompletos! `g*achievements`" 
+gameOverSmall = "**Game Over!**\n\n" 
+victorymessage = "Won!" 
+
+    [gameFramework.highscore]
+    playerbest = """
+    %s
+    **Recorde Mundial:** %s
+    **Recorde do Servidor:** %s
+    **Essa Tentativa**: %s **Melhor Pessoal** (%s%s no servidor/%s%s mundialmente)
+    """
+    connect4 = "Mais Conexões em Lig4" 
+    guildbest = """
+    %s
+    **Recorde Mundial**: %s
+    **Essa Tentativa**: %s **Recorde do Servidor** (%s%s worldwide)
+    """
+    notbest = """
+    %s
+    **Personal Best**: %s
+    **This Run**: %s (%s%s in the server/%s%s worldwide)
+    """
+    uno = "Uno Lowest Time" 
+    minesweeper = "Minesweeper Lowest Time" 
+    wr = """
+    %s
+    **This Run**: %s **World Record!**
+    """
+    minesweeperKnightPaths = "Minesweeper Knight Paths Lowest Time" 
+    quiz = "Quiz Most Points" 
+    memoryGame = "Memory Game Lowest Time" 
+    
+[languageProperties]
+language = "" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
+code = "pt_BR" # Found in: LanguageCommands.java#20:76
+country = "guide" 
+languageName = "Português Brasileiro" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
+translators = "*Not Found*, *Not Found*, deprilula28#3609, *Not Found*, *Not Found*, *Not Found*, *Not Found*" # Found in: LanguageCommands.java#20:132
+version = "" 
+flag = "🇧🇷" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
+
+[permissions]
+    [permissions.message]
+    history = "Ver Histórico De Mensagens" 
+    
+        [permissions.message.embed]
+        links = "Enviar links" 
+        
+        [permissions.message.ext]
+        emoji = "Usar emojis externos" 
+        
+        [permissions.message.attach]
+        files = "Send files" 
+        
+        [permissions.message.add]
+        reaction = "Add Reactions" 
+        
+[transactions]
+betting = "" 
+slots = "" # Found in: SlotsCommand.java#34:81 SlotsCommand.java#72:98
+winGamePrize = "" 
+changingEmote = "Alterando seu emoji" 
+upvote = "" # Found in: RPCManager.java#333:72
+cheater = "" 
+completeAchievement = "" # Found in: AchievementType.java#75:112
+give = "" # Found in: CommandsManager.java#159:124
+got = "" # Found in: CommandsManager.java#161:103
+weekly = "Weekly Patreon Command" # Found in: TokensCommand.java#37:128
+
+[badges]
+staff = "Equipe" 
+translator = "Tradutor" 
+achiever = "Conquistador" 
+highestBaltop1st = "1º no baltop" 
+patron = "Patrão" 
+highestBaltop3rd = "3º no baltop" 
+globalBaltopTop10 = "Top 10 no baltop global" 
+developer = "Desenvolvedor" 
+highestBaltop2nd = "2º no baltop" 
+# Found in: AchievementType.java#101:71
+earned = """
+
+Você conquistou o distintivo **%s**!
+Ele irá aparecer no seu perfil em `%sprofile`.
+"""
+
+[languagecommand]
+# Found in: LanguageCommands.java#21:125
+bottom = """
+Quer ajudar a traduzir para a sua língua?
+%s
+"""
+
+[backgroundimages]
+    [backgroundimages.bubbles]
+    name = "Bolhas" 
+    description = "Bolhas coloridas!" 
+    
+    [backgroundimages.shapes]
+    name = "Formas" 
+    description = "Leve consigo um pouco de história" 
+    
+    [backgroundimages.halloween]
+    name = "Dia das Bruxas" 
+    description = "Para os tempos mais medrosos." 
+    
+    [backgroundimages.xmas]
+    name = "Natal" 
+    description = "Para os tempos mais festivos." 
+    
+    [backgroundimages.custom]
+    name = "Customizado" 
+    description = "Fundo customizado para Patrões no Patreon!" 
+    
+    [backgroundimages.bday]
+    name = "Aniversário" 
+    description = "Olha, confeti!" 
+    
+[challenges]
+    [challenges.complete]
+    any = "\n\nDesafio concluído! %s +🔶 %s tokens" # Found in: Challenges.java#57:70
+    user = "\n%s concluiu o desafio: %s +🔶 %s tokens" # Found in: Challenges.java#56:88
+    
+[events]
+# Found in: EventTimer.java#19:104 EventTimings.java#49:104
+hasntBegun = """
+This command can only be executed during %s!
+That event is happening in %s.
+"""
+halloween = "Halloween" # Found in: EventTimings.java#29:29
+
+[errors]
+    [errors.dmdisabled]
+    other = "%s has private messaging with the bot disabled. This is required for this game." 
+    self = "You have private messaging with the bot disabled. This is required for this command." # Found in: GenericCommands.java#345:88
+    
+[genericMesages]
+# Found in: CommandsManager.java#473:98
+blacklistEnded = """
+🔨 **%s Suspension Ended**
+`%s`
+%s
+Refrain from breaking the rules again
+"""
+
+[premimum]
+holderTooManyKeys = "The user holding the key to the premium bot has too many servers registered." 
+
+[website]
+    [website.languageProperties]
+    code = "en_US" 
+    language = "English" 
+    country = "USA" 
+    languageName = "🇺🇸 American English" 
+    translators = "deprilula28#3609" 
+    
+    [website.game]
+        [website.game.2048]
+        name = "2048" 
+        description = "Join numbers together, and try to reach 2048!" 
+        bulletpoint = "Powers of two" 
+        
+        [website.game.connectfour]
+        name = "ConnectFour" 
+        description = "Drop tiles in order to connect 4 of your color!" 
+        bulletpoint = "Inversed mode" 
+        
+        [website.game.hangman]
+        name = "Hangman" 
+        description = "Try to guess the word submitted by the match's creator!" 
+        bulletpoint = "Your own words against you" 
+        
+        [website.game.minesweeper]
+        name = "Minesweeper" 
+        description = "The OG minesweeper! Don't get blown up!" 
+        bulletpoint = "Knight paths & house modes" 
+        
+        [website.game.tictactoe]
+        name = "TicTacToe" 
+        description = "Arrange 3 of your tile in a line within the board!" 
+        bulletpoint = "Inversed mode" 
+        
+        [website.game.detective]
+        name = "Detective" 
+        description = "Find and kick the murderer before it's too late!" 
+        bulletpoint = "Who did it?" 
+        
+        [website.game.roulette]
+        name = "Russian Roulette" 
+        description = "Who will be the lucky one to leave with the money?" 
+        bulletpoint = "Requires betting" 
+        
+        [website.game.quiz]
+        name = "Quiz" 
+        description = "Do you know all the answers?" 
+        bulletpoint = "3 thousand questions" 
+        
+        [website.game.uno]
+        name = "Uno" 
+        description = "Try to get the same color or number on one of your cards, until they're over!" 
+        bulletpoint = "Uno!" 
+        
+        [website.game.towncountryriver]
+        name = "Town, Country, River" 
+        description = "Do you know words? You have 15 seconds to come up with words within a theme." 
+        bulletpoint = "Very brazilian origins" 
+        
+        [website.game.game2048]
+        name = "2048" 
+        description = "Join numbers together, and try to reach 2048!" 
+        bulletpoint = "Powers of two" 
+        
+        [website.game.memory]
+        name = "Memory Game" 
+        description = "Can you remember where the emojis were?" 
+        bulletpoint = "Was it there?" 
+        
+        [website.game.memorygame]
+        name = "Memory Game" 
+        description = "Can you remember where the emojis were?" 
+        bulletpoint = "Was it there?" 
+        
+    [website.commonWrapper]
+    githubSource = "Github Source" 
+    trelloPage = "Trello Page" 
+    dblListing = "DBL Listing" 
+    supportServer = "Support Server" 
+    myServers = "My Servers" 
+    mutualServersDropdown = "Servers" 
+    help = "Commands" 
+    translators = "Translations" 
+    joinServer = "Join Our Server" 
+    addBot = "Add The Bot" 
+    logIn = "Log In" 
+    signOut = "Sign Out" 
+    language = "Language" 
+    
+    [website.home]
+    botDescription = "The Discord bot for playing chat games right on your server!" 
+    invite = "Add it to your server" 
+    upvote = "Upvote it on DBL" 
+    becomePatreon = "Support us on Patreon" 
+    addtodiscord = "Add to your Discord" 
+    readMore = "Read more" 
+    botinfo = "Command List and Info" 
+    discordserversmeDescription1 = "Do you want to find or share Discord servers?" 
+    discordserversmeDescription2 = "Check out our partner, DiscordServers.me!" 
+    servers = "servers" 
+    commands = "commands" 
+    
+        [website.home.changelog]
+        title = "What's new with GamesROB v%s" 
+        subtitle = "From %s" 
+        
+        [website.home.patreon]
+        title = "Become a patron!" 
+        description = "Help us GamesROB running for a price less than a coffee every month and get rewards in return!" 
+        button = "View the page" 
+        
+        [website.home.gameFeaturesList]
+        players = " players" 
+        ai = "Play with other users or AI" 
+        fromDiscord = "Right from Discord!" 
+        
+        [website.home.haveFunTogether]
+        title = "Have fun together!" 
+        description = "These are classic party games, and you can play them with basically as many people as you'd like!" 
+        
+        [website.home.playCompetitively]
+        title = "Be competitive!" 
+        description = "You can see view leaderboards on your Discord server and on it's page in the website! Who's the best?" 
+        
+        [website.home.goGetTheMoney]
+        title = "Go get the money!" 
+        description = "The bot includes a virtual currency for bets in games and minigames like slots!" 
+        
+    [website.server]
+    rankingName = "Category" 
+    overall = "Overall" 
+    position = "Position" 
+    user = "User" 
+    wins = "Victories" 
+    lost = "Losses" 
+    gamesPlayed = "Matches" 
+    settings = "Settings" 
+    nth1 = "st" 
+    nth2 = "nd" 
+    nth3 = "rd" 
+    nth4 = "th" 
+    leaderboard = "Leaderboard" 
+    viewallmembers = "View all members" 
+    viewall = "View all scores" 
+    
+    [website.serverEdit]
+    language = "Language" 
+    permStartGame = "Starting Games Permission" 
+    permStopGame = "Stopping Games Permission" 
+    default = "Default" 
+    submit = "Save Changes" 
+    mode = "Mode" 
+    target = "Target" 
+    location = "Location" 
+    permission = "Permission" 
+    gamestart = "Start match of " 
+    gamejoin = "Join match of " 
+    gameleave = "Leave match of " 
+    gamestop = "Stop match of " 
+    owngamestop = "Stop own match of " 
+    command = "Run command " 
+    viewotheruserprofiles = "View other user profiles" 
+    viewglobalbaltop = "View global baltop" 
+    deny = "Deny" 
+    allow = "Allow" 
+    
+    [website.help]
+    intro = "Intro" 
+    commands = "Commands" 
+    credits = "Credits" 
+    currency = "Guide to Tokens" 
+    tictactoe = "TicTacToe" 
+    connectfour = "ConnectFour" 
+    minesweeper = "Minesweeper" 
+    hangman = "Hangman" 
+    roulette = "Russian Roulette" 
+    detective = "Detective" 
+    quiz = "Quiz" 
+    uno = "Uno" 
+    games = "Games" 
+    infocommands = "Information" 
+    cooldownMessage = "This command can only be executed every " 
+    cooldownMessageSupporter = "For Patreon Supporters, this is reduced to " 
+    cooldownMessageVIP = "For Patreon Premium members, this is reduced to  " 
+    permissionsMessage = "In order for this command to work, the bot requires the Discord permissions: " 
+    adminOnlyMessage = "By default, this command is limited to server administrators only." 
+    usageMessage = "Usage: " 
+    features = "Features" 
+    
+    [website.premiumPage]
+    registerServer = "Confirm using one of your keys in this server:" 
+    keysRemaining = " keys remaining" 
+    registeredServers = "The servers you have registered with your premium keys are:" 
+    revokeButton = "Revoke" 
+    addButton = "Add to a server" 
+    
