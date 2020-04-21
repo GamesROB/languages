@@ -1140,10 +1140,9 @@ collectiveMatch2 = """
 """
 everyoneQuit = "The match has been cancelled because everyone quit." 
 # Found in: Match.kt#67:88
-multiplayerMatch = """
-**Multi-player %s Match**
+matchPregame = """
+**Play a %s Match**
 %s
-
 
 """
 begin = """
@@ -1530,4 +1529,4 @@ holderTooManyKeys = "The user holding the key to the premium bot has too many se
     globalInfo = "\nView world rankings with `%shighscore global` or clicking 🌐" 
     
 [gameframework]
-noInput = "" 
+noInput = "No input was provided!"
