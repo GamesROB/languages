@@ -515,7 +515,15 @@ Support us here: %s
         header = "%s's turn!\n\n" # Found in: MatchHandlerComponentsJVM.kt#38:67
         
     [game.initMessage]
+    # Found in: Match.kt#67:88
+    header = """
+    **Play a %s match**
+    %s
+
+    """
     minPlayers = "Needs at least **%s** more players" # Found in: Match.kt#69:106
+    join = "🚪 to join"
+    start = "▶️ to start"
     
 [command]
 permissionLock = "⛔ You can't use this command!" 
@@ -1132,19 +1140,7 @@ requireBetting = """
 This game requires betting!
 Add `bet=amount` in the end of the command to choose how many tokens should be gambled.
 """
-collectiveMatch2 = """
-**%s Game**
-%s
-
-
-"""
-everyoneQuit = "The match has been cancelled because everyone quit." 
-# Found in: Match.kt#67:88
-matchPregame = """
-**Play a %s Match**
-%s
-
-"""
+everyoneQuit = "The match has been cancelled because everyone quit."
 begin = """
 **It's on!**
 **%s**
@@ -1152,8 +1148,6 @@ begin = """
 
 
 """
-typeToJoin = "You can type `%sjoin` to join it." 
-joinToPlayNoReaction2 = "🚪 Type `%sjoin` to join!" 
 gameOver = """
 **Game Over!**
 %s
@@ -1162,29 +1156,12 @@ gameOver = """
 """
 mode = "\n**%s Mode:** %s" 
 modePlayButtonHeader = "\n**Choose the %s mode:**" 
-modePlayButton = "\n%s to play %s" 
-addBot = "Click 🤖 to add an AI player!" 
-singleplayerMatch = """
-**Single-player %s Match**
-%s
-
-
-"""
-join = "%s has joined the match! %s/%s" 
-settingOutOfRange = "The setting `%s` needs to be between %s and %s!" 
-winner = "%s has won!" 
+modePlayButton = "\n%s to play %s"
 patreon = "Help us maintain the bot running with Patreon for less than a coffee!" 
-creatorQuit = "The %s match has been cancelled because its creator quit." 
-draw = "It's a draw!" 
+creatorQuit = "The %s match has been cancelled because its creator quit."
 rematch = "Click :arrows_counterclockwise: for a rematch!" 
-activeGame = "There's another game going on this channel." 
-left = "%s has left the match!" 
-turn = "%s's turn" 
-now = " - **Now**" 
-joinToPlay2 = "🚪 Type `%sjoin` or click the door below to join!" 
-playButton = "Click :arrow_forward: to start %s!" 
-gameOverSmall = "**Game Over!**\n\n" 
-victorymessage = "Won!" 
+activeGame = "There's another game going on this channel."
+gameOverSmall = "**Game Over!**\n\n"
 uncompletedChallenges = "%s have uncompleted challenges! `g*achievements`" 
 
     [gameFramework.highscore]
