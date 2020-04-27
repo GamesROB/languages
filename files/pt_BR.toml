@@ -1216,18 +1216,6 @@ flag = "🇧🇷" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#
         
         [permissions.message.add]
         reaction = "Adicionar Reações"
-        
-[transactions]
-betting = "" 
-slots = "" # Found in: SlotsCommand.java#34:81 SlotsCommand.java#72:98
-winGamePrize = "" 
-changingEmote = "Alterando seu emoji" 
-upvote = "" # Found in: RPCManager.java#333:72
-cheater = "" 
-completeAchievement = "" # Found in: AchievementType.java#75:112
-give = "" # Found in: CommandsManager.java#159:124
-got = "" # Found in: CommandsManager.java#161:103
-weekly = "Weekly Patreon Command" # Found in: TokensCommand.java#37:128
 
 [badges]
 staff = "Equipe" 

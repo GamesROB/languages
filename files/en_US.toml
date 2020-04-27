@@ -31,7 +31,7 @@ pagedCommandFooter = "Page %s/%s (`%s%s <page>` to view another page)." # Found 
 # Found in: CommandsManager.java#747:76
 error = """
 ❌ An error occured when handling that command!
-Please report it along with the ID `%s` on our server (%s).
+Please report it along with the ID `%s` on our server at %s
 Sorry for the inconvenience.
 """
 # Found in: CommandsManager.java#494:83
@@ -128,6 +128,65 @@ Support us here: %s
     embed = "Check it out" 
     
 [game]
+    [game.comp]
+        [game.comp.turn]
+        invalidTurn = "It's not your turn." 
+        header = "%s's turn!\n\n" # Found in: MatchHandlerComponentsJVM.kt#38:67
+
+    [game.inputHandler]
+    noInput = "No input provided!"
+    invalidReactionBinding = "Your reaction was invalid"
+    invalidReactionReturnType = "Reaction provided invalid return type"
+        
+    [game.initMessage]
+    # Found in: Match.kt#67:88
+    header = """
+    **Play a %s match**
+    %s
+
+    """
+    minPlayers = "Needs at least **%s** more players" # Found in: Match.kt#69:106
+    join = "🚪 Join"
+    ai = "🤖 Add CPU"
+    start = "▶️ Start"
+
+    [game.endMessage]
+    uncompletedChallenges = "%s have uncompleted challenges! `%sachievements`" 
+    timeout = "The match has timed out after **%s**." 
+
+    patreon = "Help us maintain the bot running with Patreon for less than a coffee!" 
+    emote = "You can change the emote you show up as in games with %semote!"
+    findMatches = "You can play with people on the official GamesROB server!" 
+
+        [game.endMessage.highscores]
+        playerbest = """
+        %s
+        **World Record**: %s
+        **Server Record**: %s
+        **This Run**: %s **Personal Best** (%s%s in the server/%s%s worldwide)
+        """
+        guildbest = """
+        %s
+        **World Record**: %s
+        **This Run**: %s **Server Record** (%s%s worldwide)
+        """
+        notbest = """
+        %s
+        **Personal Best**: %s
+        **This Run**: %s (%s%s in the server/%s%s worldwide)
+        """
+        wr = """
+        %s
+        **This Run**: %s **World Record!**
+        """
+        
+        uno = "Uno Lowest Time" 
+        connect4 = "Connect4 Most Tiles" 
+        minesweeper = "Minesweeper Lowest Time" 
+        minesweeperKnightPaths = "Minesweeper Knight Paths Lowest Time" 
+        quiz = "Quiz Most Points" 
+        memoryGame = "Memory Game Lowest Time" 
+    
     [game.2048]
     shortDescription = "The classic 2048 game!" 
     longDescription = """
@@ -138,6 +197,10 @@ Support us here: %s
     name = "2048" 
     points = " points" 
     loss = "The board was filled!" 
+
+        [game.2048.rush]
+        name = "Rush" 
+        description = "Gotta go fast! Cuts out the early game." 
     
     [game.hangman]
     name = "Hangman" 
@@ -168,10 +231,8 @@ Support us here: %s
     
     [game.achievement]
     onARoll = "On a Roll" 
-    gambleTokens = "Gamble %s %s" 
     upperClass = "Upper Class" 
     billGates = "Literally Bill Gates" 
-    reachTokens = "Get %s %s" 
     winGames = "Win %s games" 
     unfair = "This is unfair!" 
     votingWeek = "Voting Week!" 
@@ -188,56 +249,53 @@ Support us here: %s
     intensePlayer = "Intense Player" 
     playGames = "Play %s games" 
     lucky = "Lucky" 
-    # Found in: AchievementType.java#77:79
-    got = """
-    Achievement Get: **%s**!
-    *%s*
-    %s
-    """
-    upvote = "Upvote GamesROB on DBL %s times" 
     mediumClass = "Medium Class" 
     overconfident = "Overconfident" 
     crowned = "#Crowned" 
     realPlayer = "Real Player" 
     supporter = "Supporter" 
     rigged = "Rigged!!" 
-    winTokensGambling = "Win %s tokens gambling" 
     gambler = "Gambler" 
-    runAchievements = "Use `%sachievements` to view progress in achievements!" # Found in: AchievementType.java#80:104
+
+    reachTokens = "Get %s %s" 
+    gambleTokens = "Gamble %s %s" 
+    upvote = "Upvote GamesROB on DBL %s times" 
+    winTokensGambling = "Win %s tokens gambling" 
     loseTokensGambling = "Lose %s tokens gambling" 
     
-    [game.uno]
-    invalidColor = "That's not a valid color." 
-    requestPlayer = """
-    Choose a player to switch decks with:
+    # Found in: AchievementType.java#77:79
+    got = """
+    Achievement Get: **%s**!
+    *%s*
     %s
     """
-    noColor = "You need to choose a color to use a wildcard (e.g. `B blue`)." 
-    drawCard = "You've drawn a card because you had run out." 
+    runAchievements = "Use `%sachievements` to view progress in achievements!" # Found in: AchievementType.java#80:104
+    
+    [game.uno]
+    name = "Uno" 
+    shortDescription = "Try to get the same color or number on one of your cards, until they're over!" 
+    longDescription = """
+    Everyone gets 7 cards, which are DM'd to you. On each round, you can use a card.
+    If you have a card with the same color or number as the last color used, you can use it.
+    Otherwise, you'll have to draw cards from the pile.
+    """
+    
     game = """
     Top Card
     %s
     
     
     """
-    requestColor = "Please choose the next color:" 
-    draw2 = " and %s drew %s cards" 
-    block = ", blocking %s" 
-    draw4 = " and chose the color %s, %s drew %s cards" 
-    playerDrawCard2 = "%s drew a card from the pile." 
-    name = "Uno" 
-    longDescription = """
-    Everyone gets 7 cards, which are DM'd to you. On each round, you can use a card.
-    If you have a card with the same color or number as the last color used, you can use it.
-    Otherwise, you'll have to draw cards from the pile.
+    
+    requestPlayer = """
+    Choose a player to switch decks with:
+    %s
     """
     chooseCard = """
     %s: Send the number of the card in your deck you want to use here!
     Your deck is in our DMs.
     
     """
-    played = "%s has played %s%s." 
-    won = "You won the game!" 
     deckDm3 = """
     You can play on %s.
     On your turn, click the reaction for the card you want to play.
@@ -245,57 +303,64 @@ Support us here: %s
     If you prefer, you can send the letter on top of the card or \"+\" in the game channel.
     Your deck:
     """
+    requestColor = "Please choose the next color:"
+    noColor = "You need to choose a color to use a wildcard (e.g. `B blue`)." 
+    invalidColor = "That's not a valid color." 
+
+    playerDrawCard2 = "%s drew a card from the pile." 
+    block = ", blocking %s" 
     wildcard = " and chose the color %s" 
-    shortDescription = "Try to get the same color or number on one of your cards, until they're over!" 
     invert = ", inverting the game order" 
+    draw2 = " and %s drew %s cards" 
+    draw4 = " and chose the color %s, %s drew %s cards" 
+
+    played = "%s has played %s%s." 
+    won = "You won the game!" 
+
+        [game.uno.overseer]
+        name = "Overseer" 
+        description = "Know everyone's deck at all times!" 
+
+        [game.uno.crazy]
+        name = "Crazy" 
+        description = "Play a card with number 7 to swap decks with an opponent!" 
+
+        [game.uno.street]
+        name = "Street Rules" 
+        description = "Play cards in increasing number in one turn, stack draw cards" 
     
     [game.minesweeper]
+    name = "Minesweeper" 
+    shortDescription = "The OG minesweeper! Don't get blown up!" 
     longDescription = """
     Send the place you want to dig (e.g. c4), the number of nearby bombs will be shown.
     Don't dig into a bomb! You can flag by suffixing F (e.g. e1F)
     """
-    left = "The player left" 
-    name = "Minesweeper" 
     bomb = "You dug a bomb!" 
-    shortDescription = "The OG minesweeper! Don't get blown up!" 
-    
-    [game.mode]
-        [game.mode.house]
+
+        [game.minesweeper.house]
         name = "House" 
         description = "The number shown in the tiles you dig won't count the left, bottom and right tiles." 
         
-        [game.mode.knightpaths]
+        [game.minesweeper.knightpaths]
         name = "Knight Paths" 
-        description = "The number shown in the tiles you dig actually show what's from knight paths (Chess) from it!" 
-        
-        [game.mode.overseer]
-        name = "Overseer" 
-        description = "Know everyone's deck at all times!" 
-        
-        [game.mode.reversettt]
-        name = "Inverted" 
-        description = "It's reverse day! You were probably going to tie anyway, see if this helps." 
-        
-        [game.mode.crazy]
-        name = "Crazy" 
-        description = "Play a card with number 7 to swap decks with an opponent!" 
-        
-        [game.mode.reversec4]
-        description = "It's reverse day! Don't connect four!" 
-        name = "Inverted" 
-        
-        [game.mode.rush]
-        name = "Rush" 
-        description = "Gotta go fast! Cuts out the early game." 
+        description = "The number shown in the tiles you dig actually show what's from knight paths (Chess) from it!"  
         
     [game.detective]
+    name = "Detective" 
+    shortDescription = "One of you is an assassin. Kick them out before it's too late." 
+    longDescription = """
+    The assassin will kill someone every night.
+    Citizens will kick someone out every day.
+    Try kicking the killer before it's too late.
+    """
+
     dmAssassin2 = """
     🗡 You're the killer!
     Who will be the unlucky first?
     %s
     """
     dmCitizen = "🏙 You're a citizen." 
-    name = "Detective" 
     wakeFourthPlus = "🌆 The city wakes up, with one less citizen on our realm, and that would be %s. When does this stop?" 
     murderReveal = "%s was the assassin!" 
     assassinKicked = "The assassin has been kicked! Finally, the city may sleep in peace." 
@@ -307,7 +372,6 @@ Support us here: %s
     
     """
     invalidUser = "That user isn't playing or has already died/been kicked." 
-    shortDescription = "One of you is an assassin. Kick them out before it's too late." 
     wakeThird = "🌆 The city wakes up. We're definitely in \"pattern\" territory surrounding %s's stabbing." 
     dmAssassinRecursive2 = """
     Who will it be tonight?
@@ -317,11 +381,6 @@ Support us here: %s
     sleepKicked = """
     🌇 The city goes to sleep, confidently kicking %s out of town for attempted murder.
     Little do they know, that's not who they wanted to...
-    """
-    longDescription = """
-    The assassin will kill someone every night.
-    Citizens will kick someone out every day.
-    Try kicking the killer before it's too late.
     """
     wakeSecond = "🌆 The city wakes up, this time missing %s, who has been stabbed, again, in their house. They say twice is just a coincidence though, right?" 
     wakeFirst = "🌆 The city wakes up, surprised when they encounter that %s has been stabbed in their own house. Why would anyone do that?" 
@@ -403,9 +462,6 @@ Support us here: %s
         assassin = "🗡 Assassins win!" 
         
     [game.quiz]
-    cantPlay = "%s: You've guessed too many times! Wait to play in the next round." 
-    noOneAnswered = "No one could answer that! The answer was \"**%s**\"." 
-    answer = "%s (+%s points) has answered it correctly!" 
     name = "Quiz" 
     shortDescription = "Do you know all the answers?" 
     longDescription = """
@@ -413,35 +469,30 @@ Support us here: %s
     Send in the letter you think is the correct answer in a message.
     Whoever has more points in the end will win!
     """
+    noOneAnswered = "No one could answer that! The answer was \"**%s**\"." 
     revealAnswer = """
     %s
     Answer was: %s
     
     """
+    answer = "%s (+%s points) has answered it correctly!" 
+    cantPlay = "%s: You've guessed too many times! Wait to play in the next round." 
     
     [game.towncountryriver]
-    rate = """
-    
-    
-    %s that starts with %s:
-    %s
-    Say `yes` or `no` depending on if you think it's valid!
-    
-    """
+    name = "Town, Country, River" 
+    shortDescription = "Do you know words? You have 15 seconds to come up with words within a theme." 
     longDescription = """
     Think fast! You have 15 seconds to think of a word that starts with the given letter in the given theme.
     The other players can vote whether or not your word is within the theme with `yes` or `no`!
     """
-    reactionRate2 = """
+    giveRating = """
     
     
     Vote in %s's message depending on if you think it's valid!
     Theme: **%s**
     
     """
-    name = "Town, Country, River" 
-    shortDescription = "Do you know words? You have 15 seconds to come up with words within a theme." 
-    themeMessage2 = """
+    theme = """
     
     
     Quick, gimme a %s that starts with %s!
@@ -462,7 +513,6 @@ Support us here: %s
         anime = "Anime" 
         celebrity = "Celebrity" 
         animal = "Animal" 
-        fortniteSkin = "Fortnite Skin" 
         adjective = "Adjective" 
         name = "Name" 
         gender = "Gender" 
@@ -474,56 +524,33 @@ Support us here: %s
         meme = "Meme" 
         
     [game.tictactoe]
+    name = "TicTacToe" 
+    shortDescription = "Arrange 3 of your tile in a line within the board!" 
     longDescription = """
     You know how TicTacToe works!
     Just send in the letter you want to put your tile in (e.g. a).
     """
-    shortDescription = "Arrange 3 of your tile in a line within the board!" 
-    name = "TicTacToe" 
+    winner = "%s won the game!"
+    invalidPlay = "You cannot play on that tile!"
     tie = "It's a tie!" 
+
+        [game.tictactoe.reverse]
+        name = "Inverted" 
+        description = "It's reverse day! You were probably going to tie anyway, see if this helps." 
     
     [game.connectFour]
+    name = "ConnectFour" 
+    shortDescription = "Drop tiles in order to connect 4 of your color!" 
     longDescription = """
     You have to connect 4 tiles of your color vertically, horizontally or diagonally!
     Send in the chat the number for the row you want to drop in (e.g.: 3)
     """
-    name = "ConnectFour" 
-    shortDescription = "Drop tiles in order to connect 4 of your color!" 
-    
-    [game.roulette]
-    longDescription = """
-    One bullet, 8 barrel holes.
-    Flip the barrel at whichever strength you want, and hope for the best when you pull the trigger!
-    """
-    shortDescription = "Flip the barrel, don't get hit!" 
-    chooseStrength = """
-    🔫 How strongly will you flip the barrel?
-    Send a number from %s to %s.
-    """
-    survive = "%s pulls the trigger, and is relieved by the lack of sound." 
-    shot = "%s pulls the trigger and gets hit! How unlucky of them." 
-    name = "Russian Roulette" 
-    
-    [game.unonew]
-    longDescription = "This update seems to freeze the game randomly. Please report all instances to discord.gg/YsZ9ZDQ" 
-    name = "Uno Remake [BETA]" 
-    shortDescription = "An experiement of the new Uno remake." 
-    
-    [game.comp]
-        [game.comp.turn]
-        invalidTurn = "It's not your turn." 
-        header = "%s's turn!\n\n" # Found in: MatchHandlerComponentsJVM.kt#38:67
-        
-    [game.initMessage]
-    # Found in: Match.kt#67:88
-    header = """
-    **Play a %s match**
-    %s
+    winner = "%s won the game!"
+    invalidPlay = "You cannot play on that column!"
 
-    """
-    minPlayers = "Needs at least **%s** more players" # Found in: Match.kt#69:106
-    join = "🚪 to join"
-    start = "▶️ to start"
+        [game.connectFour.reverse]
+        name = "Inverted" 
+        description = "It's reverse day! Don't connect four!" 
     
 [command]
 permissionLock = "⛔ You can't use this command!" 
@@ -891,6 +918,8 @@ permissionLock = "⛔ You can't use this command!"
     global = "World Record game score holders:" # Found in: TokensCommand.java#124:69 TokensCommand.java#150:87
     server = "Top game score records on **%s**:" # Found in: TokensCommand.java#125:69
     
+    playerRanking = "\n#️⃣ You are positioned **%s** with **%s**\n\n" # Found in: TokensCommand.java#139:107
+    
         [command.highscores.category]
         entry = "%s place held by %s (%s)" # Found in: TokensCommand.java#167:75
         server = "%s top records on ***%s**:" 
@@ -1125,73 +1154,6 @@ permissionLock = "⛔ You can't use this command!"
     [command.alertbot]
     description = "View information about our partner, alertbot." 
     
-[gameFramework]
-betting = "💰 Betting %s!" 
-defaultMode = "Normal %s" 
-waiting = "⏰ Waiting\n" 
-timeout = "The match has timed out after **%s**." 
-viewPlayers = "See the players with `%slistplayers`." 
-findMatches = "You can play with people on the official GamesROB server!" 
-playersOutOfRange = "You can only have between %s and %s players in this game!" 
-emote = "You can change the emote you show up as in games with %semote!" 
-viewPlayersStop = "See the players with `%slistplayers` and stop with `%sstop`." 
-next = " - **Next**" 
-requireBetting = """
-This game requires betting!
-Add `bet=amount` in the end of the command to choose how many tokens should be gambled.
-"""
-everyoneQuit = "The match has been cancelled because everyone quit."
-begin = """
-**It's on!**
-**%s**
-%s
-
-
-"""
-gameOver = """
-**Game Over!**
-%s
-
-
-"""
-mode = "\n**%s Mode:** %s" 
-modePlayButtonHeader = "\n**Choose the %s mode:**" 
-modePlayButton = "\n%s to play %s"
-patreon = "Help us maintain the bot running with Patreon for less than a coffee!" 
-creatorQuit = "The %s match has been cancelled because its creator quit."
-rematch = "Click :arrows_counterclockwise: for a rematch!" 
-activeGame = "There's another game going on this channel."
-gameOverSmall = "**Game Over!**\n\n"
-uncompletedChallenges = "%s have uncompleted challenges! `g*achievements`" 
-
-    [gameFramework.highscore]
-    playerbest = """
-    %s
-    **World Record**: %s
-    **Server Record**: %s
-    **This Run**: %s **Personal Best** (%s%s in the server/%s%s worldwide)
-    """
-    connect4 = "Connect4 Most Tiles" 
-    guildbest = """
-    %s
-    **World Record**: %s
-    **This Run**: %s **Server Record** (%s%s worldwide)
-    """
-    notbest = """
-    %s
-    **Personal Best**: %s
-    **This Run**: %s (%s%s in the server/%s%s worldwide)
-    """
-    uno = "Uno Lowest Time" 
-    minesweeper = "Minesweeper Lowest Time" 
-    wr = """
-    %s
-    **This Run**: %s **World Record!**
-    """
-    minesweeperKnightPaths = "Minesweeper Knight Paths Lowest Time" 
-    quiz = "Quiz Most Points" 
-    memoryGame = "Memory Game Lowest Time" 
-    
 [languageProperties]
 language = "English" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 code = "en_US" # Found in: LanguageCommands.java#20:76
@@ -1216,18 +1178,6 @@ flag = "🇺🇸" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#
         
         [permissions.message.add]
         reaction = "Add Reactions" 
-        
-[transactions]
-betting = "Used for gambling in matches" 
-slots = "Used for gambling in the slots machine" # Found in: SlotsCommand.java#34:81 SlotsCommand.java#72:98
-winGamePrize = "Prize for winning a match" 
-changingEmote = "Changing your emoji tile" 
-upvote = "Voting for the bot on DBL" # Found in: RPCManager.java#333:72
-weekly = "Weekly Patreon Command" # Found in: TokensCommand.java#37:128
-cheater = "Cheater" 
-completeAchievement = "Completing an achievement" # Found in: AchievementType.java#75:112
-give = "You gave tokens" # Found in: CommandsManager.java#159:124
-got = "You were given tokens" # Found in: CommandsManager.java#161:103
 
 [events]
 # Found in: EventTimer.java#19:104 EventTimings.java#49:104
@@ -1500,10 +1450,3 @@ holderTooManyKeys = "The user holding the key to the premium bot has too many se
     revokeButton = "Revoke" 
     addButton = "Add to a server" 
     
-[commands]
-    [commands.highscore]
-    playerRanking = "\n#️⃣ You are positioned **%s** with **%s**\n\n" # Found in: TokensCommand.java#139:107
-    globalInfo = "\nView world rankings with `%shighscore global` or clicking 🌐" 
-    
-[gameframework]
-noInput = "No input was provided!"
