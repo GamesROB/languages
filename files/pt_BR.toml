@@ -1,5 +1,94 @@
 
 [game]
+    [game.comp]
+        [game.comp.turn]
+        invalidTurn = "Não é sua vez." 
+        header = "É a vez de %s!\n\n" # Found in: MatchHandlerComponentsJVM.kt#38:67
+
+        [game.comp.scoreboard]
+        points = "%s pontos"
+
+        [game.comp.board]
+        bounds = "Posição inválida."
+    
+    [game.mode]
+    default = "Padrão"
+    selection = "⚙️ Escolha um modo:"
+
+    [game.framework]
+    botShuttingDown = "O GamesROB já volta!"
+    exception = "Ocorreu um erro. Por favor reporte isso."
+    timeout = "Acabou o tempo da partida."
+    forfeit = "Um dos jogadores saiu."
+    matchCancelled = "Cancelada\n%s"
+    roomNotFound = "A sala que você está procurando não existe!"
+
+        [game.framework.premiumWarning]
+        title = "A partida pode ter até %s jogadores."
+        description = "[Chegue a até %s jogadores sendo VIP e criando a partida ou com o bot Premium!](%s)"
+
+    [game.inputHandler]
+    noInput = "Sem conteúdo provido!"
+    invalidReactionBinding = "Sua reação foi inválida"
+    invalidReactionReturnType = "Reação proveu tipo de conteúdo inválido"
+        
+    [game.initMessage]
+    # Found in: Match.kt#67:88
+    header = """
+    **Jogue uma partida de %s**
+    %s
+    
+    """
+    minPlayers = "Requer ao minimo mais **%s** jogadores" # Found in: Match.kt#69:106
+    join = "Entrar"
+    ai = "Adicionar CPU"
+    start = "Entrar"
+    pickMode = "Modo"
+
+    [game.endMessage]
+    timeout = "Acabou o tempo da partida de **%s**." 
+    stop = "A partida foi encerrada."
+
+    uncompletedChallenges = "%s tem desafios incompletos! `%sachievements`" 
+
+    patreon = "Nos ajude a deixar o bot rodando por menos que um café!" 
+    emote = "Você pode mudar o emoji que aparece nos jogos com %semote!"
+    findMatches = "Você pode jogar com a galera no servidor oficial do GamesROB!" 
+    announcementViewsFooter = "%s visualizações"
+    trickOrTreating = "Doces ou travessuras está jogável agora!"
+    rematch = "\n🔄 Jogar Novamente (%s/%s)"
+
+        [game.endMessage.highscores]
+        norecords = """
+        %s
+        **Récorde Mundial**: %s
+        **Récorde do Servidor**: %s
+        **Melhor Pessoal**: %s
+        **Essa Tentativa**: %s (%s%s no servidor/%s%s mundial)
+        """
+        playerbest = """
+        %s
+        **Récorde Mundial**: %s
+        **Récorde do Servidor**: %s
+        **Essa Tentativa**: %s **Melhor Pessoal** (%s%s no servidor/%s%s mundial)
+        """
+        guildbest = """
+        %s
+        **Récorde Mundial**: %s
+        **Essa Tentativa**: %s **Récorde do Servidor** (%s%s mundial)
+        """
+        wr = """
+        %s
+        **Essa Tentativa*: %s **Récorde Mundial!**
+        """
+        
+        uno = "Menor Tempo no Uno" 
+        connect4 = "Mais Conectados no Lig4" 
+        minesweeper = "Menor Tempo no Campo Minado" 
+        minesweeperKnightPaths = "Menor Tempo no Campo Minado (Caminho de Caveleiro)" 
+        quiz = "Mais Pontos na Trivia" 
+        memoryGame = "Menor Tempo no Jogo da Memória" 
+    
     [game.2048]
     name = "2048"
     shortDescription = "O clássico 2048!" 
@@ -8,35 +97,83 @@
     Números do mesmo valor irão juntar-se.
     Tente chegar no 2048!
     """
-    loss = "O placar está cheio!" 
-    points = " pontos"
+
+    invalidInput = "Essa entrada é inválida!"
+    boardFull = "O tabuleiro está cheio, você perdeu."
+    win = "Você chegou no 2048!"
+
+        [game.2048.rush]
+        name = "Corrida" 
+        description = "Gotta go fast! Pula o começo do jogo." 
     
     [game.hangman]
     name = "Forca" 
-    sendWordDM = "Qual sentença escolhe?" 
     shortDescription = "Tente adivinhar a palavra que o criador escolher!" 
     longDescription = """
-    O criador manda uma sentença sigilosa para o bot no PV.
+    O criador manda uma entrada sigilosa para o bot no PV.
     Depois disso, os outros jogadores tentam adivinhar-lá, letra a letra ou de uma vez!
     """
-    wordSet = """
-    **Você escolheu a sentença!**
-    Volte agora para %s.
-    """
-    validGuess = "%s adivinhou a letra %s!" 
-    wordPicked = "" 
-    outOfLimbs = "%s não tem mais partes! Boa tentativa!" 
-    invalidGuess = "%s adivinhou %s, e errou!" 
-    sendWord = "Antes de qualquer outra coisa, %s: Mande a sentença desejada no PV!" 
-    wordTooBig = "Esta sentença é muito grande, escolha uma até %s." 
+
+    prompt = "Para começar a partida, %s manda a entrada em PV para o bot!"
+    promptDm = "Escolha uma entrada para o jogo:"
+    promptSet = "Entrada escolhida!"
+    promptInvalidLength = "A entrada deve ter entre %s e %s caracteres."
+    invalidPrompt = "A entrada deve ter apenas caracteres a-z"
+    creatorWins = "O criador ganha!"
+    guesserWins = "O adivinhador ganha!"
+    deadPlay = "Você não pode jogar depois de estar eliminado."
     
+    [game.battleship]
+    name = "Batalha Naval"
+    shortDescription = "Onde adivinhar causa destruição de navios!"
+    longDescription = """
+    Esconda os seus navios escolhendo posições
+    Quando ambos jogadores tiverem escondido seus navios, tente adivinhar onde estão
+    """
+
+    chooseOrientation = "Escolha uma orientação adicionando 'v' (vertical) ou 'h' (horizontal) ao final da posição."
+    invalidPlacement = "O navio não cabe nessa posição!"
+    overlap = "Um dos pedaços já está ocupado!"
+    alreadyUncovered = "Você já escolheu essa posição."
+    win = "%s venceu!"
+
+    # Hide Ships
+    hideShips = "Esconda seus navios no PV com o bot."
+    hideShipsDMs = """
+    Mande onde colocar os navios!
+    Formato: `<posição como letra e número><v (vertical) ou h (horizontal)>`
+    Exemplo: `b2v`
+
+    """
+    placingExtraInfo = """
+    O próximo navio tem tamanho de **%s blocos**.
+    🎲 Randomizar Restantes | 🔄 Resetar
+    """
+    hiddenShips = """
+    Você escondeu todos os navios, aguardando outro jogador.
+    🔄 Resetar
+    """
+
+    # Destroy Ships
+    destroyShips = """
+    Adivinhe uma posição para bombardear. (Exemplo: `c3`)
+    Se outro jogador colocou um navio na posição, você o verá.
+    
+    """
+    destroyShipsDMs = "Aqui está seu campo para referência:"
+
     [game.memorygame]
+    name = "Jogo da Memória" 
     shortDescription = "Teste sua memória tentando encontrar 2 do mesmo emoji!" 
     longDescription = """
     Mande a combinação do que quiser revelar (ex. a3).
     Se falhar na junção de 2, lembre das posições para depois.
     """
-    name = "Jogo da Memória" 
+    
+    invalidTurn = "Não é sua vez!"
+    pickOther = "Escolha uma posição diferente."
+    chosenTile = "Essa posição já está aberta."
+    win = "%s venceu o jogo!"
     
     [game.achievement]
     onARoll = "Arrebentando!" 
@@ -60,12 +197,6 @@
     intensePlayer = "Jogador Intenso" 
     playGames = "Jogue %s partidas" 
     lucky = "Sortudo" 
-    # Found in: AchievementType.java#77:79
-    got = """
-    Conquista Desbloqueada: **%s**!
-    *%s*
-    +🔸 %s tokens
-    """
     upvote = "Vote para GamesROB no DBL %s vezes" 
     mediumClass = "Classe Média" 
     overconfident = "Confidente demais" 
@@ -75,251 +206,117 @@
     rigged = "Roubado!!" 
     winTokensGambling = "Ganhe %s tokens apostando" 
     gambler = "Apostador" 
-    runAchievements = "Use `%sachievements` para ver seu progresso com conquistas!" # Found in: AchievementType.java#80:104
     loseTokensGambling = "Perca %s tokens apostando" 
+
+    # Found in: AchievementType.java#77:79
+    got = """
+    Conquista Desbloqueada: **%s**!
+    *%s*
+    +🔸 %s tokens
+    """
+    runAchievements = "Use `%sachievements` para ver seu progresso com conquistas!" # Found in: AchievementType.java#80:104
     
     [game.uno]
-    invalidColor = "Essa Cor é Inválida" 
-    noColor = "Você precisa escolher uma cor em inglês para usar a carta curinga (ex. `B blue`)." 
-    drawCard = "Você comprou uma carta já que não tinha nenhuma jogável." 
-    game = """
-    Última Carta
-    %s
-    
-    
-    """
     name = "Uno" 
+    shortDescription = "Tente achar a mesma cor ou número da sua carta, até elas acabarem!" 
     longDescription = """
     Todos ganham 7 cartas, enviadas no privado. Em cada partida, você pode usar uma carta.
     Se você tiver uma carta da mesma cor ou número da última usada, você pode colocá-la.
     Caso o contrário, você deverá comprar 2 cartas.
     """
-    chooseCard = """
-    %s: Envie o número da carta na sua mão que você quer usar aqui!
-    Sua mão está em nossa conversa privada.
     
-    """
-    shortDescription = "Tente achar a mesma cor ou número da sua carta, até elas acabarem!" 
-    invert = ", invertendo a ordem do jogo" 
-    requestPlayer = """
-    Choose a player to switch decks with:
-    %s
-    """
-    requestColor = "Please choose the next color:" 
-    draw2 = " and %s drew %s cards" 
-    block = ", blocking %s" 
-    draw4 = " and chose the color %s, %s drew %s cards" 
-    playerDrawCard2 = "%s drew a card from the pile." 
-    played = "%s has played %s%s." 
-    won = "You won the game!" 
-    deckDm3 = """
-    You can play on %s.
-    On your turn, click the reaction for the card you want to play.
-    Click the :heavy_plus_sign: reaction to draw a card from the pile.
-    If you prefer, you can send the letter on top of the card or \"+\" in the game channel.
-    Your deck:
-    """
-    wildcard = " and chose the color %s" 
+    instructions1 = "Clique na carta que quer escolher abaixo."
+    instructions2 = "Lembre-se de mandar \"uno\" depois, quando"
+    instructions3 = "tiver 1 carta sobrando!"
     
+    waitTurn = "Aguarde até ser sua rodada."
+
+    invalidNumber = "Não é uma carta válida."
+    invalidColor = "Não é uma cor ou número válido."
+    win = "%s venceu!"
+    topCard = "A carta em cima é:\n"
+    streetrules = "Regras Raiz"
+
     [game.minesweeper]
+    name = "Campo Minado" 
+    shortDescription = "O famoso campo minado! Não seja explodido!" 
     longDescription = """
     Envie onde quer cavar (ex. c4), e o número de bombas por perto irá mostrar.
     Não cave uma bomba! Boa sorte!
     """
-    left = "O jogador saiu" 
-    name = "Campo Minado" 
-    bomb = "Você cavou uma bomba!" 
-    shortDescription = "O famoso campo minado! Não seja explodido!" 
     
-    [game.mode]
-        [game.mode.house]
-        name = "Casa" 
-        description = "O número mostrado no item que você cavar não contará as bombas à esquerda, direita ou baixo." 
-        
-        [game.mode.knightpaths]
-        name = "Contagem de Cavalo" 
-        description = "O número mostrado no item que você cavar será as bombas em caminhos de cavalo (Xadrez) dela!" 
-        
-        [game.mode.reversettt]
-        name = "Invertido" 
-        description = "É o dia invertido! Nós dois sabemos que provavelmente daria velha, e isso não vai ajudar." 
-        
-        [game.mode.reversec4]
-        description = "É o dia invertido! Não ligue 4!" 
-        name = "Invertido" 
-        
-        [game.mode.overseer]
-        name = "Overseer" 
-        description = "Know everyone's deck at all times!" 
-        
-        [game.mode.crazy]
-        name = "Crazy" 
-        description = "Play a card with number 7 to swap decks with an opponent!" 
-        
-        [game.mode.rush]
-        name = "Rush" 
-        description = "Gotta go fast! Cuts out the early game." 
-        
+    boom = "Você cavou uma bomba! Boom!"
+    lastStanding = "%s era o último em pé!"
+    win = "Você venceu!"
+
+    easy = "Fácil"
+    medium = "Médio"
+    hard = "Difícil"
+    knightpaths = "Caminho de Cavaleiro"
+    knightpathshard = "Caminho de Cavaleiro (Difícil)"
+    
     [game.detective]
-    dmAssassin2 = """
-    🗡 Você é o assassino!
-    Quem será o primeiro mal sortudo?
-    %s
-    """
-    dmCitizen = "🏙 Você é um cidadão." 
     name = "Detetive" 
-    wakeFourthPlus = "🌆 A cidade acordou, com menos um cidadão conosco, e esse seria %s. Quando isso irá acabar?" 
-    murderReveal = "%s era o assassino!" 
-    assassinKicked = "O assassino foi expulso! Finalmente, a cidade poderá durmir em paz." 
-    sleep = "🌇 A cidade dorme." 
-    chooseKick = """
-    
-    Coletivamente, a cidade deve decidir quem está causando esses horríveis momentos, para podermos expulsá-los para sempre.
-    Envie a letra para quem deveria ser expulso da cidade:
-    
-    """
-    invalidUser = "Esse usuário não está no jogo ou já morreu/foi expulso." 
     shortDescription = "Um de vocês é um assassino. Sua missão é expulsá-lo antes que seja tarde demais." 
-    wakeThird = "🌆 A cidade acorda. Isso não pode ser mais uma concicidência: %s foi esfaqueado na sua casa. Pela terceira vez." 
-    sleepIndecisive = "🌇 A cidade dorme, indecisivos, expulsando ninguém. Como que isso irá afetá-los?" 
-    sleepKicked = """
-    🌇 A cidade dorme, confidentemente expulsando %s da cidade por tentativa de assassinato.
-    Só não sabiam que esse não era quem queriam expulsar...
-    """
     longDescription = """
     O assassino esfaqueará uma pessoa toda noite.
     Cidadãos irão expulsar alguém todo dia.
     Tente expulsar o assassino antes que seja tarde demais.
     """
-    wakeSecond = "🌆 A cidade acorda, dessa vez sem %s, também esfaqueado, também na sua casa. Dizem que duas vezes é concidência, né?" 
-    wakeFirst = "🌆 A cidade acorda, surpresa quando encontram %s esfaqueado na sua própria casa. Por que alguém faria isso?" 
-    dmAssassinRecursive2 = """
-    Who will it be tonight?
-    %s
-    """
     
-        [game.detective.response]
-        wait = "⏰ Você irá esperar até a noite chegar e fazer isso." 
-        assassinexec = "🗡 Você assassina **%s** durante a noite." 
-        assassinguard = """
-        🗡 Você fica de olho aberto pra quem sai da casa.
-        %s
-        """
-        medic = "🏥 Você revive **%s** ao longo da noite." 
-        revived = "🏥 Você foi revivido por **%s**. Ele(a) pede para você não revelar a sua identidade." 
-        detective = "🏥 Você investiga **%s**, e tem %s%% de certeza que é um(a) %s." 
-        
-        [game.detective.night]
-        playerquery = """
-        
-        O que fará?
-        %s
-        %s Ficar em casa
-        """
-        villager = """
-        🏙 Você é um aldeão.
-        Durante o dia, visite os outros para descobrir quem é o assassino!
-        """
-        assassin = """
-        🗡 Você é um assassino!
-        Mate alguém ou fique em casa para ver quem sair hoje à noite.
-        """
-        medic = """
-        🏥 Você é um médico!
-        Revive alguém que foi atacado ou permaneça em casa.
-        """
-        detective = """
-        🔍 Você é um detetive!
-        Investigue alguém para tentar encontrar o assassino, ou fique em casa.
-        """
-        
-        [game.detective.action]
-        villager = "%s Vote para executar %s" 
-        assassin = "%s Mate %s" 
-        medic = "%s Reviva %s" 
-        detective = "%s Investigue %s" 
-        
-        [game.detective.notification]
-        healed0 = "🏥 Anônimamente, um dos aldeões descobre uma maneira de reviver **%s**. O resto fica bem feliz de vê-lo(a) novamente, exceto o assassino, que agora tem um novo alvo." 
-        healed1 = "🏥 O(A) médico(a) anônimo(a) consegue salvar **%s** dessa vez. Mas quem é? Será que o assassino irá descobrir?" 
-        
-            [game.detective.notification.night]
-            first = "🌃 A noite come na vila pacífica." 
-            execution = """
-            %s A vila concorda em executar %s, e é revelado que ele(a) é um %s.
-            🌃 Os aldeãos, de luto dos perdidos, dormem ao pôr do sol.
-            """
-            noaction = """
-            A vila está dividida sobre quem executar, então decidem confiar uns nos outros.
-            🌃 Ainda perturbados com o ataque da noite passada, os aldeões decidem descançar.
-            """
-            
-            [game.detective.notification.day]
-            title = "🌇 **Dia %s**" 
-            executetitle = "A vila decide que é melhor fazer um voto para executar o assassino, baseado num voto." 
-            killed0 = "🗡 Os aldeões acordam e descobrem que **%s** está perdido(a). Preocupados, vão à sua casa e encontram seu corpo. Ele(a) foi matado(a) sem piedade." 
-            killed1 = "🗡 Os aldeões acordam e, novamente, são acordados pelo assissinato trágico de **%s**." 
-            killed2 = "🗡 Já é óbvio que o assassino não irá parar enquanto estiver livre. **%s** é a próxima vítima que os aldeões descobrem ao acordar." 
-            killedspecial = "🗡 Os aldeões acordam e descobrem o corpo de **%s**. Também descobrem que era um(a) anônimo %s. Seu futuro parece cada vez pior." 
-            skipped = "Os aldeões acordam. Depois de paranóia, estão felizes de descobrir que ninguém morreu no dia anterior. O assassino ainda está, porém, por aí." 
-            
-        [game.detective.errormessage]
-        day0guard = "Não pode ficar em casa na primeira noite." 
-        targeted = """
-        Ouviu de outro assassino que essa pessoa já é um alvo.
-        Escolha outra opção.
-        """
-        
-        [game.detective.over]
-        assassin = "🗡 Assassinos vencem!" 
-        villagers2 = "Villagers win! %s was the assassin." 
-        
+    invalidVoteDead = "Você não pode votar enquanto morto!"
+    invalidInputNumber = "Não é uma escolha válida!"
+    voteSelf = "Você não pode votar para si mesmo!"
+
+    timerDay = "%s Dia %s"
+    timerNight = "%s Noite %s"
+    vote = "Vote para quem você acha que é o assassino:"
+
+        [game.detective.callforaction]
+        kick = "\n%s Expulse %s da cidade (%s/%s)"
+        listActions = "\nO que vai fazer?"
+        assassin = "\n%s Matar %s" 
+        medic = "\n%s Reviver %s" 
+        detective = "\n%s Investigar %s" 
+        skip = "\n⏩ Pular a vez"
+
+        [game.detectve.nightAction]
+        assassin = "Ontem à noite, %s foi morto..."
+        detective = "Você inspeciona %s, e tem %s%% de certeza que ele(a) era um(a) %s"
+        medic = "%s foi revivido por um médico!"
+
+        [game.detective.role]
+        villager = "👥 Você é um aldeão."
+        assassin = "🔪 Você é um assassino!"
+        medic = "⚕️ Você é um médico!"
+        detective = "🔦 Você é um detetive!"
+
     [game.quiz]
-    cantPlay = "%s: You've guessed too many times! Wait to play in the next round." 
-    noOneAnswered = "No one could answer that! The answer was \"**%s**\"." 
-    answer = "%s (+%s points) has answered it correctly!" 
-    name = "" 
+    name = "Trivia" 
     shortDescription = "Você sabe as respostas?" 
     longDescription = """
     Quem consegue responder as respostas primeiro?
     Mande a letra que você acha que é a resposta correta em mensagem.
     Quem tiver mais pontos no final vencerá!
     """
-    revealAnswer = """
-    %s
-    A resposta era: %s
     
-    """
+    invalidNumber = "Não é uma entrada válida!"
+    nextRound = "Você só pode jogar no próximo round!"
+    win = "%s venceu o jogo!"
     
     [game.towncountryriver]
-    rate = """
-    
-    
-    %s que começa com %s:
-    %s
-    Diga `sim` ou `não` de acordo com sua opinião!
-    
-    """
+    name = "Stop" 
+    shortDescription = "Conhece várias palavras? Você tem 15 segundos para pensar em palavras dentro de um tema."
     longDescription = """
     Pense rápido! Você tem 15 segundos de pensar sobre uma palvra que começa com ume letra em um tema.
     Os outros jogadores podem votar se a palavra está correat ou não com `sim` ou `não`!
     """
-    reactionRate2 = """
     
-    
-    Vote na mensagem de %s dependendo da sua opinião da validade dentro do tema!
-    Tema: **%s**
-    
-    """
-    name = "Stop/Adedonha" 
-    shortDescription = "Conhece várias palavras? Você tem 15 segundos para pensar em palavras dentro de um tema." 
-    themeMessage2 = """
-    
-    
-    Rápido, me diz um(a) %s que começa com %s!
-    ⏰ Você tem %s
-    
-    """
+    votingInvalidUser = "Você não pode votar!"
+    alreadyVoted = "Você já votou!"
+    win = "%s venceu o jogo!"
+    theme = "Um(a) **%s** que começa com `%s`, vá!"
+    vote = "Vote sim caso ache que cabe no tema (**%s** que começa com `%s`):\n%s"
     
         [game.towncountryriver.themes]
         tv = "Filme/Série de TV" 
@@ -346,40 +343,32 @@
         meme = "Meme" 
         
     [game.tictactoe]
+    name = "Jogo da Velha" 
+    shortDescription = "Faça uma linha de 3!" 
     longDescription = """
     Você sabe como funciona!
     Envie a letra de onde quer colocar seu símbolo (ex. a).
     """
-    shortDescription = "Faça uma linha de 3!" 
-    name = "Jogo da Velha" 
+    winner = "%s venceu o jogo!"
+    invalidPlay = "Você não pode jogar nessa posição!"
     tie = "Deu velha!" 
     
+    inverse = "Invertido"
+    bigboard = "Tabuleiro Grande"
+
     [game.connectFour]
+    name = "Lig4" 
+    shortDescription = "Derrube botões e ligar 4!" 
     longDescription = """
     Você deve ligar 4 botões da sua cor verticalmente, horizontalmente ou em diagonal!
     Envie no chat o número para a linha que você quer derrubar (ex.: 3)
     """
-    name = "Lig4" 
-    shortDescription = "Derrube botões e ligar 4!" 
-    
-    [game.roulette]
-    longDescription = """
-    Uma bala, 8 buracos no barril.
-    Vire o barril com qualquer força, e acredite no melhor quando puxar o gatilho!
-    """
-    shortDescription = "Vire o barril, não seja acertado!" 
-    name = "Roleta Russa" 
-    chooseStrength = """
-    🔫 How strongly will you flip the barrel?
-    Send a number from %s to %s.
-    """
-    survive = "%s pulls the trigger, and is relieved by the lack of sound." 
-    shot = "%s pulls the trigger and gets hit! How unlucky of them." 
-    
-    [game.unonew]
-    longDescription = "This update seems to freeze the game randomly. Please report all instances to discord.gg/YsZ9ZDQ" 
-    name = "Uno Remake [BETA]" 
-    shortDescription = "An experiement of the new Uno remake." 
+    winner = "%s venceu o jogo!"
+    invalidPlay = "Você não pode jogar nessa coluna!"
+
+    inverse = "Invertido"
+    bigboard = "Tabuleiro Grande"
+    connect3 = "Lig 3"
     
 [genericMessages]
 ownersOnly = "Esse comando é somente acessivel para os donos." # Found in: TokensCommand.java#47:75 OwnerCommand.java#94:43 OwnerCommand.java#109:47 OwnerCommand.java#126:43 OwnerCommand.java#140:71 OwnerCommand.java#215:43 OwnerCommand.java#232:43 OwnerCommand.java#240:43 OwnerCommand.java#266:43 OwnerCommand.java#278:43 OwnerCommand.java#329:43 OwnerCommand.java#412:43 OwnerCommand.java#470:43 OwnerCommand.java#509:43 OwnerCommand.java#594:43 OwnerCommand.java#675:71 OwnerCommand.java#687:43 CommandsManager.java#410:75
@@ -1095,103 +1084,6 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     [command.alertbot]
     description = "Veja informações sobre nosso parceiro AlertBot." 
     
-[gameFramework]
-betting = "💰 Apostando %s 🔸 Fichas!" 
-defaultMode = "%s Normal" 
-waiting = "⏰ Esperando" 
-timeout = "A partida expirou após de **%s**." 
-viewPlayers = "Veja os jogadores com `%slistplayers`." 
-findMatches = "Você pode jogar com pessoas no servidor official do GamesROB!" 
-playersOutOfRange = "Só pode haver entre %s e %s jogadores nesse jogo!" 
-emote = "Você pode alterar o emoji que você é em jogos com %semote!" 
-viewPlayersStop = "Veja os jogadores com `%slistplayers` e saia com `%sleave`." 
-next = " - **Próximo**" 
-requireBetting = """
-Esse jogo precisa de uma aposta!
-Adicione `bet=quantidade` no fim do comando para escolher quantos tokens deverão ser apostados.
-"""
-everyoneQuit = "A partida foi cancelada porque todos sairam." 
-collectiveMatch2 = """
-**Jogo de %s**
-%s
-"""
-# Found in: Match.kt#67:88
-multiplayerMatch = """
-**Partida Multi-jogador de %s!**
-%s
-
-
-"""
-begin = """
-**Começou!**
-**%s**
-%s
-
-
-"""
-typeToJoin = "Digite `%sjoin` para participar." 
-joinToPlayNoReaction2 = "🚪 Digite `%sjoin` para entrar!" 
-gameOver = """
-**Fim de Jogo!**
-%s
-
-
-"""
-mode = "\n**Modo %s:** %s" 
-modePlayButtonHeader = "\n**Escolha o modo de %s:**" 
-modePlayButton = "\n%s para %s" 
-addBot = "Clique em 🤖 para adicionar um jogador de IA!" 
-singleplayerMatch = """
-**Partida Solo de %s!**
-%s
-
-
-"""
-join = "%s entrou na partida! %s/%s" 
-settingOutOfRange = "A configuração `%s` deve ter um valor entre %s e %s!" 
-winner = "%s venceu!" 
-patreon = "Se está gostando do bot, considere tornar-se um Patrão para suportar a existência!" 
-creatorQuit = "A partida de %s foi cancelada porque o(a) criador(a) saiu." 
-draw = "Empate!" 
-rematch = "Clique no :arrows_counterclockwise: para jogar novamente!" 
-activeGame = "Há outro jogo nesse canal." 
-left = "%s saiu da partida!" 
-turn = "Vez de %s" 
-now = " - **Agora**" 
-joinToPlay2 = "🚪 Digite `%sjoin` ou clique na porta abaixo para entrar!" 
-playButton = "Clique em :arrow_forward: para começar %s!" 
-uncompletedChallenges = "%s tem desafios incompletos! `g*achievements`" 
-gameOverSmall = "**Game Over!**\n\n" 
-victorymessage = "Won!" 
-
-    [gameFramework.highscore]
-    playerbest = """
-    %s
-    **Recorde Mundial:** %s
-    **Recorde do Servidor:** %s
-    **Essa Tentativa**: %s **Melhor Pessoal** (%s%s no servidor/%s%s mundialmente)
-    """
-    connect4 = "Mais Conexões em Lig4" 
-    guildbest = """
-    %s
-    **Recorde Mundial**: %s
-    **Essa Tentativa**: %s **Recorde do Servidor** (%s%s mundialmente)
-    """
-    notbest = """
-    %s
-    **Mlehor Pessoal:**: %s
-    **Essa Tentativa**: %s (%s%s no servidor/%s%s mundialmente)
-    """
-    uno = "Menor tempo no Uno" 
-    minesweeper = "Menor tempo no Campo Minado" 
-    wr = """
-    %s
-    **Essa Tentativa**: %s **Récorde Mundial!**
-    """
-    minesweeperKnightPaths = "Menor tempo no Campo Minado, Caminhos de Cavaleiro" 
-    quiz = "Mais pontos no Quiz" 
-    memoryGame = "Menor tempo no Jogo da Memória" 
-    
 [languageProperties]
 language = "Português" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 code = "pt_BR" # Found in: LanguageCommands.java#20:76
@@ -1491,4 +1383,16 @@ holderTooManyKeys = "O usuário com chaves para o Premium está usando-as em ser
     registeredServers = "The servers you have registered with your premium keys are:" 
     revokeButton = "Revoke" 
     addButton = "Add to a server" 
+    
+[playonline]
+    [playonline.mainpage]
+    findRoom = "Jogue com outros"
+    createRoom = "Sala Privada"
+    games = "Jogos Destacados"
+
+    [playonline.reconnecting]
+    msg0 = "Conectando ao servidor GamesROB Play Online..."
+    msg1 = "Verifique-se que está conectado à internet e o serviço está ativo."
+    msg2 = "Se o problema persistir, "
+    msg3 = "nos contate"
     

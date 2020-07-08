@@ -127,11 +127,45 @@ Support us here: %s
     content = "You need to be VIP or be using the Premium Bot to play with 4+ players" 
     embed = "Check it out" 
     
+[playonline]
+    [playonline.mainpage]
+    findRoom = "Play with others"
+    createRoom = "Private Room"
+    games = "Games Featured"
+
+    [playonline.reconnecting]
+    msg0 = "Connecting to the GamesROB Play Online server..."
+    msg1 = "Make sure you're connected to the internet and the service is up."
+    msg2 = "If the issue persists, "
+    msg3 = "contact us"
+    
 [game]
     [game.comp]
         [game.comp.turn]
         invalidTurn = "It's not your turn." 
         header = "%s's turn!\n\n" # Found in: MatchHandlerComponentsJVM.kt#38:67
+
+        [game.comp.scoreboard]
+        points = "%s points"
+
+        [game.comp.board]
+        bounds = "That position is out of bounds."
+    
+    [game.mode]
+    default = "Default"
+    selection = "⚙️ Pick a mode:"
+
+    [game.framework]
+    botShuttingDown = "GamesROB is taking a break, we'll be back shortly!"
+    exception = "An error occured. Please report this."
+    timeout = "This match has timed out."
+    forfeit = "One of the players left."
+    matchCancelled = "Cancelled\n%s"
+    roomNotFound = "The room you were looking for no longer exists!"
+
+        [game.framework.premiumWarning]
+        title = "This match can have up to %s players."
+        description = "[Get up to %s players with a VIP match creator or Premium bot!](%s)"
 
     [game.inputHandler]
     noInput = "No input provided!"
@@ -143,22 +177,35 @@ Support us here: %s
     header = """
     **Play a %s match**
     %s
-
+    
     """
     minPlayers = "Needs at least **%s** more players" # Found in: Match.kt#69:106
-    join = "🚪 Join"
-    ai = "🤖 Add CPU"
-    start = "▶️ Start"
+    join = "Join"
+    ai = "Add CPU"
+    start = "Start"
+    pickMode = "Mode"
 
     [game.endMessage]
-    uncompletedChallenges = "%s have uncompleted challenges! `%sachievements`" 
     timeout = "The match has timed out after **%s**." 
+    stop = "This match has been stopped."
+
+    uncompletedChallenges = "%s have uncompleted challenges! `%sachievements`" 
 
     patreon = "Help us maintain the bot running with Patreon for less than a coffee!" 
     emote = "You can change the emote you show up as in games with %semote!"
     findMatches = "You can play with people on the official GamesROB server!" 
+    announcementViewsFooter = "%s views"
+    trickOrTreating = "Trick or treating is playable right now!"
+    rematch = "\n🔄 Rematch (%s/%s)"
 
         [game.endMessage.highscores]
+        norecords = """
+        %s
+        **World Record**: %s
+        **Server Record**: %s
+        **Personal Best**: %s
+        **This Run**: %s (%s%s in the server/%s%s worldwide)
+        """
         playerbest = """
         %s
         **World Record**: %s
@@ -169,11 +216,6 @@ Support us here: %s
         %s
         **World Record**: %s
         **This Run**: %s **Server Record** (%s%s worldwide)
-        """
-        notbest = """
-        %s
-        **Personal Best**: %s
-        **This Run**: %s (%s%s in the server/%s%s worldwide)
         """
         wr = """
         %s
@@ -188,15 +230,17 @@ Support us here: %s
         memoryGame = "Memory Game Lowest Time" 
     
     [game.2048]
+    name = "2048"
     shortDescription = "The classic 2048 game!" 
     longDescription = """
     Click the reaction for the direction you want to shift the board.
     Tiles with the same value will join together.
     Try to reach the 2048 tile!
     """
-    name = "2048" 
-    points = " points" 
-    loss = "The board was filled!" 
+
+    invalidInput = "That's not a valid input!"
+    boardFull = "The board is full, you lost."
+    win = "You reached 2048!"
 
         [game.2048.rush]
         name = "Rush" 
@@ -204,30 +248,72 @@ Support us here: %s
     
     [game.hangman]
     name = "Hangman" 
-    sendWordDM = "What sentence do you choose?" 
     shortDescription = "Try to guess the word submitted by the match's creator!" 
-    wordSet = """
-    **You chose the sentence!**
-    You can go back to %s.
-    """
-    validGuess = "%s got the letter %s on point!" 
-    wordPicked = "The sentence has been chosen!" 
-    outOfLimbs = "%s is out of limbs! Nice try!" 
-    wordTooBig = "That word is too big! The maximum size is %s." 
-    invalidGuess = "%s guessed %s, and got it wrong!" 
-    sendWord = "Before anything, %s: Send the sentence you want in DMs!" 
     longDescription = """
     The match's creator sends a secret sentence to the bot in DMs.
     After that, the other players try to guess it, letter by letter or fully!
     """
+
+    prompt = "To begin the match, %s sends in the prompt in private to the bot!"
+    promptDm = "Choose the prompt for the game:"
+    promptSet = "The prompt was set!"
+    promptInvalidLength = "Your prompt should be %s to %s characters long."
+    invalidPrompt = "Your prompt should only contain characters a-z"
+    creatorWins = "The prompter wins!"
+    guesserWins = "The guesser wins!"
+    deadPlay = "You can't play after you're eliminated."
     
-    [game.memorygame]
+    [game.battleship]
+    name = "Battleship"
+    shortDescription = "Where reading minds causes shipwrecks!"
+    longDescription = """
+    Hide your ships by picking a position
+    When both players have hidden their ships, you'll try at guessing where they are
+    """
+
+    chooseOrientation = "Choose an orientation by adding 'v' (vertical) or 'h' (horizontal) to the end of the position."
+    invalidPlacement = "This position can't fit that ship!"
+    overlap = "One of the tiles is already occupied!"
+    alreadyUncovered = "You have already uncovered this tile."
+    win = "%s has won!"
+
+    # Hide Ships
+    hideShips = "Hide your ships in your private messages with the bot."
+    hideShipsDMs = """
+    Send in where to put the next ship!
+    Format: `<position in letter and number><v (vertical) or h (horizontal)>`
+    Example: `b2v`
+
+    """
+    placingExtraInfo = """
+    Next ship is **%s tiles** long.
+    🎲 Randomize Remaining | 🔄 Reset
+    """
+    hiddenShips = """
+    You've hidden all your ships, now waiting for other player.
+    🔄 Reset
+    """
+
+    # Destroy Ships
+    destroyShips = """
+    Guess a tile position to bomb it. (Example: `c3`)
+    If the other player placed a ship in it, you'll get to see it.
+    
+    """
+    destroyShipsDMs = "Here's your board for reference:"
+
+    [game.memory]
+    name = "Memory Game" 
+    shortDescription = "Test your memory by matching 2 emojis!" 
     longDescription = """
     Send the combination of where you want to reveal (e.g. a3).
     If you fail to match 2, remember their positions for later.
     """
-    shortDescription = "Test your memory by matching 2 emojis!" 
-    name = "Memory Game" 
+
+    invalidTurn = "It's not your turn!"
+    pickOther = "Pick a different tile."
+    chosenTile = "That tile is already uncovered."
+    win = "%s won the game!"
     
     [game.achievement]
     onARoll = "On a Roll" 
@@ -256,7 +342,6 @@ Support us here: %s
     supporter = "Supporter" 
     rigged = "Rigged!!" 
     gambler = "Gambler" 
-
     reachTokens = "Get %s %s" 
     gambleTokens = "Gamble %s %s" 
     upvote = "Upvote GamesROB on DBL %s times" 
@@ -280,55 +365,18 @@ Support us here: %s
     Otherwise, you'll have to draw cards from the pile.
     """
     
-    game = """
-    Top Card
-    %s
+    instructions1 = "Click the card you want to play below."
+    instructions2 = "Remember to send \"uno\" after, when you"
+    instructions3 = "only have 1 card left!"
     
-    
-    """
-    
-    requestPlayer = """
-    Choose a player to switch decks with:
-    %s
-    """
-    chooseCard = """
-    %s: Send the number of the card in your deck you want to use here!
-    Your deck is in our DMs.
-    
-    """
-    deckDm3 = """
-    You can play on %s.
-    On your turn, click the reaction for the card you want to play.
-    Click the :heavy_plus_sign: reaction to draw a card from the pile.
-    If you prefer, you can send the letter on top of the card or \"+\" in the game channel.
-    Your deck:
-    """
-    requestColor = "Please choose the next color:"
-    noColor = "You need to choose a color to use a wildcard (e.g. `B blue`)." 
-    invalidColor = "That's not a valid color." 
+    waitTurn = "Wait until it's your turn."
 
-    playerDrawCard2 = "%s drew a card from the pile." 
-    block = ", blocking %s" 
-    wildcard = " and chose the color %s" 
-    invert = ", inverting the game order" 
-    draw2 = " and %s drew %s cards" 
-    draw4 = " and chose the color %s, %s drew %s cards" 
+    invalidNumber = "That's not a valid card."
+    invalidColor = "That's not a valid color."
+    win = "%s has won the game!"
+    topCard = "The top card is:\n"
+    streetrules = "Street Rules"
 
-    played = "%s has played %s%s." 
-    won = "You won the game!" 
-
-        [game.uno.overseer]
-        name = "Overseer" 
-        description = "Know everyone's deck at all times!" 
-
-        [game.uno.crazy]
-        name = "Crazy" 
-        description = "Play a card with number 7 to swap decks with an opponent!" 
-
-        [game.uno.street]
-        name = "Street Rules" 
-        description = "Play cards in increasing number in one turn, stack draw cards" 
-    
     [game.minesweeper]
     name = "Minesweeper" 
     shortDescription = "The OG minesweeper! Don't get blown up!" 
@@ -336,16 +384,17 @@ Support us here: %s
     Send the place you want to dig (e.g. c4), the number of nearby bombs will be shown.
     Don't dig into a bomb! You can flag by suffixing F (e.g. e1F)
     """
-    bomb = "You dug a bomb!" 
 
-        [game.minesweeper.house]
-        name = "House" 
-        description = "The number shown in the tiles you dig won't count the left, bottom and right tiles." 
-        
-        [game.minesweeper.knightpaths]
-        name = "Knight Paths" 
-        description = "The number shown in the tiles you dig actually show what's from knight paths (Chess) from it!"  
-        
+    boom = "You dug a bomb! Boom!"
+    lastStanding = "%s was the last one standing!"
+    win = "You win!"
+
+    easy = "Easy"
+    medium = "Medium"
+    hard = "Hard"
+    knightpaths = "Knight Paths"
+    knightpathshard = "Knight Paths Hard"
+
     [game.detective]
     name = "Detective" 
     shortDescription = "One of you is an assassin. Kick them out before it's too late." 
@@ -355,112 +404,33 @@ Support us here: %s
     Try kicking the killer before it's too late.
     """
 
-    dmAssassin2 = """
-    🗡 You're the killer!
-    Who will be the unlucky first?
-    %s
-    """
-    dmCitizen = "🏙 You're a citizen." 
-    wakeFourthPlus = "🌆 The city wakes up, with one less citizen on our realm, and that would be %s. When does this stop?" 
-    murderReveal = "%s was the assassin!" 
-    assassinKicked = "The assassin has been kicked! Finally, the city may sleep in peace." 
-    sleep = "🌇 The city goes to sleep." 
-    chooseKick = """
-    
-    Collectively, the city must decide who's getting away with this awful deed, so we can kick them for good.
-    Send the letter for who you think should be kicked:
-    
-    """
-    invalidUser = "That user isn't playing or has already died/been kicked." 
-    wakeThird = "🌆 The city wakes up. We're definitely in \"pattern\" territory surrounding %s's stabbing." 
-    dmAssassinRecursive2 = """
-    Who will it be tonight?
-    %s
-    """
-    sleepIndecisive = "🌇 The city goes to sleep, indecisively kicking no one. How will that turn out?" 
-    sleepKicked = """
-    🌇 The city goes to sleep, confidently kicking %s out of town for attempted murder.
-    Little do they know, that's not who they wanted to...
-    """
-    wakeSecond = "🌆 The city wakes up, this time missing %s, who has been stabbed, again, in their house. They say twice is just a coincidence though, right?" 
-    wakeFirst = "🌆 The city wakes up, surprised when they encounter that %s has been stabbed in their own house. Why would anyone do that?" 
-    
-        [game.detective.response]
-        wait = "⏰ You will wait until the night settles in and do that." 
-        assassinexec = "🗡 You assassinate **%s** during the night." 
-        assassinguard = """
-        🗡 You keep an open eye for who has left their house.
-        %s
-        """
-        medic = "🏥 You revive **%s** during the night." 
-        revived = "🏥 You were revived by **%s**. They tell you to not reveal their identity." 
-        detective = "🏥 You investigate **%s**, and are %s%% sure they are a %s." 
-        
-        [game.detective.night]
-        playerquery = """
-        
-        What will you do?
-        %s
-        %s Stay home
-        """
-        villager = """
-        🏙 You are a villager.
-        During the day, come meet with your fellow villagers to work out who the assassin is!
-        """
-        assassin = """
-        🗡 You are an assassin!
-        Kill someone or stay home to watch out for who was awake tonight.
-        """
-        medic = """
-        🏥 You are a medic!
-        Heal someone who was deceased or stay home.
-        """
-        detective = """
-        🔍 You are a detective!
-        Investigate someone to try to find the killer or stay home.
-        """
-        
-        [game.detective.action]
-        villager = "%s Vote to execute %s" 
-        assassin = "%s Kill %s" 
-        medic = "%s Revive %s" 
-        detective = "%s Investigate %s" 
-        
-        [game.detective.notification]
-        healed0 = "🏥 Annonymously, one of the villagers finds a way to get **%s** revived. The rest are very happy to see them back, except the assassin, who now has a target." 
-        healed1 = "🏥 The annonymous medic manages to save **%s** as well. Who are they? Will the assassin find that out?" 
-        
-            [game.detective.notification.night]
-            first = "🌃 The night begins in the peaceful village." 
-            execution = """
-            %s The village agrees to execute %s, and they are revealed to be a %s.
-            🌃 The villagers, mourning the lost ones, go rest at nightfall.
-            """
-            noaction = """
-            The village is divided on who to execute, so they agree to trust the fellow villagers.
-            🌃 Still shaken by last night's attack, the villagers choose to rest.
-            """
-            
-            [game.detective.notification.day]
-            title = "🌇 **Day %s**" 
-            executetitle = "The villages agree it is best to make a vote to execute the assassin, based on a vote." 
-            killed0 = "🗡 The villagers wake up to find **%s** is missing. Checking in on them reveals their body. They were killed in cold blood." 
-            killed1 = "🗡 The villagers wake up and, once again, are greeted to the tragic murder of **%s**." 
-            killed2 = "🗡 The assassin will not stop while they are loose. **%s** is the next victim the villagers find once they wake up." 
-            killedspecial = "🗡 The villagers wake up to find **%s**'s body. They also discover them to be an annonymous %s. The future doesn't look bright for them." 
-            skipped = "The villagers wake up. After some paranoia, they are pleased to discover nobody was killed the night prior. The assassin is still, however, on the loose." 
-            
-        [game.detective.errormessage]
-        day0guard = "You can't guard during the first night." 
-        targeted = """
-        You've heard from another assassin they're targeting that person tonight.
-        Pick another option.
-        """
-        
-        [game.detective.over]
-        villagers2 = "Villagers win! %s was the assassin." 
-        assassin = "🗡 Assassins win!" 
-        
+    invalidVoteDead = "You can't vote while dead!"
+    invalidInputNumber = "That's not a valid choice!"
+    voteSelf = "You can't vote for yourself!"
+
+    timerDay = "%s Day %s"
+    timerNight = "%s Night %s"
+    vote = "Vote for who you think is the murderer:"
+
+        [game.detective.callforaction]
+        kick = "\n%s Kick %s out of town (%s/%s)"
+        listActions = "\nWhat will you do?"
+        assassin = "\n%s Kill %s" 
+        medic = "\n%s Revive %s" 
+        detective = "\n%s Investigate %s" 
+        skip = "\n⏩ Skip"
+
+        [game.detectve.nightAction]
+        assassin = "Tonight, %s was murdered..."
+        detective = "You inspect %s, and are %s%% sure they are a %s"
+        medic = "%s was revived by a medic!"
+
+        [game.detective.role]
+        villager = "👥 You are a villager."
+        assassin = "🔪 You are a murderer!"
+        medic = "⚕️ You are a medic!"
+        detective = "🔦 You are a detective!"
+
     [game.quiz]
     name = "Quiz" 
     shortDescription = "Do you know all the answers?" 
@@ -469,14 +439,10 @@ Support us here: %s
     Send in the letter you think is the correct answer in a message.
     Whoever has more points in the end will win!
     """
-    noOneAnswered = "No one could answer that! The answer was \"**%s**\"." 
-    revealAnswer = """
-    %s
-    Answer was: %s
-    
-    """
-    answer = "%s (+%s points) has answered it correctly!" 
-    cantPlay = "%s: You've guessed too many times! Wait to play in the next round." 
+
+    invalidNumber = "That's not a valid input!"
+    nextRound = "You can only play on the next round!"
+    win = "%s won the game!"
     
     [game.towncountryriver]
     name = "Town, Country, River" 
@@ -485,20 +451,12 @@ Support us here: %s
     Think fast! You have 15 seconds to think of a word that starts with the given letter in the given theme.
     The other players can vote whether or not your word is within the theme with `yes` or `no`!
     """
-    giveRating = """
-    
-    
-    Vote in %s's message depending on if you think it's valid!
-    Theme: **%s**
-    
-    """
-    theme = """
-    
-    
-    Quick, gimme a %s that starts with %s!
-    ⏰ You have %s
-    
-    """
+
+    votingInvalidUser = "You can't vote!"
+    alreadyVoted = "You already voted!"
+    win = "%s won the game!"
+    theme = "Some **%s** that starts with `%s`, go!"
+    vote = "Vote whether you think this fits the theme (**%s** starting with `%s`):\n%s"
     
         [game.towncountryriver.themes]
         tv = "Movie/TV Show" 
@@ -534,10 +492,9 @@ Support us here: %s
     invalidPlay = "You cannot play on that tile!"
     tie = "It's a tie!" 
 
-        [game.tictactoe.reverse]
-        name = "Inverted" 
-        description = "It's reverse day! You were probably going to tie anyway, see if this helps." 
-    
+    inverse = "Inverted"
+    bigboard = "Big Board"
+
     [game.connectFour]
     name = "ConnectFour" 
     shortDescription = "Drop tiles in order to connect 4 of your color!" 
@@ -548,9 +505,9 @@ Support us here: %s
     winner = "%s won the game!"
     invalidPlay = "You cannot play on that column!"
 
-        [game.connectFour.reverse]
-        name = "Inverted" 
-        description = "It's reverse day! Don't connect four!" 
+    inverse = "Inverted"
+    bigboard = "Big Board"
+    connect3 = "Connect 3"
     
 [command]
 permissionLock = "⛔ You can't use this command!" 
@@ -732,7 +689,7 @@ permissionLock = "⛔ You can't use this command!"
         servercommands = "Server" 
         partnercommands = "Partners" 
         eventcommands = "Halloween Event" 
-        games = "Games" 
+        gameframework = "Games"
         profilecommands = "Profile" 
         infocommands = "Information" 
         matchcommands = "Match" 
@@ -1153,7 +1110,7 @@ permissionLock = "⛔ You can't use this command!"
     
     [command.alertbot]
     description = "View information about our partner, alertbot." 
-    
+
 [languageProperties]
 language = "English" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
 code = "en_US" # Found in: LanguageCommands.java#20:76
