@@ -4,6 +4,7 @@
         [game.comp.turn]
         invalidTurn = "Não é sua vez." 
         header = "É a vez de %s!\n\n" # Found in: MatchHandlerComponentsJVM.kt#38:67
+        ownTurn = "É sua vez!"
 
         [game.comp.scoreboard]
         points = "%s pontos"
@@ -15,13 +16,23 @@
     default = "Padrão"
     selection = "⚙️ Escolha um modo:"
 
+    boardSize = "Tabuleiro: %s"
+    matchLose = "Condição de vitória invertida"
+    matchCount = "Quantidade para juntar: %s"
+
+    # Minesweeper
+    bombCount = "Percentagem de Bombas: %s"
+    knightPaths = "Caminhos do Cavaleiro"
+    # Uno
+    ladder = "Escada"
+    negatableDraw = "Compre-cartas Adicional"
+
     [game.framework]
     botShuttingDown = "O GamesROB já volta!"
     exception = "Ocorreu um erro. Por favor reporte isso."
     timeout = "Acabou o tempo da partida."
     forfeit = "Um dos jogadores saiu."
     matchCancelled = "Cancelada\n%s"
-    roomNotFound = "A sala que você está procurando não existe!"
 
         [game.framework.premiumWarning]
         title = "A partida pode ter até %s jogadores."
@@ -31,6 +42,7 @@
     noInput = "Sem conteúdo provido!"
     invalidReactionBinding = "Sua reação foi inválida"
     invalidReactionReturnType = "Reação proveu tipo de conteúdo inválido"
+    illegalGameInputTime = "Não dá pra jogar agora!"
         
     [game.initMessage]
     # Found in: Match.kt#67:88
@@ -115,6 +127,7 @@
     """
 
     prompt = "Para começar a partida, %s manda a entrada em PV para o bot!"
+    poPrompt = "%s está escolhendo a entrada!"
     promptDm = "Escolha uma entrada para o jogo:"
     promptSet = "Entrada escolhida!"
     promptInvalidLength = "A entrada deve ter entre %s e %s caracteres."
@@ -161,6 +174,13 @@
     
     """
     destroyShipsDMs = "Aqui está seu campo para referência:"
+
+    # Play online
+    hideYourShips = "Esconda seus navios:"
+    randomizeButton = "Randomizar Restantes"
+    resetButton = "Resetar"
+    findOpponentShips = "Encontre os navios do oponente:"
+    yourBoard = "Seu Campo"
 
     [game.memorygame]
     name = "Jogo da Memória" 
@@ -303,6 +323,9 @@
     invalidNumber = "Não é uma entrada válida!"
     nextRound = "Você só pode jogar no próximo round!"
     win = "%s venceu o jogo!"
+
+    questionHeader = "A pergunta que não quer calar..."
+    cheatercheater = "Quer roubar? De boa, só que vou escolher pra vc :3"
     
     [game.towncountryriver]
     name = "Stop" 
@@ -317,6 +340,10 @@
     win = "%s venceu o jogo!"
     theme = "Um(a) **%s** que começa com `%s`, vá!"
     vote = "Vote sim caso ache que cabe no tema (**%s** que começa com `%s`):\n%s"
+
+    poTheme = "Tema"
+    poTime = "Tempo"
+    poLetter = "Primeira Letra"
     
         [game.towncountryriver.themes]
         tv = "Filme/Série de TV" 
@@ -1385,6 +1412,11 @@ holderTooManyKeys = "O usuário com chaves para o Premium está usando-as em ser
     addButton = "Add to a server" 
     
 [playonline]
+    [playonline.dialogue]
+    playEnded = "Você entrará quando a partida acabar!"
+    roomNotFound = "A sala que está procurando não existe mais!"
+    notEnoughPlayers = "Não há jogadores suficientes."
+
     [playonline.mainpage]
     findRoom = "Jogue com outros"
     createRoom = "Sala Privada"
@@ -1396,3 +1428,24 @@ holderTooManyKeys = "O usuário com chaves para o Premium está usando-as em ser
     msg2 = "Se o problema persistir, "
     msg3 = "nos contate"
     
+    [playonline.room]
+    unknownstate = "Estado de sala desconhecido..."
+    pickgame = "Escolha o jogo:"
+    pickmode = "Escolha o modo no jogo:"
+    votewait = "Esperando os outros votarem..."
+    pickwait = "%s está escolhendo..."
+    minplayerwait = "Esperando mais jogadores..."
+    cancel = "Cancelar"
+
+    randomwait = "Esperando o criador virar a roleta..."
+    randomizelabel = "Vire a roleta para começar!"
+    randomizebutton = "Randomizar"
+
+        [playonline.room.settings]
+        gamesel = "Como o jogo é escolhido"
+        modesel = "Como o modo do jogo é escolhido"
+        turnsinpicking = "Turnos"
+        ownerpicks = "Você Escolhe"
+        random = "Aleatório"
+        voting = "Votando"
+        confirm = "Confirmar"

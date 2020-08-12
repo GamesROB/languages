@@ -128,6 +128,11 @@ Support us here: %s
     embed = "Check it out" 
     
 [playonline]
+    [playonline.dialogue]
+    playEnded = "You'll join when this match is over!"
+    roomNotFound = "The room you were looking for no longer exists!"
+    notEnoughPlayers = "Not enough players."
+
     [playonline.mainpage]
     findRoom = "Play with others"
     createRoom = "Private Room"
@@ -138,12 +143,35 @@ Support us here: %s
     msg1 = "Make sure you're connected to the internet and the service is up."
     msg2 = "If the issue persists, "
     msg3 = "contact us"
+
+    [playonline.room]
+    unknownstate = "Unknown room state..."
+    pickgame = "Choose the game to play:"
+    pickmode = "Choose the mode for the game:"
+    votewait = "Waiting for others to vote..."
+    minplayerwait = "Waiting for more players..."
+    pickwait = "%s is picking..."
+    cancel = "Cancel"
+
+    randomwait = "Waiting for the creator to spin the wheel..."
+    randomizelabel = "Randomize to start!"
+    randomizebutton = "Randomize"
+    
+        [playonline.room.settings]
+        gamesel = "How is the game picked"
+        modesel = "How is the game mode picked"
+        turnsinpicking = "Turns in Picking"
+        ownerpicks = "Owner Picks"
+        random = "Random"
+        voting = "Voting"
+        confirm = "Confirm"
     
 [game]
     [game.comp]
         [game.comp.turn]
         invalidTurn = "It's not your turn." 
         header = "%s's turn!\n\n" # Found in: MatchHandlerComponentsJVM.kt#38:67
+        ownTurn = "It's your turn!"
 
         [game.comp.scoreboard]
         points = "%s points"
@@ -155,13 +183,23 @@ Support us here: %s
     default = "Default"
     selection = "⚙️ Pick a mode:"
 
+    boardSize = "Board: %s"
+    matchLose = "Reversed victory condition"
+    matchCount = "Match count: %s"
+
+    # Minesweeper
+    bombCount = "Bomb Percentage: %s"
+    knightPaths = "Knight Paths"
+    # Uno
+    ladder = "Ladder"
+    negatableDraw = "Negatable Draw"
+
     [game.framework]
     botShuttingDown = "GamesROB is taking a break, we'll be back shortly!"
     exception = "An error occured. Please report this."
     timeout = "This match has timed out."
     forfeit = "One of the players left."
     matchCancelled = "Cancelled\n%s"
-    roomNotFound = "The room you were looking for no longer exists!"
 
         [game.framework.premiumWarning]
         title = "This match can have up to %s players."
@@ -171,6 +209,7 @@ Support us here: %s
     noInput = "No input provided!"
     invalidReactionBinding = "Your reaction was invalid"
     invalidReactionReturnType = "Reaction provided invalid return type"
+    illegalGameInputTime = "Cannot send game input now!"
         
     [game.initMessage]
     # Found in: Match.kt#67:88
@@ -255,6 +294,7 @@ Support us here: %s
     """
 
     prompt = "To begin the match, %s sends in the prompt in private to the bot!"
+    poPrompt = "%s is picking the prompt!"
     promptDm = "Choose the prompt for the game:"
     promptSet = "The prompt was set!"
     promptInvalidLength = "Your prompt should be %s to %s characters long."
@@ -301,6 +341,13 @@ Support us here: %s
     
     """
     destroyShipsDMs = "Here's your board for reference:"
+
+    # Play online
+    hideYourShips = "Hide your ships:"
+    randomizeButton = "Randomize Remaining"
+    resetButton = "Reset"
+    findOpponentShips = "Find your opponent's ships:"
+    yourBoard = "Your Board"
 
     [game.memory]
     name = "Memory Game" 
@@ -443,6 +490,9 @@ Support us here: %s
     invalidNumber = "That's not a valid input!"
     nextRound = "You can only play on the next round!"
     win = "%s won the game!"
+
+    questionHeader = "The question on everyone's minds..."
+    cheatercheater = "Ayy you wanna cheat? That's fine, I'll just pick for you :3"
     
     [game.towncountryriver]
     name = "Town, Country, River" 
@@ -457,6 +507,10 @@ Support us here: %s
     win = "%s won the game!"
     theme = "Some **%s** that starts with `%s`, go!"
     vote = "Vote whether you think this fits the theme (**%s** starting with `%s`):\n%s"
+
+    poTheme = "Theme"
+    poTime = "Time"
+    poLetter = "First Letter"
     
         [game.towncountryriver.themes]
         tv = "Movie/TV Show" 
