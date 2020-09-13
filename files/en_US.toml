@@ -41,13 +41,12 @@ The bot needs these permissions in the server for this command to work:
 """
 invalidPage = "That's not a valid page. Please pick one between 1 and %s." # Found in: PagedCommand.java#36:93
 # Found in: GenericCommands.java#210:73
-globalStatistics = """
+globalStatistics2 = """
 📶 **%s** servers
-👥 **%s** users
+👥 **%s** unique users registered
 🗨 **%s** text channels
 🎮 **%s** games (**%s** active)
 ❗  **%s** commands
-📈 **%s** votes (**%s** this month)
 🕙 **%s** played
 """
 cooldown = "⏰ Wait %s to use this command again." # Found in: CommandsManager.java#524:83 CommandsManager.java#525:89 CommandsManager.java#531:100 CommandsManager.java#534:100 CommandsManager.java#539:72
@@ -186,7 +185,9 @@ Support us here: %s
     boardSize = "Board: %s"
     matchLose = "Reversed victory condition"
     matchCount = "Match count: %s"
-
+    
+    # Hangman
+    livecn = "%s lives"
     # Minesweeper
     bombCount = "Bomb Percentage: %s"
     knightPaths = "Knight Paths"
@@ -223,10 +224,12 @@ Support us here: %s
     ai = "Add CPU"
     start = "Start"
     pickMode = "Mode"
+    matchMode = "**%s Mode**"
 
     [game.endMessage]
     timeout = "The match has timed out after **%s**." 
     stop = "This match has been stopped."
+    matchMode = "\n%s Mode"
 
     uncompletedChallenges = "%s have uncompleted challenges! `%sachievements`" 
 
@@ -280,6 +283,8 @@ Support us here: %s
     invalidInput = "That's not a valid input!"
     boardFull = "The board is full, you lost."
     win = "You reached 2048!"
+    deadPlayer = "You can't play!"
+    lastPlayerAlive = "The last player wins!"
 
         [game.2048.rush]
         name = "Rush" 
@@ -302,6 +307,10 @@ Support us here: %s
     creatorWins = "The prompter wins!"
     guesserWins = "The guesser wins!"
     deadPlay = "You can't play after you're eliminated."
+    
+    livec2 = "2 lives"
+    livec4 = "4 lives"
+    livec6 = "6 lives"
     
     [game.battleship]
     name = "Battleship"
@@ -417,6 +426,7 @@ Support us here: %s
     instructions3 = "only have 1 card left!"
     
     waitTurn = "Wait until it's your turn."
+    colorPick = "Choose a color:"
 
     invalidNumber = "That's not a valid card."
     invalidColor = "That's not a valid color."
@@ -568,6 +578,7 @@ permissionLock = "⛔ You can't use this command!"
 
     [command.info]
     description = "View statistics and information" 
+    aliases = []
     
         [command.info.embed2]
         description = "**The bot for playing fun chat games in your Discord!**" # Found in: GenericCommands.java#86:93
@@ -627,6 +638,7 @@ permissionLock = "⛔ You can't use this command!"
     globalView = "\nTo view the global leaderboard, try `%sbaltop global`." 
     invalidPage = "Please choose a page from %s to %s." 
     description = "Shows the token leaderboard." 
+    aliases = []
     
     [command.statistics]
     # Found in: GenericCommands.java#166:101
@@ -661,6 +673,7 @@ permissionLock = "⛔ You can't use this command!"
     💻 RAM Usage: %s
     """
     footer = "Comparison Time" # Found in: GenericCommands.java#148:82
+    aliases = []
     
         [command.statistics.commandStatistics]
         mostUsed = "**Most used commands:**\n" # Found in: GenericCommands.java#151:91
@@ -692,6 +705,7 @@ permissionLock = "⛔ You can't use this command!"
     disabled = "Custom economy is disabled on your server." # Found in: PatreonCommands.java#141:72 PatreonCommands.java#142:70 PatreonCommands.java#154:70
     description = "Customize the economy of your premium server" 
     setname = "The economy name for this server has been changed." # Found in: PatreonCommands.java#227:66
+    aliases = []
     
     [command.help]
     # Found in: CommandsManager.java#345:77
@@ -737,6 +751,7 @@ permissionLock = "⛔ You can't use this command!"
     """
     websiteTitle = "Check out our website!" # Found in: CommandsManager.java#869:160
     setting = "`%s` (Values %s - %s / Default %s)" # Found in: CommandsManager.java#331:95
+    aliases = []
     
         [command.help.categories]
         tokencommands = "Tokens" 
@@ -763,6 +778,7 @@ permissionLock = "⛔ You can't use this command!"
     Please choose from the available options or attach the image you wish to use.
     """
     imagenotowned = "🔒 You can't use that image. Check out all the ones you can use with `%sprofilebackground`!" # Found in: ProfileCommands.java#87:88
+    aliases = []
     
     [command.profile]
     title = "Profile (Scores from this server)" # Found in: ProfileCommands.java#297:97
@@ -783,6 +799,7 @@ permissionLock = "⛔ You can't use this command!"
     victories = "Victories" # Found in: LeaderboardCommands.java#79:71 LeaderboardCommands.java#82:77 ProfileCommands.java#276:77
     winPercent = "Win %%" # Found in: LeaderboardCommands.java#85:78 ProfileCommands.java#279:78
     background = "Set your profile background with `g*profilebackgrounds`\n" # Found in: ProfileCommands.java#218:88
+    aliases = []
     
     [command.emote]
     reset = "Your emoji has been reset!" # Found in: ProfileCommands.java#331:64
@@ -795,6 +812,7 @@ permissionLock = "⛔ You can't use this command!"
     description = "Change the emoji tile you'll be in matches!" 
     set = "Your emoji has been set: %s" # Found in: ProfileCommands.java#319:66 ProfileCommands.java#327:66
     invalid = "That isn't an emoji or Discord emote." # Found in: ProfileCommands.java#328:73
+    aliases = []
     
     [command.upvote]
     setdays = "%s's upvoted days status was set to %s." # Found in: OwnerCommand.java#116:67 CommandsManager.java#229:118
@@ -810,6 +828,7 @@ permissionLock = "⛔ You can't use this command!"
     
     """
     removedays = "%s's upvoted days status was removed by %s." # Found in: CommandsManager.java#233:105
+    aliases = []
     
         [command.upvote.history]
         title = "**Your last upvotes:**\n" # Found in: GenericCommands.java#303:77
@@ -837,6 +856,7 @@ permissionLock = "⛔ You can't use this command!"
     That permission isn't valid. Here are the permissions you can use:
     %s
     """
+    aliases = []
     
         [command.perm.check]
         ownHeader = "Your permissions:\n" # Found in: PermissionCommands.java#44:72
@@ -857,6 +877,7 @@ permissionLock = "⛔ You can't use this command!"
     embedUpvote = "[Upvote the bot on DBL to get tokens](%s)" 
     upvoteLater = "~~Upvoting the bot~~ (You can do it again in %s)" 
     gamblingTokens = "**Gambling with** `g*slots`" 
+    aliases = []
     
         [command.tokens.transactions]
         footer3 = "Balance = %s" # Found in: TokensCommand.java#117:84
@@ -881,6 +902,7 @@ permissionLock = "⛔ You can't use this command!"
     ram = "RAM Usage" 
     status = "Status" 
     newTitle = "**Bot Statistics and Information:**\n" 
+    aliases = []
     
     [command.patreon]
     insiders = "Insiders" 
@@ -898,9 +920,11 @@ permissionLock = "⛔ You can't use this command!"
     vip = "VIP" 
     none = "Not a Donor" 
     description = "View more information about our Patreon campaign!" 
+    aliases = []
     
     [command.invite]
     description = "Invite the bot!" 
+    aliases = []
     
         [command.invite.embed]
         description = "You'll need the Manage Server permission in the server you want to add it on." # Found in: GenericCommands.java#74:85
@@ -911,11 +935,13 @@ permissionLock = "⛔ You can't use this command!"
     beginning = "Here are the achievements you can complete:\n\n" # Found in: TokensCommand.java#75:83
     noAchievements = "No achievements are available for you right now! :wink:" # Found in: TokensCommand.java#73:102
     upvote = "Upvote the bot in DBL" # Found in: TokensCommand.java#97:110
+    aliases = []
     
     [command.stop]
     response = "The match has been stopped." # Found in: Match.kt#107:58
     description = "Forces a stop the current match" 
     matchStopped = "⏹ Match stopped by %s" 
+    aliases = []
     
     [command.leave]
     description = "Leaves your current match" 
@@ -923,6 +949,7 @@ permissionLock = "⛔ You can't use this command!"
     notInMatch = "You aren't in that match!" 
     cantLeave = "This match can't be left." 
     message = "%s has left the match.\n" 
+    aliases = []
     
     [command.highscores]
     entry = "%s held by %s" # Found in: TokensCommand.java#135:82
@@ -930,6 +957,7 @@ permissionLock = "⛔ You can't use this command!"
     server = "Top game score records on **%s**:" # Found in: TokensCommand.java#125:69
     
     playerRanking = "\n#️⃣ You are positioned **%s** with **%s**\n\n" # Found in: TokensCommand.java#139:107
+    aliases = []
     
         [command.highscores.category]
         entry = "%s place held by %s (%s)" # Found in: TokensCommand.java#167:75
@@ -939,6 +967,7 @@ permissionLock = "⛔ You can't use this command!"
     [command.idlerpg]
     description = "Learn more about our partnered bot, IdleRPG!" 
     message = "IdleRPG is a bot with shop system, characters, classes, dungeons, items, PvP, economy, gambling, marriage, music, guilds and much more!" 
+    aliases = []
     
     [command.leaderboard]
     # Found in: CommandsManager.java#208:107
@@ -950,15 +979,18 @@ permissionLock = "⛔ You can't use this command!"
     noWinner = "~no winner yet~" # Found in: LeaderboardCommands.java#133:80
     description = "View the leaderboard!" 
     unknownUser = "*unknown user*" # Found in: LeaderboardCommands.java#93:117 LeaderboardCommands.java#110:81
+    aliases = []
     
     [command.cafe]
     description = "Learn more about our partnered bot, Cafe!" 
     message = "Cafe is a incremental/clicker style economy bot meant to liven up your server! It has over 30 unique items, tons of upgrades, leaderboards and more!" 
+    aliases = []
     
     [command.setprefix]
     description = "Set the command prefix for your server!" 
     tooLong = "That prefix is too long!" # Found in: GenericCommands.java#267:120
     message = "Changed the bot's prefix for this server!" # Found in: GenericCommands.java#274:66
+    aliases = []
     
     [command.discordserversme]
     description = "Learn more about our partner, DiscordServers.me!" 
@@ -966,6 +998,7 @@ permissionLock = "⛔ You can't use this command!"
     Do you want to find or share Discord servers?
     Check out our partner, DiscordServers.me!
     """
+    aliases = []
     
     [command.ping]
     description = "🗄 *Debug* View the latency of the bot" 
@@ -983,6 +1016,7 @@ permissionLock = "⛔ You can't use this command!"
     ↳ Command `%s`
     ↳ Discord `%s`
     """
+    aliases = []
     
     [command.trickortreating]
     # Found in: HalloweenEvent.java#97:108
@@ -1033,6 +1067,7 @@ permissionLock = "⛔ You can't use this command!"
     **Visitor:** %s
     """
     flagNoContent = "There is no content to flag. Please do not abuse the flag feature as it will lead to a blacklist." # Found in: HalloweenEvent.java#253:123
+    aliases = []
     
     [command.tournment]
     notstarted = "A GamesROB tournment hasn't been created! Use `%stournment create <end time>` to start one." # Found in: PatreonCommands.java#34:94 PatreonCommands.java#83:94 PatreonCommands.java#107:107
@@ -1052,6 +1087,7 @@ permissionLock = "⛔ You can't use this command!"
     """
     timeset = "Tournment was created! It was set to end in %s.\n" # Found in: PatreonCommands.java#76:66
     notended = "The tournment hasn't ended yet. If you want to force it to end, use `%stournment purge`." # Found in: PatreonCommands.java#85:116
+    aliases = []
     
         [command.tournment.leaderboard]
         # Found in: PatreonCommands.java#44:116
@@ -1070,6 +1106,7 @@ permissionLock = "⛔ You can't use this command!"
         
     [command.userlang]
     set = "Your personal language was set to %s" # Found in: LanguageCommands.java#50:65
+    aliases = []
     description = "Change your own language." 
     
     [command.join]
@@ -1078,11 +1115,13 @@ permissionLock = "⛔ You can't use this command!"
     collectiveMatch = "This is a collective match, you can just go ahead and play!" 
     description = "Joins a match on the current channel" 
     full = "The match is full!" 
+    aliases = []
     
     [command.gdpr]
     description = "Get all of the data we have stored with your User ID attached." 
     dm = "Here's all the data we have on your account:" 
     message2 = "A private message will be sent to you shortly." 
+    aliases = []
     
         [command.gdpr.deletion]
         info = "You can request data deletion with `g*gdpr remove`" # Found in: GenericCommands.java#337:79
@@ -1101,6 +1140,7 @@ permissionLock = "⛔ You can't use this command!"
     [command.guildlang]
     description = "Change the default language for the server." 
     set = "The default language for this server was set to %s" # Found in: LanguageCommands.java#35:66
+    aliases = []
     
     [command.changelog]
     description = "Shows all the changes on the latest update" 
@@ -1114,6 +1154,7 @@ permissionLock = "⛔ You can't use this command!"
     *Updates are usually scheduled for every friday, making the next update %s.*
     *You can suggest features and bug fixes in our server: %s*
     """
+    aliases = []
     
     [command.slots]
     description = "Gamble your currency in a slots game! Totally not rigged trust me" 
@@ -1123,11 +1164,13 @@ permissionLock = "⛔ You can't use this command!"
     all = "all" # Found in: SlotsCommand.java#31:68
     matchEnd = "Result: %s" # Found in: SlotsCommand.java#79:92
     matchHeader = "Rolling for %s..." # Found in: SlotsCommand.java#46:88 SlotsCommand.java#90:104
+    aliases = []
     
     [command.weekly]
     timeout = "You can get your weekly %s again in %s." # Found in: TokensCommand.java#34:67
     description = "Get your weekly token prize for being a kind donator!" 
     message = "You've earnt %s!" # Found in: TokensCommand.java#41:63
+    aliases = []
     
     [command.support]
     message = """
@@ -1135,6 +1178,7 @@ permissionLock = "⛔ You can't use this command!"
     https://discord.gg/rUpAqVa
     """
     description = "Gives you a link to the bot's support server" 
+    aliases = []
     
     [command.candy]
     # Found in: HalloweenEvent.java#130:61
@@ -1144,6 +1188,7 @@ permissionLock = "⛔ You can't use this command!"
     """
     other = "🍬 %s has %s candy!" # Found in: HalloweenEvent.java#131:63
     description = "Checks how much candy you or someone else has" 
+    aliases = []
     
     [command.listplayers]
     description = "Lists the players in the current match in the current channel" 
@@ -1154,6 +1199,7 @@ permissionLock = "⛔ You can't use this command!"
     
     
     """
+    aliases = []
     
     [command.website]
     description = "Gives you a link to the website" 
@@ -1161,9 +1207,11 @@ permissionLock = "⛔ You can't use this command!"
     We have a website where you learn more about the bot!
     https://gamesrob.com
     """
+    aliases = []
     
     [command.alertbot]
     description = "View information about our partner, alertbot." 
+    aliases = []
 
 [languageProperties]
 language = "English" # Found in: LanguageCommands.java#15:122 LanguageCommands.java#19:128 LanguageCommands.java#50:121 Language.java#33:54 Language.java#34:54 CommandsManager.java#613:91
@@ -1172,6 +1220,7 @@ country = "USA"
 languageName = "American English" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
 translators = "Fin#3799" # Found in: LanguageCommands.java#20:132
 version = "1.8.6" 
+aliases = [ "english", "en", "american", "american english", "eng" ]
 flag = "🇺🇸" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
 
 [permissions]

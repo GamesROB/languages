@@ -20,6 +20,8 @@
     matchLose = "Condição de vitória invertida"
     matchCount = "Quantidade para juntar: %s"
 
+    # Hangman
+    livecn = "%s vidas"
     # Minesweeper
     bombCount = "Percentagem de Bombas: %s"
     knightPaths = "Caminhos do Cavaleiro"
@@ -60,6 +62,7 @@
     [game.endMessage]
     timeout = "Acabou o tempo da partida de **%s**." 
     stop = "A partida foi encerrada."
+    matchMode = "\nModo %s"
 
     uncompletedChallenges = "%s tem desafios incompletos! `%sachievements`" 
 
@@ -113,6 +116,8 @@
     invalidInput = "Essa entrada é inválida!"
     boardFull = "O tabuleiro está cheio, você perdeu."
     win = "Você chegou no 2048!"
+    deadPlayer = "Você não pode jogar!"
+    lastPlayerAlive = "O último jogador ganha!"
 
         [game.2048.rush]
         name = "Corrida" 
@@ -135,6 +140,10 @@
     creatorWins = "O criador ganha!"
     guesserWins = "O adivinhador ganha!"
     deadPlay = "Você não pode jogar depois de estar eliminado."
+    
+    livec2 = "2 vidas"
+    livec4 = "4 vidas"
+    livec6 = "6 vidas"
     
     [game.battleship]
     name = "Batalha Naval"
@@ -250,6 +259,7 @@
     instructions3 = "tiver 1 carta sobrando!"
     
     waitTurn = "Aguarde até ser sua rodada."
+    colorPick = "Escolha uma cor:"
 
     invalidNumber = "Não é uma carta válida."
     invalidColor = "Não é uma cor ou número válido."
@@ -445,13 +455,12 @@ cmdPermDeniedAdmin = "Esse comando é limitado para administradores por padrão.
 pagedCommandFooter = "Página %s/%s (`%s%s <página>` para ver outra página)." # Found in: PagedCommand.java#43:100
 invalidPage = "Essa página é inválida, escolha uma entre 1 e %s." # Found in: PagedCommand.java#36:93
 # Found in: GenericCommands.java#210:73
-globalStatistics = """
+globalStatistics2 = """
 📶 **%s** servidores
-👥 **%s** usuários
+👥 **%s** usuários únicos registrados
 🗨 **%s** canais de texto
 🎮 **%s** jogos (**%s** ativos)
 ❗  **%s** comandos
-📈 **%s** votos (**%s** nesse mês)
 🕙 **%s** jogados
 """
 cooldown = "⏰ Wait %s to use this command again." # Found in: CommandsManager.java#524:83 CommandsManager.java#525:89 CommandsManager.java#531:100 CommandsManager.java#534:100 CommandsManager.java#539:72
@@ -525,6 +534,7 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
 
     [command.info]
     description = "Ver estatísticas e informações" 
+    aliases = [ "informacoes", "informações", "infos", "informa" ]
     
         [command.info.embed2]
         description = "**O bot para jogar jogos de chat divertidos no seu Discord!**" # Found in: GenericCommands.java#86:93
@@ -584,6 +594,7 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     globalView = "\nPara ver o placar global, tente `%sbaltop global`." 
     invalidPage = "Por favor, escolha uma página entre %s e %s." 
     description = "Mostra o placar de tokens." 
+    aliases = [ "topo", "melhoresdinheiro", "maisricos", "ricos", "riqueza" ]
     
     [command.customeco]
     purgecancelled = "Cancelada a deletação de dados." # Found in: PatreonCommands.java#192:93
@@ -1118,6 +1129,7 @@ country = "guide"
 languageName = "Português Brasileiro" # Found in: LanguageCommands.java#15:126 LanguageCommands.java#19:132 LanguageCommands.java#50:125 Language.java#34:58 CommandsManager.java#613:95
 translators = "*Not Found*, *Not Found*, deprilula28#3609, *Not Found*, *Not Found*, *Not Found*, *Not Found*" # Found in: LanguageCommands.java#20:132
 version = "" 
+aliases = [ "portuguese", "pt", "br", "português", "portugues", "brasil", "brazil", "brasileiro", "português brasileiro", "portugues brasileiro" ]
 flag = "🇧🇷" # Found in: LanguageCommands.java#15:65 LanguageCommands.java#19:76
 
 [permissions]
