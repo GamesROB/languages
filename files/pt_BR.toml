@@ -431,8 +431,12 @@ invalidLanguage = "" # Found in: LanguageCommands.java#29:92 LanguageCommands.ja
 mentionedMessage = "Meu prefixo nesse servidor é `%s`. Envie `%shelp` para começar!" # Found in: CommandsManager.java#741:126
 # Found in: Match.kt#79:91
 alreadyPlaying = """
-You are already playing another game on %s!
-Type `%sstop` to stop that match.
+Você já está jogando em %s!
+Use `%sleave` para sair da partida.
+"""
+alreadyPlayingOwned = """
+Você criou outro jogo em %s!
+Use `%sstop` para parar a partida.
 """
 # Found in: CommandsManager.java#747:76
 error = """
@@ -1091,6 +1095,25 @@ permissionLock = "⛔ Você não tem permissão para usar esse comando!"
     """
     flagNoContent = "Não há conteúdo para reportar. Por favor não abuse esse botão pois isso levará a uma suspensão." # Found in: HalloweenEvent.java#253:123
     
+    costumeVerifying = "Esse emote está sob inspecção do time do GamesROB. Por favor aguarde."
+    costumeVerifyStart = "Enviamos seu emote para verificação para termos certeza que pode usar!"
+    costumeVerificationJoin = "Você estará usando o emote quando for verificado pelo time do GamesROB."
+    costumeEmoteDenied = "Esse emote foi rejeitado pelo time do GamesROB. Por favor tente outro."
+    costumeVerificationWait = "Você só pode pedir verificação de um emote cada %s! Por favor aguarde até %s e tente novamente."
+    costumeSet = "Você está usando o emote como fantasia! Agora vá pegar doces!"
+
+    annonymousNames = [
+        "Criança aleatória",
+        "Parece legal",
+        "Provavelmente um otaku",
+        "Provavelmente um nerd",
+        "Alguém que parece velho demais pra isso",
+        "Peraí... João!?",
+        "Parece selvagem!",
+        "Um personagem... interessante..",
+        "Pessoa Genérica #243"
+    ]
+
     [command.gdpr]
     description = "Receba todos dados que temos guardado com seu ID de usuário." 
     dm = "Aqui está todos os dados que temos:" 
